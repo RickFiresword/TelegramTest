@@ -9,8 +9,6 @@ import telebot
 import urllib
 import time
 
-token_i = '27503-8p5YVDjl6dBrY7'
-
 my_telegram_chat_id = 297439048
 
 headers = {
@@ -27,15 +25,13 @@ bot = telebot.TeleBot(token)
 url = 'http://betsapi.com/ci/soccer'
 page = requests.get(url, headers=headers)
 
-time.sleep(5)
+time.sleep(2)
 soup = BeautifulSoup(page.text, 'html.parser')
 main_page = soup.prettify()
 
 # ====/Create valid link======
 
 http_add = 'http://betsapi.com/'
-match_id = 'r/234234234234'
-
 
 def valid_link(x, y):
     return x + y
@@ -44,14 +40,14 @@ def valid_link(x, y):
 # =====/Find all match links ======
 
 get_links = soup.findAll('a', attrs={'href': re.compile("^/r/")})
-time.sleep(5)
+time.sleep(2)
 def executeSomething():
     # code here
     def parse_link(link):
         print(link)
         page = requests.get(link)
         soup = BeautifulSoup(page.text, 'html.parser')
-        time.sleep(4)
+        time.sleep(2)
         try:
             score = soup.find('span', {'class': 'text-danger'})
             the_time = soup.findAll(class_='race-time')[0]
@@ -144,12 +140,12 @@ def executeSomething():
         link = re.sub('" id=".*', '', link, flags=re.DOTALL)
         link = "".join(map(str, link))
         parse_link(link)
-        time.sleep(2)
+        time.sleep(1)
 
-        if count == 500:
+        if count == 5000:
             break
 
-    time.sleep(4200)
+    time.sleep(10)
 
 while True:
     executeSomething()
