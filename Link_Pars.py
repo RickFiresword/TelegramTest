@@ -94,7 +94,7 @@ def executeSomething():
 
 
 
-            if (the_time_text > '13' and the_time_text < '23') and (dang_attack_total > 10) and (onTarget_attack_total > 15):
+            if (the_time_text > '1' and the_time_text < '45') and (dang_attack_total > 1) and (onTarget_attack_total > 1):
 
                 dang_attack_total_score = 'Dangerous Attacks: ' + dang_attack_home.text + " - " + dang_attack_away.text + '  ( Total = ' + str(dang_attack_total) + ' )'
                 simple_attack_total_score = "Simple Attacks: " + simple_attack_home.text + " - " + simple_attack_away.text + '  ( Total = ' + str(simple_attack_total) + ' )'
