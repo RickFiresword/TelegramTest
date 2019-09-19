@@ -5,14 +5,9 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import telebot
-# import constant
 import urllib
 import time
 
-
-
-
-token_i = '27503-8p5YVDjl6dBrY7'
 
 #my_telegram_chat_id = 297439048
 my_telegram_chat_id = '-328568838'
@@ -38,12 +33,6 @@ main_page = soup.prettify()
 # ====/Create valid link======
 
 http_add = 'http://betsapi.com/'
-match_id = 'r/234234234234'
-
-
-def valid_link(x, y):
-    return x + y
-
 
 # =====/Find all match links ======
 
