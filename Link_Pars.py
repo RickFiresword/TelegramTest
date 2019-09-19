@@ -152,7 +152,7 @@ def executeSomething():
         if count == 500:
             break
 
-    time.sleep(200)
+    time.sleep(450)
 
 while True:
     executeSomething()
