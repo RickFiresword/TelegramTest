@@ -32,7 +32,7 @@ main_page = soup.prettify()
 
 # ====/Create valid link======
 
-http_add = 'http://betsapi.com/'
+http_add = 'https://bsportsfan.com/'
 
 # =====/Find all match links ======
 
