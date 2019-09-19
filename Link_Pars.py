@@ -23,7 +23,7 @@ chat_text = "&text="
 
 bot = telebot.TeleBot(token)
 
-url = 'https://bsportsfan.com/ci/soccer'
+url = 'http://betsapi.com/ci/soccer'
 page = requests.get(url, headers=headers)
 
 time.sleep(5)
@@ -32,7 +32,7 @@ main_page = soup.prettify()
 
 # ====/Create valid link======
 
-http_add = 'https://bsportsfan.com/'
+http_add = 'http://betsapi.com/'
 
 # =====/Find all match links ======
 
