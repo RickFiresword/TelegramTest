@@ -97,7 +97,7 @@ def executeSomething():
             chance_bet = str(chance_bet)
 
 
-            if (the_time_text > '14' and the_time_text < '24') and (dang_attack_total > 20 ) and (onTarget_attack_total > 1 ):
+            if (the_time_text > '14' and the_time_text < '27') and (dang_attack_total > 20 ) and (onTarget_attack_total > 1 ):
 
                 dang_attack_total_score = 'Dangerous Attacks: ' + dang_attack_home.text + " - " + dang_attack_away.text + '  ( Total = ' + str(dang_attack_total) + ' )'
                 simple_attack_total_score = "Simple Attacks: " + simple_attack_home.text + " - " + simple_attack_away.text + '  ( Total = ' + str(simple_attack_total) + ' )'
