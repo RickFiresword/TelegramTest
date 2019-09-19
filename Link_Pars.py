@@ -9,7 +9,13 @@ import telebot
 import urllib
 import time
 
-my_telegram_chat_id = 297439048
+
+
+
+token_i = '27503-8p5YVDjl6dBrY7'
+
+#my_telegram_chat_id = 297439048
+my_telegram_chat_id = '-328568838'
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36'
@@ -22,16 +28,18 @@ chat_text = "&text="
 
 bot = telebot.TeleBot(token)
 
-url = 'http://betsapi.com/ci/soccer'
+url = 'https://bsportsfan.com/ci/soccer'
 page = requests.get(url, headers=headers)
 
-time.sleep(2)
+time.sleep(5)
 soup = BeautifulSoup(page.text, 'html.parser')
 main_page = soup.prettify()
 
 # ====/Create valid link======
 
 http_add = 'http://betsapi.com/'
+match_id = 'r/234234234234'
+
 
 def valid_link(x, y):
     return x + y
@@ -40,14 +48,14 @@ def valid_link(x, y):
 # =====/Find all match links ======
 
 get_links = soup.findAll('a', attrs={'href': re.compile("^/r/")})
-time.sleep(2)
+time.sleep(5)
 def executeSomething():
     # code here
     def parse_link(link):
         print(link)
         page = requests.get(link)
         soup = BeautifulSoup(page.text, 'html.parser')
-        time.sleep(2)
+        time.sleep(4)
         try:
             score = soup.find('span', {'class': 'text-danger'})
             the_time = soup.findAll(class_='race-time')[0]
@@ -89,8 +97,7 @@ def executeSomething():
             chance_bet = str(chance_bet)
 
 
-
-            if (the_time_text > '1' and the_time_text < '45') and (dang_attack_total > 1) and (onTarget_attack_total > 1):
+            if (the_time_text > '14' and the_time_text < '24') and (dang_attack_total > 20 ) and (onTarget_attack_total > 1 ):
 
                 dang_attack_total_score = 'Dangerous Attacks: ' + dang_attack_home.text + " - " + dang_attack_away.text + '  ( Total = ' + str(dang_attack_total) + ' )'
                 simple_attack_total_score = "Simple Attacks: " + simple_attack_home.text + " - " + simple_attack_away.text + '  ( Total = ' + str(simple_attack_total) + ' )'
@@ -120,15 +127,15 @@ def executeSomething():
                 else:
                     bet_tip = "No bet. Too much goals... --->"
 
-                total_stats_chat = " /----------------------------" + "\n" + name_teams + "\n" + score_teams + '\n' + time_now + "\n" + '-' + "\n" + simple_attack_total_score + "\n" + dang_attack_total_score + "\n" + onTarget_attack_total_score + "\n" + offTarget_attack_total_score + "\n" + "=====" + "\n" + bet_tip + "\n" + "(Beta) Chance  > " + chance_bet + "%" + "\n" + "----------------------------\ "
+                total_stats_chat = " /----------------------------" + "\n" + link + "\n" + "-" + "\n" + name_teams + "\n" + score_teams + '\n' + time_now + "\n" + '-' + "\n" + simple_attack_total_score + "\n" + dang_attack_total_score + "\n" + onTarget_attack_total_score + "\n" + offTarget_attack_total_score + "\n" + "=====" + "\n" + bet_tip + "\n" + "(Beta) Chance  > " + chance_bet + "%" + "\n" + "----------------------------\ "
                 bot.send_message(chat_id=my_telegram_chat_id, text=total_stats_chat)
 
 
             else:
-                print (('___ не удовлетворяет условиям! ___' + '\n' + '---------------------'))
+                print ('___ не удовлетворяет условиям! ___' + '\n' + '---------------------')
         except:
             pass
-            print (('!!! Некоторые данные отсутствуют !!!' + '\n' + '---------------------'))
+            print ('!!! Некоторые данные отсутствуют !!!' + '\n' + '---------------------')
         # print(link)
 
 
@@ -140,17 +147,13 @@ def executeSomething():
         link = re.sub('" id=".*', '', link, flags=re.DOTALL)
         link = "".join(map(str, link))
         parse_link(link)
-        time.sleep(1)
+        time.sleep(2)
 
-        if count == 5000:
+        if count == 500:
             break
 
-    time.sleep(10)
+    time.sleep(200)
 
 while True:
     executeSomething()
-    
-if __name__ == '__main__':
-    server.debug = True
-    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
 
