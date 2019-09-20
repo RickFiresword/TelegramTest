@@ -5,9 +5,14 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import telebot
+# import constant
 import urllib
 import time
 
+
+
+
+token_i = '27503-8p5YVDjl6dBrY7'
 
 #my_telegram_chat_id = 297439048
 my_telegram_chat_id = '-328568838'
@@ -23,7 +28,7 @@ chat_text = "&text="
 
 bot = telebot.TeleBot(token)
 
-url = 'http://betsapi.com/ci/soccer'
+url = 'https://bsportsfan.com/ci/soccer'
 page = requests.get(url, headers=headers)
 
 time.sleep(5)
@@ -33,6 +38,12 @@ main_page = soup.prettify()
 # ====/Create valid link======
 
 http_add = 'http://betsapi.com/'
+match_id = 'r/234234234234'
+
+
+def valid_link(x, y):
+    return x + y
+
 
 # =====/Find all match links ======
 
@@ -44,7 +55,7 @@ def executeSomething():
         print(link)
         page = requests.get(link)
         soup = BeautifulSoup(page.text, 'html.parser')
-        time.sleep(4)
+        time.sleep(5)
         try:
             score = soup.find('span', {'class': 'text-danger'})
             the_time = soup.findAll(class_='race-time')[0]
@@ -86,7 +97,7 @@ def executeSomething():
             chance_bet = str(chance_bet)
 
 
-            if (the_time_text > '14' and the_time_text < '27') and (dang_attack_total > 20 ) and (onTarget_attack_total > 1 ):
+            if (the_time_text > '14' and the_time_text < '24') and (dang_attack_total > 20 ) and (onTarget_attack_total > 2 ):
 
                 dang_attack_total_score = 'Dangerous Attacks: ' + dang_attack_home.text + " - " + dang_attack_away.text + '  ( Total = ' + str(dang_attack_total) + ' )'
                 simple_attack_total_score = "Simple Attacks: " + simple_attack_home.text + " - " + simple_attack_away.text + '  ( Total = ' + str(simple_attack_total) + ' )'
@@ -116,6 +127,19 @@ def executeSomething():
                 else:
                     bet_tip = "No bet. Too much goals... --->"
 
+            #=====
+                if offTarget_attack_total_score == 100:
+                    offTarget_attack_total_score = onTarget_attack_total_score
+                    onTarget_attack_total_score = 0
+                    onTarget_attack_home.text = 0
+                    onTarget_attack_away.text = 0
+                elif onTarget_attack_total_score == 100:
+                    onTarget_attack_total_score = offTarget_attack_total_score
+                    offTarget_attack_total_score = 0
+                    offTarget_attack_home.text = 0
+                    offTarget_attack_away.text = 0
+
+
                 total_stats_chat = " /----------------------------" + "\n" + link + "\n" + "-" + "\n" + name_teams + "\n" + score_teams + '\n' + time_now + "\n" + '-' + "\n" + simple_attack_total_score + "\n" + dang_attack_total_score + "\n" + onTarget_attack_total_score + "\n" + offTarget_attack_total_score + "\n" + "=====" + "\n" + bet_tip + "\n" + "(Beta) Chance  > " + chance_bet + "%" + "\n" + "----------------------------\ "
                 bot.send_message(chat_id=my_telegram_chat_id, text=total_stats_chat)
 
@@ -125,6 +149,8 @@ def executeSomething():
         except:
             pass
             print ('!!! Некоторые данные отсутствуют !!!' + '\n' + '---------------------')
+        # print(link)
+
 
     count = 0
     for link in get_links:
@@ -134,10 +160,12 @@ def executeSomething():
         link = re.sub('" id=".*', '', link, flags=re.DOTALL)
         link = "".join(map(str, link))
         parse_link(link)
-        time.sleep(2)
+        time.sleep(3)
 
-    time.sleep(450)
+        if count == 50000:
+            break
+
+    time.sleep(400)
 
 while True:
     executeSomething()
-
