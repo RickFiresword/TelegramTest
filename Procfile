@@ -1,1 +1,1 @@
-web: python Link_Pars.py --log-file -
+web: python Link_Pars.py
