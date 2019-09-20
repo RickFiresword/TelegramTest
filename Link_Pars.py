@@ -125,8 +125,6 @@ def executeSomething():
         except:
             pass
             print ('!!! Некоторые данные отсутствуют !!!' + '\n' + '---------------------')
-        # print(link)
-
 
     count = 0
     for link in get_links:
@@ -137,9 +135,6 @@ def executeSomething():
         link = "".join(map(str, link))
         parse_link(link)
         time.sleep(2)
-
-        if count == 500:
-            break
 
     time.sleep(450)
 
