@@ -1,1 +1,1 @@
-web: python Link_Pars.py
+worker: python Link_Pars.py
