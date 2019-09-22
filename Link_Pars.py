@@ -10,11 +10,6 @@ import urllib
 import time
 
 
-
-
-token_i = '27503-8p5YVDjl6dBrY7'
-
-#my_telegram_chat_id = 297439048
 my_telegram_chat_id = '-328568838'
 
 headers = {
@@ -28,7 +23,7 @@ chat_text = "&text="
 
 bot = telebot.TeleBot(token)
 
-url = 'https://bsportsfan.com/ci/soccer'
+url = 'http://betsapi.com/ci/soccer'
 page = requests.get(url, headers=headers)
 
 time.sleep(5)
