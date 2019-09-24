@@ -206,7 +206,7 @@ def executeSomething():
 
 
     driver.close()
-    time.sleep(1)
+    time.sleep(400)
 
 while True:
     executeSomething()
