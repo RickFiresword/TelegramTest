@@ -8,9 +8,16 @@ import telebot
 # import constant
 import urllib
 import time
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 
+
+
+token_i = '27503-8p5YVDjl6dBrY7'
 
 my_telegram_chat_id = '-328568838'
+
+url = 'http://m.scorebing.com/live'
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36'
@@ -23,144 +30,184 @@ chat_text = "&text="
 
 bot = telebot.TeleBot(token)
 
-url = 'http://betsapi.com/ci/soccer'
-page = requests.get(url, headers=headers)
+links = []
 
-time.sleep(5)
-soup = BeautifulSoup(page.text, 'html.parser')
-main_page = soup.prettify()
-
-# ====/Create valid link======
-
-http_add = 'http://betsapi.com/'
-match_id = 'r/234234234234'
-
-
-def valid_link(x, y):
-    return x + y
-
-
-# =====/Find all match links ======
-
-get_links = soup.findAll('a', attrs={'href': re.compile("^/r/")})
-time.sleep(5)
 def executeSomething():
+    #====
+    links = []
+
+    chromedriver = '/Users/rick_firesword/Downloads/chromedriver'
+
+    driver = webdriver.Chrome(chromedriver)
+    driver.get(url)
+    time.sleep(3)
+
+    get_links = driver.find_elements_by_xpath('/html/body/div/div/div[1]/main/div/div/div/div/div/a')
     # code here
-    def parse_link(link):
-        print(link)
-        page = requests.get(link)
-        soup = BeautifulSoup(page.text, 'html.parser')
-        time.sleep(5)
+    for i in get_links:
+        a = (i.get_attribute('href'))
+        a = a.replace('http://m.scorebing.com/match/', 'http://m.scorebing.com/match_live/')
+        link = {
+            'href': a
+        }
+        links.append(link)
+        # print link
+
+    for j in links:
+        driver.get(j['href'])
+
         try:
-            score = soup.find('span', {'class': 'text-danger'})
-            the_time = soup.findAll(class_='race-time')[0]
-            the_time_text = str(the_time.text).replace("'", '').replace(" ", '').replace("\n", '')
+            # =======================/CORNERS/============================
+            driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[2]/a[1]").click()
+            corner_home = driver.find_element_by_xpath(
+                "/html/body/div/div/div[1]/main/div[1]/div/div[1]/h5/span[2]").text
+            corner_away = driver.find_element_by_xpath(
+                "/html/body/div/div/div[1]/main/div[1]/div/div[3]/h5/span[1]").text
+            if ':' not in corner_home:
+                corner_home = corner_home
+            else:
+                corner_home = 0
 
-            #====
-            name_home = soup.find_all(class_="breadcrumb-item active")[0]
+            if ':' not in corner_away:
+                corner_away = corner_away
+            else:
+                corner_away = 0
+            corner_total = int(corner_home) + int(corner_away)
+            corner_home = str(corner_home)
+            corner_away = str(corner_away)
+            corner_total = str(corner_total)
+            corner_total_text = "Corners: " + corner_home + ' - ' + corner_away + '  ( Total = ' + corner_total + ' )'
 
-            simple_attack_home = soup.find_all(class_='sr-only')[0]
-            simple_attack_away = soup.find_all(class_="sr-only")[1]
-            dang_attack_home = soup.find_all(class_="sr-only")[2]
-            dang_attack_away = soup.find_all(class_="sr-only")[3]
-            onTarget_attack_home = soup.find_all(class_="sr-only")[4]
-            onTarget_attack_away = soup.find_all(class_="sr-only")[5]
-            offTarget_attack_home = soup.find_all(class_="sr-only")[6]
-            offTarget_attack_away = soup.find_all(class_="sr-only")[7]
+            # =======================/onTarget/============================
 
-            #====
+            onTarget_home = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[3]/div[1]/div/div[1]").text
+            onTarget_away = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[3]/div[1]/div/div[3]").text
+            onTarget_total = int(onTarget_home) + int(onTarget_away)
+            onTarget_home = str(onTarget_home)
+            onTarget_away = str(onTarget_away)
+            onTarget_total = str(onTarget_total)
+            onTarget_total_text = 'On Target: ' + onTarget_home + " - " + onTarget_away + '  ( Total = ' + onTarget_total + ' )'
 
-            dang_attack_home_score_text = dang_attack_home.text
-            dang_attack_away_score_text = dang_attack_away.text
-            simple_attack_home_score_text = simple_attack_home.text
-            simple_attack_away_score_text = simple_attack_away.text
-            onTarget_attack_home_score_text = onTarget_attack_home.text
-            onTarget_attack_away_score_text = onTarget_attack_away.text
-            offTarget_attack_home_score_text = offTarget_attack_home.text
-            offTarget_attack_away_score_text = offTarget_attack_away.text
+            # =======================/offTarget/============================
 
-            name_home_text = name_home.text.replace('     ', '').replace('\n', '').replace('  ', '').replace('   ', '')
-            score_text = score.text.replace('     ', '').replace('\n', '').replace('  ', '').replace('   ', '')
+            offTarget_home = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[3]/div[2]/div/div[1]").text
+            offTarget_away = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[3]/div[2]/div/div[3]").text
+            offTarget_total = int(offTarget_home) + int(offTarget_away)
+            offTarget_home = str(offTarget_home)
+            offTarget_away = str(offTarget_away)
+            offTarget_total = str(offTarget_total)
+            offTarget_total_text = 'Off Target: ' + offTarget_home + " - " + offTarget_away + '  ( Total = ' + offTarget_total + ' )'
 
-            dang_attack_total = int(dang_attack_home_score_text) + int(dang_attack_away_score_text)
-            simple_attack_total = int(simple_attack_home_score_text) + int(simple_attack_away_score_text)
-            onTarget_attack_total = int(onTarget_attack_home_score_text) + int(onTarget_attack_away_score_text)
-            offTarget_attack_total = int(offTarget_attack_home_score_text) + int(offTarget_attack_away_score_text)
-            chance_bet = (dang_attack_total*0.2 + simple_attack_total*7.8 + onTarget_attack_total*15 + offTarget_attack_total*70)/10
+            # =======================/Attacks/============================
+
+            attacks_home = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[3]/div[3]/div/div[1]").text
+            attacks_away = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[3]/div[3]/div/div[3]").text
+            attacks_total = int(attacks_home) + int(attacks_away)
+            attacks_home = str(attacks_home)
+            attacks_away = str(attacks_away)
+            attacks_total = str(attacks_total)
+            attacks_total_text = 'Simple Attacks: ' + attacks_home + " - " + attacks_away + '  ( Total = ' + attacks_total + ' )'
+
+            # =======================/Dang Attack/============================
+
+            dang_attacks_home = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[3]/div[4]/div/div[1]").text
+            dang_attacks_away = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[3]/div[4]/div/div[3]").text
+            dang_attacks_total = int(dang_attacks_home) + int(dang_attacks_away)
+            dang_attacks_home = str(dang_attacks_home)
+            dang_attacks_away = str(dang_attacks_away)
+            dang_attacks_total = str(dang_attacks_total)
+            dang_attacks_total_text = 'Dangerous Attacks: ' + dang_attacks_home + " - " + dang_attacks_away + '  ( Total = ' + dang_attacks_total + ' )'
+
+
+            # =======================/The Time/============================
+            the_time = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[1]/div/div[2]/div/h4").text
+            the_time = the_time.replace("'", "")
+            the_time = str(the_time)
+            the_time_text = "Time: " + the_time + "'"
+
+            # =======================/Scrore/============================
+            score_home = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[1]/div/div[2]/div/h2").text
+            score_away = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[1]/div/div[2]/div/h2").text
+            score = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[1]/div/div[2]/div/h2").text
+            score_home = re.sub(' .*', '', score_home, flags=re.DOTALL)
+            score_away = "".join([char for num, char in enumerate(score_away) if num != 2])
+            score_away = "".join([char for num, char in enumerate(score_away) if num != 0])
+            score_away = "".join([char for num, char in enumerate(score_away) if num != 1])
+            score_away = "".join([char for num, char in enumerate(score_away) if num != 2])
+            score_total = int(score_home) + int(score_away)
+
+            score_teams = "Score: " + score_home + " - " + score_away
+
+            if score_total == 0:
+                bet_tip = "Bet 0,5 OVER --->"
+            elif score_total == 1:
+                bet_tip = "Bet 1,5 OVER --->"
+            elif score_total == 2:
+                bet_tip = "Bet 2,5 OVER --->"
+            elif score_total == 3:
+                bet_tip = "Bet 3,5 OVER --->"
+            else:
+                bet_tip = "No bet. Too much goals... --->"
+
+            # =======================/Name TEAMS/============================
+            team_home = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[1]/div/div[1]/h3/a").text
+            team_away = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/div[1]/div/div[3]/h3/a").text
+            league_name = driver.find_element_by_xpath("/html/body/div/div/div[1]/main/h3/a[3]").text
+            league_name = 'Legue: ' + str(league_name)
+            team_text = 'Teams: ' + str(team_home) + ' - ' + str(team_away)
+            team_text = str(team_text)
+
+
+            #======================/ BETA CHANCE / ======================
+
+            q_time = the_time
+            q_time = (q_time)
+            if q_time > '13' and q_time < '16':
+                q_time = 1.3
+            elif q_time > '0' and q_time < '13':
+                q_time = 1.8
+            elif q_time > '15' and q_time < '19':
+                q_time = 1.2
+            elif q_time > '18' and q_time < '23':
+                q_time = 1.1
+            elif q_time > '23' and q_time < '26':
+                q_time = 1
+            elif q_time > '25' and q_time < '33':
+                q_time = 0.8
+            elif q_time > '32' and q_time < '37':
+                q_time = 0.5
+            elif q_time > '36' and q_time < '45':
+                q_time = 0.1
+            else:
+                q_time = 1
+
+            print q_time
+            chance_bet = ((int(dang_attacks_total)*1.4) + (int(attacks_total)*0.05) + (int(onTarget_total)*8) + (int(offTarget_total)*2) + (int(corner_total)*1.2))*q_time
+
             if chance_bet > 85:
-                chance_bet = '85+'
+                chance_bet = '85+ %'
             chance_bet = str(chance_bet)
 
 
-            if (the_time_text > '14' and the_time_text < '24') and (dang_attack_total > 20 ) and (onTarget_attack_total > 2 ):
+            total_stats_chat = " /----------------------------" + "\n" + league_name + "\n" + team_text + "\n" + "-" + "\n" + score_teams + "\n" + the_time_text + "\n" + "-" + "\n" + attacks_total_text + "\n" + dang_attacks_total_text + "\n" + onTarget_total_text + "\n" + offTarget_total_text + "\n" + corner_total_text + "\n" + '=' + "\n" + bet_tip + "\n" + '(Beta) Chance: >' + chance_bet + "\n" "----------------------------\ "
 
-                dang_attack_total_score = 'Dangerous Attacks: ' + dang_attack_home.text + " - " + dang_attack_away.text + '  ( Total = ' + str(dang_attack_total) + ' )'
-                simple_attack_total_score = "Simple Attacks: " + simple_attack_home.text + " - " + simple_attack_away.text + '  ( Total = ' + str(simple_attack_total) + ' )'
-                onTarget_attack_total_score = "On Target: " + onTarget_attack_home.text + " - " + onTarget_attack_away.text + '  ( Total = ' + str(onTarget_attack_total) + ' )'
-                offTarget_attack_total_score = "OFF Target: " + offTarget_attack_home.text + " - " + offTarget_attack_away.text + '  ( Total = ' + str(offTarget_attack_total) + ' )'
+            if '-' in the_time:
+                pass
 
-                name_teams = "Teams: " + name_home_text.replace(' v ', ' - ')
-                score_teams = "Score: " + score_text
-                time_now = 'Time: ' + the_time_text + " '"
-
-                if score_text[0] == '0' and score_text[2] == '0':
-                    bet_tip = "Bet 0,5 OVER --->"
-                elif score_text[0] == '1' and score_text[2] == '0':
-                    bet_tip = "Bet 1,5 OVER --->"
-                elif score_text[0] == '0' and score_text[2] == '1':
-                    bet_tip = "Bet 1,5 OVER --->"
-                elif score_text[0] == '2' and score_text[2] == '0':
-                    bet_tip = "Bet 2,5 OVER --->"
-                elif score_text[0] == '0' and score_text[2] == '2':
-                    bet_tip = "Bet 2,5 OVER --->"
-                elif score_text[0] == '1' and score_text[2] == '1':
-                    bet_tip = "Bet 2,5 OVER --->"
-                elif score_text[0] == '2' and score_text[2] == '1':
-                    bet_tip = "Bet 3,5 OVER --->"
-                elif score_text[0] == '1' and score_text[2] == '2':
-                    bet_tip = "Bet 3,5 OVER --->"
-                else:
-                    bet_tip = "No bet. Too much goals... --->"
-
-            #=====
-                if offTarget_attack_total_score == 100:
-                    offTarget_attack_total_score = onTarget_attack_total_score
-                    onTarget_attack_total_score = 0
-                    onTarget_attack_home.text = 0
-                    onTarget_attack_away.text = 0
-                elif onTarget_attack_total_score == 100:
-                    onTarget_attack_total_score = offTarget_attack_total_score
-                    offTarget_attack_total_score = 0
-                    offTarget_attack_home.text = 0
-                    offTarget_attack_away.text = 0
-
-
-                total_stats_chat = " /----------------------------" + "\n" + link + "\n" + "-" + "\n" + name_teams + "\n" + score_teams + '\n' + time_now + "\n" + '-' + "\n" + simple_attack_total_score + "\n" + dang_attack_total_score + "\n" + onTarget_attack_total_score + "\n" + offTarget_attack_total_score + "\n" + "=====" + "\n" + bet_tip + "\n" + "(Beta) Chance  > " + chance_bet + "%" + "\n" + "----------------------------\ "
+            if (the_time >= '13' and the_time <= '24') and (dang_attacks_total > '15') and (onTarget_total > '1'):
                 bot.send_message(chat_id=my_telegram_chat_id, text=total_stats_chat)
-
 
             else:
                 print ('___ не удовлетворяет условиям! ___' + '\n' + '---------------------')
-        except:
+
+        except NoSuchElementException:
             pass
             print ('!!! Некоторые данные отсутствуют !!!' + '\n' + '---------------------')
-        # print(link)
 
 
-    count = 0
-    for link in get_links:
-        count += 1
-        link = str(link)
-        link = link.replace('<a href="/', http_add)
-        link = re.sub('" id=".*', '', link, flags=re.DOTALL)
-        link = "".join(map(str, link))
-        parse_link(link)
-        time.sleep(3)
-
-        if count == 50000:
-            break
-
-    time.sleep(400)
+    driver.close()
+    time.sleep(1)
 
 while True:
     executeSomething()
+
