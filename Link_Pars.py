@@ -181,7 +181,6 @@ def executeSomething():
             else:
                 q_time = 1
 
-            print q_time
             chance_bet = ((int(dang_attacks_total)*1.4) + (int(attacks_total)*0.05) + (int(onTarget_total)*8) + (int(offTarget_total)*2) + (int(corner_total)*1.2))*q_time
 
             if chance_bet > 85:
