@@ -32,5 +32,5 @@ singledispatch==3.4.0.3
 soup==0.1.0
 telebot==0.0.3
 urljoin==1.0.0
-urllib3==1.24.1
+urllib3==1.24.2
 urlopen==1.0.0
