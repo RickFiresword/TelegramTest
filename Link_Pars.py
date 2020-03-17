@@ -10,7 +10,7 @@ reload(sys)
 
 import requests
 from bs4 import BeautifulSoup
-import telebot
+import telepot
 import time
 #import gspread
 #from oauth2client.service_account import ServiceAccountCredentials
@@ -169,7 +169,7 @@ def executeSomething():
 
 
 
-        time.sleep(0)
+        time.sleep(1)
         #bot.send_message(chat_id=my_telegram_chat_id, text=ttt)
 
         
