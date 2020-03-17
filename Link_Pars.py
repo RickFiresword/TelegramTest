@@ -154,7 +154,7 @@ def executeSomething():
             print('Critical not changed')
             
         else:
-            print('Critical changed ---------------------------')
+            print('Critical changed ----------------------------')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=(light2+" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n Total Critical: " + critical_total))
             # ЗАПИСЬ в файл начало
