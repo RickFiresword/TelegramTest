@@ -61,7 +61,7 @@ line1 = line.encode('utf-8')
 line2 = line1.decode('ISO-8859-1')
 #line2
 
-bot.sendMessage(chat_id=my_telegram_chat_id, text=line1 + line2 + line)
+bot.sendMessage(chat_id=my_telegram_chat_id, text='🦠')
 
 
 '''
