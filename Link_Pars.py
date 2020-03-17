@@ -26,11 +26,45 @@ chat_id = "message.from_user.id"
 bot = telepot.Bot(token)
 url = 'https://coronavirusupdate.me'
 
+virus = "🦠"
+virus1 = virus.encode('utf-8')
+virus2 = virus1.decode('ISO-8859-1')
+#virus2
 
-bot.sendMessage(chat_id=my_telegram_chat_id, text='hellome')
+skull = "💀️"
+skull1 = skull.encode('utf-8')
+skull2 = skull1.decode('ISO-8859-1')
+#skull2
+
+emerg = "🚑️"
+emerg1 = emerg.encode('utf-8')
+emerg2 = emerg1.decode('ISO-8859-1')
+#Emerg
+
+drug = "💊️"
+drug1 = drug.encode('utf-8')
+drug2 = drug1.decode('ISO-8859-1')
+#Drug2
+
+light = "⚡"
+light1 = light.encode('utf-8')
+light2 = light1.decode('ISO-8859-1')
+#light2 
+
+point = "•"
+point1 = point.encode('utf-8')
+point2 = point1.decode('ISO-8859-1')
+#point2
+
+line = "➖"
+line1 = line.encode('utf-8')
+line2 = line1.decode('ISO-8859-1')
+#line2
+
+bot.sendMessage(chat_id=my_telegram_chat_id, text=line1 + line2 + line)
 
 
-
+'''
 def executeSomething():
     handle = open("link_country.txt", "r")
     data = handle.read().splitlines()
@@ -64,40 +98,7 @@ def executeSomething():
         critical_total = str("".join(critical_total.split()))
 
 
-        virus = "🦠"
-        virus1 = virus.encode('utf-8')
-        virus2 = virus1.decode('ISO-8859-1')
-        #virus2
         
-        skull = "💀️"
-        skull1 = skull.encode('utf-8')
-        skull2 = skull1.decode('ISO-8859-1')
-        #skull2
-        
-        emerg = "🚑️"
-        emerg1 = emerg.encode('utf-8')
-        emerg2 = emerg1.decode('ISO-8859-1')
-        #Emerg
-        
-        drug = "💊️"
-        drug1 = drug.encode('utf-8')
-        drug2 = drug1.decode('ISO-8859-1')
-        #Drug2
-        
-        light = "⚡"
-        light1 = light.encode('utf-8')
-        light2 = light1.decode('ISO-8859-1')
-        #light2 
-        
-        point = "•"
-        point1 = point.encode('utf-8')
-        point2 = point1.decode('ISO-8859-1')
-        #point2
-        
-        line = "➖"
-        line1 = line.encode('utf-8')
-        line2 = line1.decode('ISO-8859-1')
-        #line2
         
         
         
@@ -169,7 +170,7 @@ def executeSomething():
 
 
 
-        time.sleep(1)
+        time.sleep(0)
         #bot.send_message(chat_id=my_telegram_chat_id, text=ttt)
 
         
@@ -184,7 +185,7 @@ def executeSomething():
         f.close()
         '''
 executeSomething()
-
+'''
 #while True:
 #    executeSomething()
 #    time.sleep(0)
