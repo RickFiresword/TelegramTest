@@ -114,10 +114,10 @@ def executeSomething():
 
 
         if int(data[1]) == int(deaths_total):
-            print('Общие смерти не изменились!')
+            #print('Общие смерти не изменились!')
             pass
         else:
-            print('Данные общих смертей поменялись!')
+            #print('Данные общих смертей поменялись!')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=skull2+" New death (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total)
             # ЗАПИСЬ в файл начало
@@ -127,10 +127,10 @@ def executeSomething():
             f.close()
 
         if int(data[3]) == int(cases_total):
-            print('Общие зараженные не изменились!')
+            #print('Общие зараженные не изменились!')
             pass
         else:
-            print('Данные общих зараженных поменялись!')
+            #print('Данные общих зараженных поменялись!')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=emerg2+" New case (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n Cases Today: " + cases_today + "\n Total Cases: " + cases_total)
             # ЗАПИСЬ в файл начало
@@ -140,10 +140,10 @@ def executeSomething():
             f.close()
 
         if int(data[5]) == int(recovered_total):
-            print('Общие вылеченые не изменились!')
+            #print('Общие вылеченые не изменились!')
             pass
         else:
-            print('Данные общих вылеченных поменялись!')
+            #print('Данные общих вылеченных поменялись!')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=drug2+" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n Total Recovered: " + recovered_total)
             # ЗАПИСЬ в файл начало
@@ -153,10 +153,10 @@ def executeSomething():
             f.close()
 
         if int(data[6]) == int(critical_total):
-            print('Общие критических не изменились!')
+            #print('Общие критических не изменились!')
             pass
         else:
-            print('Данные общих критических поменялись!')
+            #print('Данные общих критических поменялись!')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=light2+" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n Total Critical: " + critical_total)
             # ЗАПИСЬ в файл начало
