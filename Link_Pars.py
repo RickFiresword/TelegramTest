@@ -63,9 +63,9 @@ def executeSomething():
         critical_total = str("".join(critical_total.split()))
 
 
-        ttt = "ð¦ ".decode("utf-8")
-        
-        print(ttt)
+        ttt = "🦠"
+        qqq = ttt.encode('utf-8')
+        print(qqq)
         
         '''
         # чтение файла
