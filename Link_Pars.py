@@ -17,7 +17,7 @@ import time
 #test
 
 
-sys.setdefaultencoding('utf8')
+#sys.setdefaultencoding('utf8')
 
 mylist = []
 
