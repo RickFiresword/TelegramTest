@@ -74,6 +74,7 @@ def executeSomething():
         data = handle.readlines()
 
         if str(data[0]) == str(country):
+            pass
             #print('Название страны не изменилось!')
 
 
