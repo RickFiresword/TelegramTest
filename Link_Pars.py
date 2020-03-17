@@ -16,9 +16,6 @@ import time
 #from oauth2client.service_account import ServiceAccountCredentials
 
 
-
-
-
 mylist = []
 
 my_telegram_chat_id = '-1001196904283'
@@ -110,14 +107,15 @@ def executeSomething():
 
         if str(data[0]) == str(country):
             print('Country not changed')
-            
+        else:
+            print('Country changed ---------------------------')    
 
 
         if int(data[1]) == int(deaths_total):
             print('Deaths total not changed')
             
         else:
-            print('Deaths changed')
+            print('Deaths changed ---------------------------')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=(skull2+" New death (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total))
             # ЗАПИСЬ в файл начало
@@ -130,7 +128,7 @@ def executeSomething():
             print('Infected not changed')
             
         else:
-            print('Infected changed')
+            print('Infected changed ---------------------------')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=(emerg2+" New case (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n Cases Today: " + cases_today + "\n Total Cases: " + cases_total))
             # ЗАПИСЬ в файл начало
@@ -143,7 +141,7 @@ def executeSomething():
             print('Recovered not changed')
             
         else:
-            print('Recovered changed')
+            print('Recovered changed ---------------------------')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=(drug2+" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n Total Recovered: " + recovered_total))
             # ЗАПИСЬ в файл начало
@@ -156,7 +154,7 @@ def executeSomething():
             print('Critical not changed')
             
         else:
-            print('Critical changed')
+            print('Critical changed ---------------------------')
 
             bot.send_message(chat_id=my_telegram_chat_id, text=(light2+" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n Total Critical: " + critical_total))
             # ЗАПИСЬ в файл начало
