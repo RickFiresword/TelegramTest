@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# -*- coding: ascii -*-
+# -*- coding: utf-8 -*-
 
 import threading
 import sys
@@ -17,7 +17,7 @@ import time
 
 
 
-sys.setdefaultencoding('utf8')
+
 
 mylist = []
 
