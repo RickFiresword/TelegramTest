@@ -175,7 +175,7 @@ def executeSomething():
 
         
         # tests
-        ''''
+        
         #f = open(country + '.txt', 'w')
     
         # ЗАПИСЬ в файл начало
@@ -183,7 +183,7 @@ def executeSomething():
         #a = str(country + "\n" + deaths_total + "\n" + deaths_today + "\n" + cases_total + "\n" + cases_today + "\n" + recovered_total + "\n" + critical_total)
         #f.write(a)
         #f.close()
-        '''
+        
 executeSomething()
 '''
 #while True:
