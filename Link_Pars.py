@@ -64,7 +64,7 @@ def executeSomething():
 
 
 
-        ttt = ("🦠 Country: #" + country + "\n•\n💀 Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n••\n🚑 Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n•••\n💊 Total Recovered: " + recovered_total + "\n⚡ Total Critical: " + critical_total + "\n ➖➖➖➖➖➖").decode("utf-8"))
+        ttt = ("🦠 Country: #" + country + "\n•\n💀 Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n••\n🚑 Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n•••\n💊 Total Recovered: " + recovered_total + "\n⚡ Total Critical: " + critical_total + "\n ➖➖➖➖➖➖").encode('latin-1').decode('utf-8')
         print(ttt)
 
         # чтение файла
