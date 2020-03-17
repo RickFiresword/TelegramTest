@@ -6,7 +6,7 @@ import sys
 
 from telepot import loop
 
-reload(sys)
+#reload(sys)
 
 import requests
 from bs4 import BeautifulSoup
