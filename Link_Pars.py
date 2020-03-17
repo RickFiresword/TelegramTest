@@ -5,7 +5,7 @@ import threading
 import sys
 
 from telepot import loop
-
+from importlib import reload
 #reload(sys)
 
 import requests
