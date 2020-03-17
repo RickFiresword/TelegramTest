@@ -101,7 +101,7 @@ def executeSomething():
         
         
         
-        ttt = (virus2 + "Country: #" + country + "\n"+point2+"\n"+skull2+" Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n"+point2+point2+"\n"+emerg2+" Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n"+point2+point2+point2+"\n"+drug2+" Total Recovered: " + recovered_total + "\n"+light2+" Total Critical: " + critical_total + "\n "+line2+line2+line2+line2+line2")
+        #ttt = (virus2 + "Country: #" + country + "\n"+point2+"\n"+skull2+" Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n"+point2+point2+"\n"+emerg2+" Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n"+point2+point2+point2+"\n"+drug2+" Total Recovered: " + recovered_total + "\n"+light2+" Total Critical: " + critical_total + "\n "+line2+line2+line2+line2+line2")
 
         
         # чтение файла
