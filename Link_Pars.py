@@ -63,7 +63,7 @@ def executeSomething():
         critical_total = str("".join(critical_total.split()))
 
 
-        ttt = "%uD83E%uDDA0".encode("utf-8")
+        ttt = "🦠".encode("utf-8")
         print(ttt)
         
         '''
