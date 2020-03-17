@@ -12,8 +12,8 @@ import requests
 from bs4 import BeautifulSoup
 import telebot
 import time
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+#import gspread
+#from oauth2client.service_account import ServiceAccountCredentials
 #test
 
 
