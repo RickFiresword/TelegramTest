@@ -65,6 +65,7 @@ def executeSomething():
 
         ttt = "🦠"
         qqq = ttt.encode('utf-8')
+        print(sys.stdout.encoding)
         print(qqq)
         
         '''
