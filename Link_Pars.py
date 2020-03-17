@@ -16,8 +16,8 @@ import time
 #from oauth2client.service_account import ServiceAccountCredentials
 
 
-sys.putenv('PYTHONIOENCODING', 'utf8')
-#sys.setdefaultencoding('utf8')
+
+sys.setdefaultencoding('utf8')
 
 mylist = []
 
