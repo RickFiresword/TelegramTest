@@ -64,7 +64,8 @@ def executeSomething():
 
 
         ttt = "🦠".encode("utf-8")
-        print(ttt)
+        qqt = ttt.decode("utf-8")
+        print(qqt)
         
         '''
         # чтение файла
