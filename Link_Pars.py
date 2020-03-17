@@ -64,7 +64,7 @@ def executeSomething():
 
 
 
-        ttt = ("\%uD83E%uDDA0 Country: #" + country + "\n-\n\%uD83D%uDC80 Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n--\n\%uD83D%uDE91 Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n---\n\%uD83D%uDC8A Total Recovered: " + recovered_total + "\n\%u26A1 Total Critical: " + critical_total + "\n -----")
+        ttt = ("💊️ Country: #" + country + "\n-\n\%uD83D%uDC80 Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n--\n\%uD83D%uDE91 Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n---\n\%uD83D%uDC8A Total Recovered: " + recovered_total + "\n\%u26A1 Total Critical: " + critical_total + "\n -----")
         print(ttt)
         '''
         # чтение файла
@@ -147,4 +147,4 @@ def executeSomething():
 
 while True:
     executeSomething()
-    time.sleep(0)
+    time.sleep(100)
