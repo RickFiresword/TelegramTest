@@ -109,12 +109,12 @@ def executeSomething():
         data = handle.readlines()
 
         if str(data[0]) == str(country):
-            print('Название страны не изменилось!')
+            #print('Название страны не изменилось!')
             pass
 
 
         if int(data[1]) == int(deaths_total):
-            #print('Общие смерти не изменились!')
+            print('Nope')
             pass
         else:
             #print('Данные общих смертей поменялись!')
