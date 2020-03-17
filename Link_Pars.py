@@ -63,8 +63,7 @@ def executeSomething():
         critical_total = str("".join(critical_total.split()))
 
 
-
-        ttt = ("💊️ Country: #" + country + "\n-\n\%uD83D%uDC80 Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n--\n\%uD83D%uDE91 Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n---\n\%uD83D%uDC8A Total Recovered: " + recovered_total + "\n\%u26A1 Total Critical: " + critical_total + "\n -----")
+        ttt = "%uD83E%uDDA0".decode("utf-8")
         print(ttt)
         '''
         # чтение файла
@@ -144,7 +143,7 @@ def executeSomething():
         f.write(a)
         f.close()
         '''
-
-while True:
-    executeSomething()
-    time.sleep(100)
+executeSomething()
+#while True:
+#    executeSomething()
+#    time.sleep(100)
