@@ -170,7 +170,7 @@ def executeSomething():
 
 
 
-        time.sleep(0)
+        time.sleep(0.5)
         #bot.send_message(chat_id=my_telegram_chat_id, text=ttt)
 
         
