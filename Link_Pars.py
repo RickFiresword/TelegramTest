@@ -181,7 +181,7 @@ def executeSomething():
         f.write(a)
         f.close()
         '''
-executeSomething()
-#while True:
-#    executeSomething()
-#    time.sleep(100)
+
+while True:
+    executeSomething()
+    time.sleep(0)
