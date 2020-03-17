@@ -27,6 +27,10 @@ bot = telebot.TeleBot(token)
 url = 'https://coronavirusupdate.me'
 
 
+bot.send_message(chat_id=my_telegram_chat_id, text='hellome')
+
+
+
 def executeSomething():
     handle = open("link_country.txt", "r")
     data = handle.read().splitlines()
