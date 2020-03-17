@@ -78,6 +78,7 @@ def executeSomething():
 
 
         if int(data[1]) == int(deaths_total):
+            pass
             #print('Общие смерти не изменились!')
         else:
             #print('Данные общих смертей поменялись!')
@@ -90,6 +91,7 @@ def executeSomething():
             f.close()
 
         if int(data[3]) == int(cases_total):
+            pass
             #print('Общие зараженные не изменились!')
         else:
             #print('Данные общих зараженных поменялись!')
@@ -102,6 +104,7 @@ def executeSomething():
             f.close()
 
         if int(data[5]) == int(recovered_total):
+            pass
             #print('Общие вылеченые не изменились!')
         else:
             #print('Данные общих вылеченных поменялись!')
@@ -114,6 +117,7 @@ def executeSomething():
             f.close()
 
         if int(data[6]) == int(critical_total):
+            pass
             #print('Общие критических не изменились!')
         else:
             #print('Данные общих критических поменялись!')
