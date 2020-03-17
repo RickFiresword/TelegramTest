@@ -23,7 +23,7 @@ my_telegram_chat_id = '-1001196904283'
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
 chat_id = "message.from_user.id"
 
-bot = telebot.TeleBot(token)
+bot = telepot.Bot(token)
 url = 'https://coronavirusupdate.me'
 
 
