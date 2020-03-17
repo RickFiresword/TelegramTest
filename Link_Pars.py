@@ -61,10 +61,10 @@ line1 = line.encode('utf-8')
 line2 = line1.decode('ISO-8859-1')
 #line2
 
-bot.sendMessage(chat_id=my_telegram_chat_id, text='🦠')
+#bot.sendMessage(chat_id=my_telegram_chat_id, text='🦠')
 
 
-'''
+
 def executeSomething():
     handle = open("link_country.txt", "r")
     data = handle.read().splitlines()
@@ -122,7 +122,7 @@ def executeSomething():
         else:
             print('Deaths changed ---------------------------')
 
-            bot.sendMessage(chat_id=my_telegram_chat_id, text=(skull1 + " New death (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total))
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('💀️' + " New death (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total))
             # ЗАПИСЬ в файл начало
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
@@ -135,7 +135,7 @@ def executeSomething():
         else:
             print('Infected changed ---------------------------')
 
-            bot.sendMessage(chat_id=my_telegram_chat_id, text=(emerg1 +" New case (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n Cases Today: " + cases_today + "\n Total Cases: " + cases_total))
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('🚑️' +" New case (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n Cases Today: " + cases_today + "\n Total Cases: " + cases_total))
             # ЗАПИСЬ в файл начало
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
@@ -148,7 +148,7 @@ def executeSomething():
         else:
             print('Recovered changed ---------------------------')
 
-            bot.sendMessage(chat_id=my_telegram_chat_id, text=(drug1 +" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n Total Recovered: " + recovered_total))
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('💊️' +" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n Total Recovered: " + recovered_total))
             # ЗАПИСЬ в файл начало
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
@@ -161,7 +161,7 @@ def executeSomething():
         else:
             print('Critical changed ----------------------------')
 
-            bot.sendMessage(chat_id=my_telegram_chat_id, text=(light1 +" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n Total Critical: " + critical_total))
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('⚡' +" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n Total Critical: " + critical_total))
             # ЗАПИСЬ в файл начало
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
@@ -185,7 +185,7 @@ def executeSomething():
         #f.close()
         
 executeSomething()
-'''
+
 #while True:
 #    executeSomething()
 #    time.sleep(0)
