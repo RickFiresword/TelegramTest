@@ -109,12 +109,7 @@ def executeSomething():
         # чтение файла
         handle = open(country + '.txt', "r")
         data = handle.readlines()
-
-        if str(data[0]) == str(country):
-            print('Country not changed')
-        else:
-            print('Country changed ---------------------------')    
-
+  
 
         if int(data[1]) == int(deaths_total):
             print('Deaths total not changed')
