@@ -165,7 +165,7 @@ def executeSomething():
 
 
 
-        time.sleep(0.65)
+        time.sleep(0)
         #bot.send_message(chat_id=my_telegram_chat_id, text=ttt)
 
         
