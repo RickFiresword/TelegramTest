@@ -76,7 +76,7 @@ def executeSomething():
         soup = BeautifulSoup(r, features="html.parser")
 
         country = soup.find("h1").get_text() #total deaths
-        country = str("".join(country.split()))..replace(' ','').replace('Coronavirus','').replace('Update','')
+        country = str("".join(country.split())).replace(' ','').replace('Coronavirus','').replace('Update','')
         #print country
 
         deaths_total = soup.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[0].get_text()  # total deaths today
