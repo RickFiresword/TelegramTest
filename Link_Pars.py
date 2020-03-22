@@ -112,7 +112,7 @@ def executeSomething():
             
             #=======5H STATS========
             ff = open('2001-0.txt', 'r')
-            lines = ff.readlines().splitlines()
+            lines = ff.readlines()
             old_data = int(ff[1])
             
             h5_deaths = str((int(deaths_total) - int(data[1])))
