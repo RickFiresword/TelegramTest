@@ -162,7 +162,7 @@ def executeSomething():
                 gg = str(gg) + '\n'
                 
                 with open('2001-0.txt','w', encoding='utf-8') as fin2:
-                fin2.writelines(gg)[0]
+                    fin2.writelines(gg)[0]
                 #a = gg + "\n"
 
             # Закрываем файл
