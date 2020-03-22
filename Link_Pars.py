@@ -131,9 +131,9 @@ def executeSomething():
             
             
             
-         if (int(data2[2]) != int(cases_global_today)) and (q_data != '15:30'):
+        if (int(data2[2]) != int(cases_global_today)) and (q_data != '15:32'):
             print('Not 23:59 now')
-         else:
+        else:
             print('Now is 23:59  ---------------------------')
 
             bot.sendMessage(chat_id=my_telegram_chat_id, text=('Its time!'))
