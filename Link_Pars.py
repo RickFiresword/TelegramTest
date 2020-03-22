@@ -130,25 +130,19 @@ def executeSomething():
             lines = ff.readlines()
             va = lines[2]
             new_deno = int(cases_total) - int(data[3])
-            
-
             gg = int(va) + int(new_deno)
 
             lines[2] = str(gg) + "\n"
 
             # Закрываем файл
             ff.close()
-
             # Открываем файл для записи
             save_changes = open('2001-0.txt', 'w')
-
             # Сохраняем список строк
             save_changes.writelines(lines)
-
             # Закрываем файл
             save_changes.close()
-
-            # Закрываем файл
+            # Закрываем основной файл
                 
             f.close()
 
