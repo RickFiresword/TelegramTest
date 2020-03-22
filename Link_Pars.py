@@ -152,17 +152,18 @@ def executeSomething():
             
             
             with open('2001-0.txt','r', encoding='utf-8') as fin:
-                a = fin.readlines()[0]
+                with open('2001-0.txt','w', encoding='utf-8') as fin2:
+                    a = fin.readlines()[0]
+                    old_data = str(a)
             #=======5H STATS========
             #old_data = int(ff[1])
             
-                h5_cases = str((int(cases_total) - int(data[3])))
+                    h5_cases = str((int(cases_total) - int(data[3])))
             
-                gg = int(a) + int(h5_cases)
-                gg = str(gg) + '\n'
+                    gg = int(a) + int(h5_cases)
+                    gg = str(gg) + '\n'
                 
-                with open('2001-0.txt','w', encoding='utf-8') as fin2:
-                    fin2.writelines(gg)[0]
+                    fin2.writelines(a)
                 #a = gg + "\n"
 
             # Закрываем файл
