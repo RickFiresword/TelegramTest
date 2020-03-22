@@ -159,7 +159,7 @@ def executeSomething():
                 h5_cases = str((int(cases_total) - int(data[3])))
             
                 gg = int(a) + int(h5_cases)
-                gg = str(gg) + '\n
+                gg = str(gg) + '\n'
                 
                 with open('2001-0.txt','w', encoding='utf-8') as fin2:
                 fin2.writelines(gg)[0]
