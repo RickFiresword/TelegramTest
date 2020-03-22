@@ -112,19 +112,19 @@ def executeSomething():
             
             
             with open('2001-0.txt','r', encoding='utf-8') as fin:
-            a = fin.readlines()[1]
+                a = fin.readlines()[1]
             #=======5H STATS========
             #old_data = int(ff[1])
             
-            h5_deaths = str((int(deaths_total) - int(data[1])))
+                h5_deaths = str((int(deaths_total) - int(data[1])))
             
-            gg = int(a) + int(h5_deaths)
+                gg = int(a) + int(h5_deaths)
 
             
-            lines[1] = str(gg) + "\n"
+                lines[1] = str(gg) + "\n"
 
             # Закрываем файл
-            ff.close()
+                ff.close()
             f.close()
 
             # Открываем файл для записи
