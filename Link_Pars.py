@@ -9,43 +9,46 @@ import requests
 from bs4 import BeautifulSoup
 import telepot
 import time
-#import gspread
-#from oauth2client.service_account import ServiceAccountCredentials
-mylist = []
+from datetime import datetime
+
+
 my_telegram_chat_id = '-1001196904283'
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
 chat_id = "message.from_user.id"
 bot = telepot.Bot(token)
+
 url = 'https://coronavirusupdate.me'
-virus = "🦠"
-virus1 = virus.encode('utf-8')
-virus2 = virus1.decode('ISO-8859-1')
+
+#virus = "🦠"
+#virus1 = virus.encode('utf-8')
+#virus2 = virus1.decode('ISO-8859-1')
 #virus2
-skull = "💀️"
-skull1 = skull.encode('utf-8')
-skull2 = skull1.decode('ISO-8859-1')
+#skull = "💀️"
+#skull1 = skull.encode('utf-8')
+#skull2 = skull1.decode('ISO-8859-1')
 #skull2
-emerg = "🚑️"
-emerg1 = emerg.encode('utf-8')
-emerg2 = emerg1.decode('ISO-8859-1')
+#emerg = "🚑️"
+#emerg1 = emerg.encode('utf-8')
+#emerg2 = emerg1.decode('ISO-8859-1')
 #Emerg
-drug = "💊️"
-drug1 = drug.encode('utf-8')
-drug2 = drug1.decode('ISO-8859-1')
+#drug = "💊️"
+#drug1 = drug.encode('utf-8')
+#drug2 = drug1.decode('ISO-8859-1')
 #Drug2
-light = "⚡"
-light1 = light.encode('utf-8')
-light2 = light1.decode('ISO-8859-1')
-#light2 
-point = "•"
-point1 = point.encode('utf-8')
-point2 = point1.decode('ISO-8859-1')
+#light = "⚡"
+#light1 = light.encode('utf-8')
+#light2 = light1.decode('ISO-8859-1')
+##light2 
+#point = "•"
+#point1 = point.encode('utf-8')
+#point2 = point1.decode('ISO-8859-1')
 #point2
-line = "➖"
-line1 = line.encode('utf-8')
-line2 = line1.decode('ISO-8859-1')
+#line = "➖"
+#line1 = line.encode('utf-8')
+#line2 = line1.decode('ISO-8859-1')
 #line2
 #bot.sendMessage(chat_id=my_telegram_chat_id, text='🦠')
+
 def executeSomething():
     handle = open("link_country.txt", "r")
     data = handle.read().splitlines()
