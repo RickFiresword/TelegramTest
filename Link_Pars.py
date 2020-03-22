@@ -56,7 +56,7 @@ def executeSomething():
     
     if qqq == '20:47' and int(data2[2]) != int(deaths_global_today):
         print('q++++++++++++++')
-        bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖ Day stats: ' + qqq_day + '/' +qqq_month + '.2020➖➖➖ '+ '\n\n💀️ WORLD Deaths Today: '+ deaths_global_today + '\n🚑️ WORLD Cases Today: ' + cases_global_today + '\n\n •••\n\n☠️ Total WORLD Deaths: '+ deaths_global_all + '\n🏥 Total WORLD Cases: ' + cases_global_all + '\n⚡ Total WORLD Critical: '+ critial_global_all + '\n🌍 Affected Countries: '+ affected_global_all + "\n ➖➖➖➖🦠➖➖➖➖"))
+        bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖ Day stats: ' + qqq_day + ' / ' +qqq_month + ' / 2020➖➖➖ '+ '\n\n💀️ WORLD Deaths Today: '+ deaths_global_today + '\n🚑️ WORLD Cases Today: ' + cases_global_today + '\n\n •••\n\n☠️ Total WORLD Deaths: '+ deaths_global_all + '\n🏥 Total WORLD Cases: ' + cases_global_all + '\n⚡ Total WORLD Critical: '+ critial_global_all + '\n🌍 Affected Countries: '+ affected_global_all + "\n ➖➖➖➖🦠➖➖➖➖"))
         
     else:
         print ('nope')
@@ -163,7 +163,7 @@ def executeSomething():
         #a = str(country + "\n" + deaths_total + "\n" + deaths_today + "\n" + cases_total + "\n" + cases_today + "\n" + recovered_total + "\n" + critical_total)
         #f.write(a)
         #f.close()
-        
+    print("ONE CIRLCE DONE=============================#")    
 while True:
     executeSomething()
     time.sleep(0)
