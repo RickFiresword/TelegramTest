@@ -53,9 +53,9 @@ def executeSomething():
     affected_global_all = str("".join(affected_global_all.split()))
     
     
-    if qqq == '20:11' and int(data2[2]) != int(deaths_global_today):
+    if qqq == '20:13' and int(data2[2]) != int(deaths_global_today):
         print('q++++++++++++++')
-        bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖' + qqq_day + '/' +qqq_month + '➖➖➖ '+ '💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
+        bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖' + qqq_day + '/' +qqq_month + '➖➖➖ '+ '💀️'))
         
     else:
         print ('nope')
