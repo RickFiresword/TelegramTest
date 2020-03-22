@@ -87,7 +87,7 @@ def executeSomething():
             print(country + ' Deaths changed ---------------------------')
             print(country + ' Deaths changed ---------------------------')
 
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
             # ЗАПИСЬ в файл начало
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
@@ -102,7 +102,7 @@ def executeSomething():
             print(country + ' Infected changed ---------------------------')
             print(country + ' Infected changed ---------------------------')
 
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('🚑️' +" New cases (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n\n Cases Today: " + cases_today + "\n Total Cases: " + cases_total + "\n ➖➖➖➖➖➖➖"))
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('🚑️' +" New cases (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n\n Cases Today: " + cases_today + "\n Total Cases: " + cases_total + "\n ➖➖➖➖➖➖➖"))
             # ЗАПИСЬ в файл начало
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
@@ -117,7 +117,7 @@ def executeSomething():
             print(country + ' Recovered changed ---------------------------')
             print(country + ' Recovered changed ---------------------------')
 
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('💊️' +" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n\n Total Recovered: " + recovered_total + "\n ➖➖➖➖➖➖➖"))
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('💊️' +" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n\n Total Recovered: " + recovered_total + "\n ➖➖➖➖➖➖➖"))
             # ЗАПИСЬ в файл начало
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
@@ -132,7 +132,7 @@ def executeSomething():
             print(country + ' Critical changed ----------------------------')
             print(country + ' Critical changed ----------------------------')
 
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('⚡' +" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n\n Total Critical: " + critical_total + "\n ➖➖➖➖➖➖➖"))
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('⚡' +" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n\n Total Critical: " + critical_total + "\n ➖➖➖➖➖➖➖"))
             # ЗАПИСЬ в файл начало
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
