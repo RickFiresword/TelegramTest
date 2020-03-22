@@ -161,7 +161,7 @@ def executeSomething():
                 gg = int(a) + int(h5_cases)
 
             
-                lines[1] = str(gg) + "\n"
+                a = str(gg) + "\n"
 
             # Закрываем файл
                 ff.close()
