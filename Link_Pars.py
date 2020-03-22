@@ -132,7 +132,7 @@ def executeSomething():
             
         if q_data == '15:35':
             if int(data2[2]) != int(cases_global_today):
-                print('NOOOOOOOOOOOOW)
+                print('NOOOOOOOOOOOOW')
         else:
             print('Now is 23:59  ---------------------------')
 
