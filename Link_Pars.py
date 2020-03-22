@@ -171,7 +171,7 @@ def executeSomething():
             save_changes = open('2001-0.txt', 'w')
 
             # Сохраняем список строк
-            save_changes.writelines(lines)
+            save_changes.writelines(a)
 
             # Закрываем файл
             save_changes.close()
