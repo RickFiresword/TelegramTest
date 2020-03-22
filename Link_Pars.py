@@ -24,6 +24,7 @@ url = 'https://coronavirusupdate.me'
 
 def executeSomething():
 
+    #==================24H stats /start=====================#
     handle2 = open("Day_stats.txt", "r")
     data2 = handle2.read().splitlines()
     
@@ -53,18 +54,18 @@ def executeSomething():
     affected_global_all = str("".join(affected_global_all.split()))
     
     
-    if qqq == '23:59' and int(data2[2]) != int(deaths_global_today):
+    if qqq == '20:47' and int(data2[2]) != int(deaths_global_today):
         print('q++++++++++++++')
         bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖ Day stats: ' + qqq_day + '/' +qqq_month + '.2020➖➖➖ '+ '\n\n💀️ WORLD Deaths Today: '+ deaths_global_today + '\n🚑️ WORLD Cases Today: ' + cases_global_today + '\n\n •••\n\n☠️ Total WORLD Deaths: '+ deaths_global_all + '\n🏥 Total WORLD Cases: ' + cases_global_all + '\n⚡ Total WORLD Critical: '+ critial_global_all + '\n🌍 Affected Countries: '+ affected_global_all + "\n ➖➖➖➖🦠➖➖➖➖"))
         
     else:
         print ('nope')
     
+    #==================24H stats /end=====================#
     
     
     
-    
-    
+    #==================Main Stats====================#
     handle = open("link_country.txt", "r")
     data = handle.read().splitlines()
     
@@ -88,7 +89,7 @@ def executeSomething():
         recovered_total = str("".join(recovered_total.split()))
         critical_total = soup.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[5].get_text() #total deaths today
         critical_total = str("".join(critical_total.split()))
-        
+        #==================Main Stats====================#
         
                 
         # чтение файла
