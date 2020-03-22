@@ -54,7 +54,7 @@ def executeSomething():
     affected_global_all = str("".join(affected_global_all.split()))
     
     
-    if qqq == '20:47' and int(data2[2]) != int(deaths_global_today):
+    if qqq == '00:02' and int(data2[2]) != int(deaths_global_today):
         print('q++++++++++++++')
         bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖ Day stats: ' + qqq_day + ' / ' +qqq_month + ' / 2020➖➖➖ '+ '\n\n💀️ WORLD Deaths Today: '+ deaths_global_today + '\n🚑️ WORLD Cases Today: ' + cases_global_today + '\n\n •••\n\n☠️ Total WORLD Deaths: '+ deaths_global_all + '\n🏥 Total WORLD Cases: ' + cases_global_all + '\n⚡ Total WORLD Critical: '+ critial_global_all + '\n🌍 Affected Countries: '+ affected_global_all + "\n ➖➖➖➖🦠➖➖➖➖"))
         
