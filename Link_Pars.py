@@ -160,7 +160,7 @@ def executeSomething():
             
                 gg = int(a) + int(h5_cases)
                 gg = str(gg) + '\n'
-            
+                fin.writelines(gg)
                 #a = gg + "\n"
 
             # Закрываем файл
@@ -168,13 +168,13 @@ def executeSomething():
             f.close()
 
             # Открываем файл для записи
-            save_changes = open('2001-0.txt', 'w')
+            #save_changes = open('2001-0.txt', 'w')
 
             # Сохраняем список строк
-            save_changes.writelines(gg)
+            #save_changes.writelines(gg)
 
             # Закрываем файл
-            save_changes.close()
+            #save_changes.close()
 
         if int(data[5]) == int(recovered_total):
             print(country + ' Recovered not changed')
