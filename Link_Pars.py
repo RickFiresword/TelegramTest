@@ -54,7 +54,7 @@ def executeSomething():
     if qqq == '20:09' and int(data2[2]) != int(deaths_global_today):
         print('q++++++++++++++')
         bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖' + qqq1.day + '/' +qqq1.month + '➖➖➖ '+ '💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
-        🦠
+        
     else:
         print ('nope')
     
