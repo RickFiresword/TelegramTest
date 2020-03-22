@@ -48,7 +48,7 @@ def executeSomething():
     affected_global_all = str("".join(affected_global_all.split()))
     
     qqq = datetime.now().strftime('%H:%M')
-    if qqq == '19:56' and int(data[2]) != int(deaths_global_today):
+    if qqq == '19:57' and int(data2[2]) != int(deaths_global_today):
         print('q++++++++++++++')
     else:
         print ('nope')
