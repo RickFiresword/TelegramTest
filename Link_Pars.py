@@ -19,35 +19,8 @@ bot = telepot.Bot(token)
 
 url = 'https://coronavirusupdate.me'
 
-#virus = "🦠"
-#virus1 = virus.encode('utf-8')
-#virus2 = virus1.decode('ISO-8859-1')
-#virus2
-#skull = "💀️"
-#skull1 = skull.encode('utf-8')
-#skull2 = skull1.decode('ISO-8859-1')
-#skull2
-#emerg = "🚑️"
-#emerg1 = emerg.encode('utf-8')
-#emerg2 = emerg1.decode('ISO-8859-1')
-#Emerg
-#drug = "💊️"
-#drug1 = drug.encode('utf-8')
-#drug2 = drug1.decode('ISO-8859-1')
-#Drug2
-#light = "⚡"
-#light1 = light.encode('utf-8')
-#light2 = light1.decode('ISO-8859-1')
-##light2 
-#point = "•"
-#point1 = point.encode('utf-8')
-#point2 = point1.decode('ISO-8859-1')
-#point2
-#line = "➖"
-#line1 = line.encode('utf-8')
-#line2 = line1.decode('ISO-8859-1')
-#line2
-#bot.sendMessage(chat_id=my_telegram_chat_id, text='🦠')
+
+
 
 def executeSomething():
     handle = open("link_country.txt", "r")
@@ -71,12 +44,30 @@ def executeSomething():
         critical_total = soup.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[5].get_text() #total deaths today
         critical_total = str("".join(critical_total.split()))
         
+        #========WORLD Stats =================#
+        ttime = requests.get(url).text
+        soup2 = BeautifulSoup(ttime, features="html.parser")
+        deaths_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[0].get_text()
+        deaths_global_all = str("".join(deaths_global_all.split()))
+
+        deaths_global_today = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[1].get_text()
+        deaths_global_today = str("".join(deaths_global_today.split())).replace('+','')
+
+        cases_global_today = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[2].get_text()
+        cases_global_today = str("".join(cases_global_today.split())).replace('+','')
+
+        cases_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[3].get_text()
+        cases_global_all = str("".join(cases_global_all.split()))
+
+        critial_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[4].get_text()
+        critial_global_all = str("".join(critial_global_all.split()))
+
+        affected_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[5].get_text()
+        affected_global_all = str("".join(affected_global_all.split()))
         
+        #===========WORLD Stats /end ==============#
         
-        
-        
-        #ttt = (virus2 + "Country: #" + country + "\n"+point2+"\n"+skull2+" Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n"+point2+point2+"\n"+emerg2+" Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n"+point2+point2+point2+"\n"+drug2+" Total Recovered: " + recovered_total + "\n"+light2+" Total Critical: " + critical_total + "\n "+line2+line2+line2+line2+line2")
-        
+                
         # чтение файла
         handle = open(country + '.txt', "r")
         data = handle.readlines()
@@ -84,7 +75,7 @@ def executeSomething():
 
         if int(data[1]) == int(deaths_total):
             print(country + ' Deaths total not changed')
-            print(country + ' Deaths total not changed')
+            print(country + affected_global_all + ' Deaths total not changed')
 
         else:
             print(country + ' Deaths changed ---------------------------')
