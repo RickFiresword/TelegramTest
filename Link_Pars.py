@@ -103,64 +103,6 @@ def executeSomething():
         
         #ttt = (virus2 + "Country: #" + country + "\n"+point2+"\n"+skull2+" Total Deaths: " + deaths_total + "\nDeaths Today: " + deaths_today + "\n"+point2+point2+"\n"+emerg2+" Total Cases: " + cases_total + "\nCases Today: " + cases_today + "\n"+point2+point2+point2+"\n"+drug2+" Total Recovered: " + recovered_total + "\n"+light2+" Total Critical: " + critical_total + "\n "+line2+line2+line2+line2+line2")
 
-        
-        # чтение файла
-        handle = open(country + '.txt', "r")
-        data = handle.readlines()
-  
-
-        if int(data[1]) == int(deaths_total):
-            print(country + 'Deaths total not changed')
-            
-        else:
-            print(country + 'Deaths changed ---------------------------')
-
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
-            # ЗАПИСЬ в файл начало
-            f = open(country + '.txt', 'w')
-            a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
-            f.write(a)
-            f.close()
-
-        if int(data[3]) == int(cases_total):
-            print(country + 'Infected not changed')
-            
-        else:
-            print(country + 'Infected changed ---------------------------')
-
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('🚑️' +" New cases (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n\n Cases Today: " + cases_today + "\n Total Cases: " + cases_total + "\n ➖➖➖➖➖➖➖"))
-            # ЗАПИСЬ в файл начало
-            f = open(country + '.txt', 'w')
-            a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
-            f.write(a)
-            f.close()
-
-        if int(data[5]) == int(recovered_total):
-            print(country + 'Recovered not changed')
-            
-        else:
-            print(country + 'Recovered changed ---------------------------')
-
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('💊️' +" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n\n Total Recovered: " + recovered_total + "\n ➖➖➖➖➖➖➖"))
-            # ЗАПИСЬ в файл начало
-            f = open(country + '.txt', 'w')
-            a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
-            f.write(a)
-            f.close()
-
-        if int(data[6]) == int(critical_total):
-            print(country + 'Critical not changed')
-            
-        else:
-            print(country + 'Critical changed ----------------------------')
-
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('⚡' +" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n\n Total Critical: " + critical_total + "\n ➖➖➖➖➖➖➖"))
-            # ЗАПИСЬ в файл начало
-            f = open(country + '.txt', 'w')
-            a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
-            f.write(a)
-            f.close()
-
 
 
         time.sleep(0)
@@ -172,10 +114,10 @@ def executeSomething():
         #f = open(country + '.txt', 'w')
         
         # ЗАПИСЬ в файл начало
-        #f = open(country + '.txt', 'a')
-        #a = str(country + "\n" + deaths_total + "\n" + deaths_today + "\n" + cases_total + "\n" + cases_today + "\n" + recovered_total + "\n" + critical_total)
-        #f.write(a)
-        #f.close()
+        f = open(country + '.txt', 'a')
+        a = str(country + "\n" + deaths_total + "\n" + deaths_today + "\n" + cases_total + "\n" + cases_today + "\n" + recovered_total + "\n" + critical_total)
+        f.write(a)
+        f.close()
         
 
 
