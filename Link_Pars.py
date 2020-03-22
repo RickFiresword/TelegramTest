@@ -23,8 +23,19 @@ url = 'https://coronavirusupdate.me'
 
 
 def executeSomething():
+
     handle = open("link_country.txt", "r")
     data = handle.read().splitlines()
+    handle2 = open('Day_stats.txt', "r")
+    data2 = handle2.readlines()
+    
+    if q_data == '15:57':
+        if int(data2[2]) != int(cases_global_today):
+            print('NOOOOOOOOOOOOW')
+    else:
+        print('Now is 23:59  ---------------------------')
+    
+    
     for i in data:
         r = requests.get(i).text
         soup = BeautifulSoup(r, features="html.parser")
@@ -71,10 +82,8 @@ def executeSomething():
         
                 
         # чтение файла
-        handle = open(country + '.txt', "r")
-        data = handle.readlines()
-        handle2 = open('Day_stats.txt', "r")
-        data2 = handle2.readlines()
+        #handle2 = open('Day_stats.txt', "r")
+        #data2 = handle2.readlines()
 
 
         if int(data[1]) == int(deaths_total):
