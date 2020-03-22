@@ -24,6 +24,40 @@ url = 'https://coronavirusupdate.me'
 
 def executeSomething():
 
+    handle2 = open("Day_stats.txt", "r")
+    data2 = handle2.read().splitlines()
+    
+    ttime = requests.get(url).text
+    soup2 = BeautifulSoup(ttime, features="html.parser")
+    deaths_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[0].get_text()
+    deaths_global_all = str("".join(deaths_global_all.split()))
+
+    deaths_global_today = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[1].get_text()
+    deaths_global_today = str("".join(deaths_global_today.split())).replace('+','')
+
+    cases_global_today = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[2].get_text()
+    cases_global_today = str("".join(cases_global_today.split())).replace('+','')
+
+    cases_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[3].get_text()
+    cases_global_all = str("".join(cases_global_all.split()))
+
+    critial_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[4].get_text()
+    critial_global_all = str("".join(critial_global_all.split()))
+
+    affected_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[5].get_text()
+    affected_global_all = str("".join(affected_global_all.split()))
+    
+    qqq = datetime.now().strftime('%H:%M')
+    if qqq == '19:52':
+        print(q)
+    else:
+        print ('nope')
+    
+    
+    
+    
+    
+    
     handle = open("link_country.txt", "r")
     data = handle.read().splitlines()
     
