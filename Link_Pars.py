@@ -110,14 +110,15 @@ def executeSomething():
             f.write(a)
             #f.close()
             
+            
+            with open('2001-0.txt','r', encoding='utf-8') as fin:
+            a = fin.readlines()[1]
             #=======5H STATS========
-            ff = open('2001-0.txt', 'r')
-            lines = ff.read().splitlines()
-            old_data = int(ff[1])
+            #old_data = int(ff[1])
             
             h5_deaths = str((int(deaths_total) - int(data[1])))
             
-            gg = int(old_data) + int(h5_deaths)
+            gg = int(a) + int(h5_deaths)
 
             
             lines[1] = str(gg) + "\n"
