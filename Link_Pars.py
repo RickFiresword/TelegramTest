@@ -148,7 +148,33 @@ def executeSomething():
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
             f.write(a)
+            #f.close()
+            
+            
+            with open('2001-0.txt','r', encoding='utf-8') as fin:
+                a = fin.readlines()[0]
+            #=======5H STATS========
+            #old_data = int(ff[1])
+            
+                h5_cases = str((int(cases_total) - int(data[3])))
+            
+                gg = int(a) + int(h5_cases)
+
+            
+                lines[1] = str(gg) + "\n"
+
+            # Закрываем файл
+                ff.close()
             f.close()
+
+            # Открываем файл для записи
+            save_changes = open('2001-0.txt', 'w')
+
+            # Сохраняем список строк
+            save_changes.writelines(lines)
+
+            # Закрываем файл
+            save_changes.close()
 
         if int(data[5]) == int(recovered_total):
             print(country + ' Recovered not changed')
