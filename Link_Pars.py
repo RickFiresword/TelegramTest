@@ -164,7 +164,7 @@ def executeSomething():
                 a = str(gg) + "\n"
 
             # Закрываем файл
-                ff.close()
+                
             f.close()
 
             # Открываем файл для записи
