@@ -159,9 +159,9 @@ def executeSomething():
                 h5_cases = str((int(cases_total) - int(data[3])))
             
                 gg = int(a) + int(h5_cases)
-
+                gg = str(gg) + '\n'
             
-                a = str(gg) + "\n"
+                #a = gg + "\n"
 
             # Закрываем файл
                 
@@ -171,7 +171,7 @@ def executeSomething():
             save_changes = open('2001-0.txt', 'w')
 
             # Сохраняем список строк
-            save_changes.writelines(a)
+            save_changes.writelines(gg)[0]
 
             # Закрываем файл
             save_changes.close()
