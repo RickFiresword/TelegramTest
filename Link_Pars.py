@@ -108,33 +108,8 @@ def executeSomething():
             f = open(country + '.txt', 'w')
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
             f.write(a)
-            #f.close()
-            
-            
-            with open('2001-0.txt','r', encoding='utf-8') as fin:
-                a = fin.readlines()[1]
-            #=======5H STATS========
-            #old_data = int(ff[1])
-            
-                h5_deaths = str((int(deaths_total) - int(data[1])))
-            
-                gg = int(a) + int(h5_deaths)
-
-            
-                lines[1] = str(gg) + "\n"
-
-            # Закрываем файл
-                ff.close()
             f.close()
-
-            # Открываем файл для записи
-            save_changes = open('2001-0.txt', 'w')
-
-            # Сохраняем список строк
-            save_changes.writelines(lines)
-
-            # Закрываем файл
-            save_changes.close()
+            
             
 
         if int(data[3]) == int(cases_total):
@@ -151,33 +126,32 @@ def executeSomething():
             #f.close()
             
             
-            with open('2001-0.txt','r', encoding='utf-8') as fin:
-                a = fin.readlines()[0]
-                with open('2001-0.txt','w', encoding='utf-8') as fin2:
-                    old_data = str(a)
-            #=======5H STATS========
-            #old_data = int(ff[1])
-            
-                    h5_cases = str((int(cases_total) - int(data[3])))
-            
-                    gg = int(a) + int(h5_cases)
-                    gg = str(gg) + '\n'
-                
-                    fin2.writelines(a)
-                #a = gg + "\n"
+            ff = open('2001-0.txt', 'r')
+            lines = ff.readlines()
+            new_deno = int(cases_total) - int(data[3])
+            va = str(lines[2])
+
+            gg = int(va) + int(new_deno)
+
+            lines[2] = str(gg) + "\n"
+
+            # Закрываем файл
+            ff.close()
+
+            # Открываем файл для записи
+            save_changes = open('2001-0.txt', 'w')
+
+            # Сохраняем список строк
+            save_changes.writelines(lines)
+
+            # Закрываем файл
+            save_changes.close()
 
             # Закрываем файл
                 
             f.close()
 
-            # Открываем файл для записи
-            #save_changes = open('2001-0.txt', 'w')
 
-            # Сохраняем список строк
-            #save_changes.writelines(gg)
-
-            # Закрываем файл
-            #save_changes.close()
 
         if int(data[5]) == int(recovered_total):
             print(country + ' Recovered not changed')
