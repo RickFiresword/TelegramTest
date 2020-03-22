@@ -128,8 +128,9 @@ def executeSomething():
             
             ff = open('2001-0.txt', 'r')
             lines = ff.readlines()
+            va = lines[2]
             new_deno = int(cases_total) - int(data[3])
-            va = str(lines[2])
+            
 
             gg = int(va) + int(new_deno)
 
