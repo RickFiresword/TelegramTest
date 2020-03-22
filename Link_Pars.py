@@ -65,20 +65,22 @@ def executeSomething():
         affected_global_all = soup2.findAll("h3", {'style': 'color:red; font-weight:900; font-size:25px'})[5].get_text()
         affected_global_all = str("".join(affected_global_all.split()))
         
+        q_data = datetime.now().strftime('%H:%M')
+        
         #===========WORLD Stats /end ==============#
         
                 
         # чтение файла
         handle = open(country + '.txt', "r")
         data = handle.readlines()
+        handle2 = open('Day_stats.txt', "r")
+        data2 = handle2.readlines()
 
 
         if int(data[1]) == int(deaths_total):
             print(country + ' Deaths total not changed')
-            print(country + affected_global_all + ' Deaths total not changed')
 
         else:
-            print(country + ' Deaths changed ---------------------------')
             print(country + ' Deaths changed ---------------------------')
 
             bot.sendMessage(chat_id=my_telegram_chat_id, text=('💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
@@ -90,10 +92,8 @@ def executeSomething():
 
         if int(data[3]) == int(cases_total):
             print(country + ' Infected not changed')
-            print(country + ' Infected not changed')
 
         else:
-            print(country + ' Infected changed ---------------------------')
             print(country + ' Infected changed ---------------------------')
 
             bot.sendMessage(chat_id=my_telegram_chat_id, text=('🚑️' +" New cases (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n\n Cases Today: " + cases_today + "\n Total Cases: " + cases_total + "\n ➖➖➖➖➖➖➖"))
@@ -105,10 +105,8 @@ def executeSomething():
 
         if int(data[5]) == int(recovered_total):
             print(country + ' Recovered not changed')
-            print(country + ' Recovered not changed')
 
         else:
-            print(country + ' Recovered changed ---------------------------')
             print(country + ' Recovered changed ---------------------------')
 
             bot.sendMessage(chat_id=my_telegram_chat_id, text=('💊️' +" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n\n Total Recovered: " + recovered_total + "\n ➖➖➖➖➖➖➖"))
@@ -120,10 +118,8 @@ def executeSomething():
 
         if int(data[6]) == int(critical_total):
             print(country + ' Critical not changed')
-            print(country + ' Critical not changed')
 
         else:
-            print(country + ' Critical changed ----------------------------')
             print(country + ' Critical changed ----------------------------')
 
             bot.sendMessage(chat_id=my_telegram_chat_id, text=('⚡' +" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n\n Total Critical: " + critical_total + "\n ➖➖➖➖➖➖➖"))
@@ -132,6 +128,20 @@ def executeSomething():
             a = str(country + "\n" + deaths_total + "\n"  + deaths_today + "\n"  + cases_total + "\n"  + cases_today + "\n"  + recovered_total + "\n"  + critical_total)
             f.write(a)
             f.close()
+            
+            
+            
+          if int(data2[2]) != int(cases_global_today) and q_data != '15:29':
+            print('Not 23:59 now')
+        else:
+            print('Now is 23:59  ---------------------------')
+
+            bot.sendMessage(chat_id=my_telegram_chat_id, text=('Its time!'))
+            f = open('Day_stats.txt', 'w')
+            a = str(deaths_global_all + "\n" + deaths_global_today + "\n"  + cases_global_today + "\n"  + cases_global_all + "\n"  + critial_global_all + "\n"  + affected_global_all)
+            f.write(a)
+            f.close()
+            # ЗАПИСЬ в файл начало
         time.sleep(0)
         #bot.send_message(chat_id=my_telegram_chat_id, text=ttt)
         
