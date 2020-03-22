@@ -29,6 +29,8 @@ def executeSomething():
     
     qqq = datetime.now().strftime('%H:%M')
     qqq1 = datetime.now()
+    qqq_day = str(qqq1.day)
+    qqq_month = str(qqq1.month)
     
     ttime = requests.get(url).text
     soup2 = BeautifulSoup(ttime, features="html.parser")
@@ -51,9 +53,9 @@ def executeSomething():
     affected_global_all = str("".join(affected_global_all.split()))
     
     
-    if qqq == '20:09' and int(data2[2]) != int(deaths_global_today):
+    if qqq == '20:11' and int(data2[2]) != int(deaths_global_today):
         print('q++++++++++++++')
-        bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖' + qqq1.day + '/' +qqq1.month + '➖➖➖ '+ '💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
+        bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖' + qqq_day + '/' +qqq_month + '➖➖➖ '+ '💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
         
     else:
         print ('nope')
