@@ -112,10 +112,10 @@ def executeSomething():
   
 
         if int(data[1]) == int(deaths_total):
-            print('Deaths total not changed')
+            print(country + 'Deaths total not changed')
             
         else:
-            print('Deaths changed ---------------------------')
+            print(country + 'Deaths changed ---------------------------')
 
             #bot.sendMessage(chat_id=my_telegram_chat_id, text=('💀️' + " New deaths (+" + str((int(deaths_total) - int(data[1]))) +") in #"+ country + ". \n\n Deaths Today: " + deaths_today + "\n Total Deaths: " + deaths_total + "\n ➖➖➖➖➖➖➖"))
             # ЗАПИСЬ в файл начало
@@ -125,10 +125,10 @@ def executeSomething():
             f.close()
 
         if int(data[3]) == int(cases_total):
-            print('Infected not changed')
+            print(country + 'Infected not changed')
             
         else:
-            print('Infected changed ---------------------------')
+            print(country + 'Infected changed ---------------------------')
 
             #bot.sendMessage(chat_id=my_telegram_chat_id, text=('🚑️' +" New cases (+" + str((int(cases_total) - int(data[3]))) +") in #"+ country + ". \n\n Cases Today: " + cases_today + "\n Total Cases: " + cases_total + "\n ➖➖➖➖➖➖➖"))
             # ЗАПИСЬ в файл начало
@@ -138,10 +138,10 @@ def executeSomething():
             f.close()
 
         if int(data[5]) == int(recovered_total):
-            print('Recovered not changed')
+            print(country + 'Recovered not changed')
             
         else:
-            print('Recovered changed ---------------------------')
+            print(country + 'Recovered changed ---------------------------')
 
             #bot.sendMessage(chat_id=my_telegram_chat_id, text=('💊️' +" New recovered (+" + str((int(recovered_total) - int(data[5]))) +") in #"+ country + ". \n\n Total Recovered: " + recovered_total + "\n ➖➖➖➖➖➖➖"))
             # ЗАПИСЬ в файл начало
@@ -151,10 +151,10 @@ def executeSomething():
             f.close()
 
         if int(data[6]) == int(critical_total):
-            print('Critical not changed')
+            print(country + 'Critical not changed')
             
         else:
-            print('Critical changed ----------------------------')
+            print(country + 'Critical changed ----------------------------')
 
             #bot.sendMessage(chat_id=my_telegram_chat_id, text=('⚡' +" New critical (+" + str((int(critical_total) - int(data[6]))) +") in #"+ country + ". \n\n Total Critical: " + critical_total + "\n ➖➖➖➖➖➖➖"))
             # ЗАПИСЬ в файл начало
