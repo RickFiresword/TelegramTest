@@ -51,8 +51,8 @@ def executeSomething():
         
                 
         # чтение файла
-        #handle2 = open('Day_stats.txt', "r")
-        #data2 = handle2.readlines()
+        handle = open(country+'.txt', "r")
+        data = handle.readlines()
 
 
         if int(data[1]) == int(deaths_total):
@@ -108,18 +108,7 @@ def executeSomething():
             f.close()
             
             
-        if q_data == '15:53':
-            if int(data2[2]) != int(cases_global_today):
-                print('NOOOOOOOOOOOOW')
-        else:
-            print('Now is 23:59  ---------------------------')
-
-            #bot.sendMessage(chat_id=my_telegram_chat_id, text=('Its time!'))
-            f = open('Day_stats.txt', 'w')
-            a = str(deaths_global_all + "\n" + deaths_global_today + "\n"  + cases_global_today + "\n"  + cases_global_all + "\n"  + critial_global_all + "\n"  + affected_global_all)
-            f.write(a)
-            f.close()
-            # ЗАПИСЬ в файл начало
+        
         time.sleep(0)
         #bot.send_message(chat_id=my_telegram_chat_id, text=ttt)
         
