@@ -56,7 +56,7 @@ def executeSomething():
     
     if qqq == '23:59' and int(data2[2]) != int(deaths_global_today):
         print('q++++++++++++++')
-        bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖ Day stats: ' + qqq_day + ' / ' +qqq_month + ' / 2020➖➖➖ '+ '\n\n💀️ WORLD Deaths Today: '+ deaths_global_today + '\n🚑️ WORLD Cases Today: ' + cases_global_today + '\n\n •••\n\n☠️ Total WORLD Deaths: '+ deaths_global_all + '\n🏥 Total WORLD Cases: ' + cases_global_all + '\n⚡ Total WORLD Critical: '+ critial_global_all + '\n🌍 Affected Countries: '+ affected_global_all + "\n ➖➖➖➖🦠➖➖➖➖"))
+        bot.sendMessage(chat_id=my_telegram_chat_id, text=('➖➖➖ Day stats: ' + qqq_day + ' / ' +qqq_month + ' / 2020 ➖➖➖ '+ '\n\n💀️ WORLD Deaths Today: '+ deaths_global_today + '\n🚑️ WORLD Cases Today: ' + cases_global_today + '\n\n •••\n\n☠️ Total WORLD Deaths: '+ deaths_global_all + '\n🏥 Total WORLD Cases: ' + cases_global_all + '\n⚡ Total WORLD Critical: '+ critial_global_all + '\n🌍 Affected Countries: '+ affected_global_all + "\n ➖➖➖➖🦠➖➖➖➖"))
         
     else:
         print ('nope')
@@ -126,23 +126,101 @@ def executeSomething():
             #f.close()
             
             
-            ff = open('2001-0.txt', 'r')
-            lines = ff.readlines()
-            va = lines[2]
-            new_deno = int(cases_total) - int(data[3])
-            gg = int(va) + int(new_deno)
+            if qqq >= '20:01' and qqq <= '23:59':
+                ff = open('2001-0000.txt', 'r')
+                lines = ff.readlines()
+                va = lines[2]
+                new_deno = int(cases_total) - int(data[3])
+                gg = int(va) + int(new_deno)
 
-            lines[2] = str(gg) + "\n"
+                lines[2] = str(gg) + "\n"
 
-            # Закрываем файл
-            ff.close()
-            # Открываем файл для записи
-            save_changes = open('2001-0.txt', 'w')
-            # Сохраняем список строк
-            save_changes.writelines(lines)
-            # Закрываем файл
-            save_changes.close()
-            # Закрываем основной файл
+                # Закрываем файл
+                ff.close()
+                # Открываем файл для записи
+                save_changes = open('2001-0000.txt', 'w')
+                # Сохраняем список строк
+                save_changes.writelines(lines)
+                # Закрываем файл
+                save_changes.close()
+                # Закрываем основной файл
+                
+            elif qqq >= '00:01' and qqq <= '05:00':
+                ff = open('0001-0500.txt', 'r')
+                lines = ff.readlines()
+                va = lines[2]
+                new_deno = int(cases_total) - int(data[3])
+                gg = int(va) + int(new_deno)
+
+                lines[2] = str(gg) + "\n"
+
+                # Закрываем файл
+                ff.close()
+                # Открываем файл для записи
+                save_changes = open('0001-0500.txt', 'w')
+                # Сохраняем список строк
+                save_changes.writelines(lines)
+                # Закрываем файл
+                save_changes.close()
+                # Закрываем основной файл
+                
+            elif qqq >= '05:01' and qqq <= '10:00':
+                ff = open('0501-1000.txt', 'r')
+                lines = ff.readlines()
+                va = lines[2]
+                new_deno = int(cases_total) - int(data[3])
+                gg = int(va) + int(new_deno)
+
+                lines[2] = str(gg) + "\n"
+
+                # Закрываем файл
+                ff.close()
+                # Открываем файл для записи
+                save_changes = open('0501-1000.txt', 'w')
+                # Сохраняем список строк
+                save_changes.writelines(lines)
+                # Закрываем файл
+                save_changes.close()
+                # Закрываем основной файл
+                
+            elif qqq >= '10:01' and qqq <= '15:00':
+                ff = open('1001-1500.txt', 'r')
+                lines = ff.readlines()
+                va = lines[2]
+                new_deno = int(cases_total) - int(data[3])
+                gg = int(va) + int(new_deno)
+
+                lines[2] = str(gg) + "\n"
+
+                # Закрываем файл
+                ff.close()
+                # Открываем файл для записи
+                save_changes = open('1001-1500.txt', 'w')
+                # Сохраняем список строк
+                save_changes.writelines(lines)
+                # Закрываем файл
+                save_changes.close()
+                # Закрываем основной файл
+                
+            elif qqq >= '15:01' and qqq <= '20:00':
+                ff = open('1501-2000.txt', 'r')
+                lines = ff.readlines()
+                va = lines[2]
+                new_deno = int(cases_total) - int(data[3])
+                gg = int(va) + int(new_deno)
+
+                lines[2] = str(gg) + "\n"
+
+                # Закрываем файл
+                ff.close()
+                # Открываем файл для записи
+                save_changes = open('1501-2000.txt', 'w')
+                # Сохраняем список строк
+                save_changes.writelines(lines)
+                # Закрываем файл
+                save_changes.close()
+                # Закрываем основной файл
+                
                 
             f.close()
 
