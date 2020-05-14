@@ -16,12 +16,12 @@ import time
 #=============TELEGRAM BOT======================#
 token_i = '27503-R9VUM6NP7900Cw'
 
-my_telegram_chat_id = '-1001469274467' #testing
-my_telegram_chat_ft = '-1001469274467' #testing
+#my_telegram_chat_id = '-1001469274467' #testing
+#my_telegram_chat_ft = '-1001469274467' #testing
 
 
-#my_telegram_chat_id = '-1001403893518'
-#my_telegram_chat_ft = '-1001219317029'
+my_telegram_chat_id = '-1001403893518'
+my_telegram_chat_ft = '-1001219317029'
 my_telegram_chat_corners = '-1001249261381'
 
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
