@@ -177,14 +177,14 @@ def executeSomething():
                         score_total_plus = str(score_total + 0.5)
                         first_time_over = ("‼️ TEST 🌊 eSport ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
                         # чтение файла
-                        handle = open("text.text", "r")
+                        handle = open("link_country.txt", "r")
                         data = handle.read()
                         if teams_text in data:
                             print ('FUCKING INFO !!!')
                             pass
                         else:
                             # ЗАПИСЬ в файл начало
-                            f = open('text.text', 'a')
+                            f = open('link_country.txt', 'a')
                             a = str(teams_text)
                             f.write(a)
                             f.close()
