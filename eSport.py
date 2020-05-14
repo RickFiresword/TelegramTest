@@ -11,7 +11,7 @@ import requests
 
 import telepot
 import time
-
+sys.setrecursionlimit(99999)
 
 #=============TELEGRAM BOT======================#
 token_i = '27503-R9VUM6NP7900Cw'
