@@ -27,7 +27,7 @@ my_telegram_chat_corners = '-1001249261381'
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
 chat_id = "message.from_user.id"
 
-bot = telepot.TeleBot(token)
+bot = telepot.Bot(token)
 url = 'https://api.betsapi.com/v2/events/inplay?sport_id=1&token=27503-R9VUM6NP7900Cw'
 
 
