@@ -6,7 +6,6 @@ import sys
 
 from telepot import loop
 
-reload(sys)
 
 import requests
 
