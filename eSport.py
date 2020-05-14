@@ -172,8 +172,8 @@ def executeSomething():
 
                 # ===============Алгоритм 0 - первый тайм ======================#
 
-                #if (int(the_time) >= 1 and int(the_time) <= 5) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2:
-                if the_time > 1:
+                if (int(the_time) >= 1 and int(the_time) <= 5) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2:
+                #if the_time > 1:
                         score_total_plus = str(score_total + 0.5)
                         first_time_over = ("‼️ TEST 🌊 eSport ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
                         # чтение файла
