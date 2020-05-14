@@ -9,7 +9,7 @@ from telepot import loop
 
 import requests
 
-import telebot
+import telepot
 import time
 
 
@@ -27,7 +27,7 @@ my_telegram_chat_corners = '-1001249261381'
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
 chat_id = "message.from_user.id"
 
-bot = telebot.TeleBot(token)
+bot = telepot.TeleBot(token)
 url = 'https://api.betsapi.com/v2/events/inplay?sport_id=1&token=27503-R9VUM6NP7900Cw'
 
 
@@ -188,9 +188,8 @@ def executeSomething():
                             f.write(a)
                             f.close()
 
-                            #int(this_message) = (bot.send_message(chat_id=my_telegram_chat_id, text=first_time_over))
-                            #id_get = this_message.message_id
-                            id_get = (bot.send_message(chat_id=my_telegram_chat_id, text=first_time_over)).message_id
+                            int(this_message) = (bot.send_message(chat_id=my_telegram_chat_id, text=first_time_over))
+                            id_get = this_message.message_id
                             new_id_get = id_get-304
                             new_id_get = str(new_id_get)
                             str_id_get = str(id_get)
