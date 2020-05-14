@@ -42,7 +42,7 @@ def executeSomething():
     except (IndexError, KeyError, ValueError):
         pass
         r = 0
-        print (time.strftime("%H:%M:%S  ") + "Была ошибка -r-!")
+        print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
     for j in r:
         get_sport_id = j['id']
@@ -57,7 +57,7 @@ def executeSomething():
 
         except (IndexError, KeyError, ValueError):
             pass
-            print (time.strftime("%H:%M:%S  ") + "Была ошибка -r2-! ID: " + get_sport_id)
+            print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
 
 
         try:
@@ -73,7 +73,7 @@ def executeSomething():
                     league = int(1)
                     team_home = 1
                     team_away = 1
-                    print ("%H:%M:%S  Была ошибка league")
+                    print ("%H:%M:%S  Errore league")
 
                 try:
                     #-Scores
@@ -90,7 +90,7 @@ def executeSomething():
                     score_home = 0
                     score_away = 0
                     score_total = 0
-                    print ("%H:%M:%S  Была ошибка -Scores-!")
+                    print ("%H:%M:%S  Errore -Scores-!")
 
                 try:
                     #-Attacks
@@ -140,7 +140,7 @@ def executeSomething():
                     the_time = 0
 
                 if the_time > 6:
-                    print ("Не входит в диапозон времени. Стопаем")
+                    print ("Time to high. Stoped")
                     time.sleep(1)
                     executeSomething()
 
@@ -179,7 +179,7 @@ def executeSomething():
                         handle = open("text.text", "r")
                         data = handle.read()
                         if teams_text in data:
-                            print ('ДУБЛЬ ЕБАНЫЙ!!!!!!')
+                            print ('FUCKING INFO !!!')
                             pass
                         else:
                             # ЗАПИСЬ в файл начало
@@ -193,13 +193,13 @@ def executeSomething():
                             new_id_get = id_get-304
                             new_id_get = str(new_id_get)
                             str_id_get = str(id_get)
-                            print (time.strftime("%H:%M:%S  ") + 'ID последнего сообщения: ' + str_id_get)
+                            print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
                             first_time_over2 = ("❗ Wave_" + new_id_get + "   TEST eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
                             bot.edit_message_text(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
 
 
                 else:
-                    print ((time.strftime("%H:%M:%S  ") + get_sport_id + " Не подходит условиям 1й тайм"))
+                    print (get_sport_id + " Bad conditions for 1st time"))
                     pass
                     time.sleep(1)
 
@@ -208,7 +208,7 @@ def executeSomething():
 
         except (IndexError, KeyError, ValueError):
             pass
-            print ("Пропускаем!")
+            print ("Passed!")
             executeSomething()
 
 
