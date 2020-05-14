@@ -199,7 +199,7 @@ def executeSomething():
 
 
                 else:
-                    print (get_sport_id + " Bad conditions for 1st time"))
+                    print (get_sport_id + " Bad conditions for 1st time")
                     pass
                     time.sleep(1)
 
