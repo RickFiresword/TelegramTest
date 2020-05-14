@@ -11,8 +11,6 @@ import requests
 
 import telebot
 import time
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 
 
 
