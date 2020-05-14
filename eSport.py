@@ -190,8 +190,9 @@ def executeSomething():
                             f.close()
 
                             this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
-                            print (this_message[message_id])
-                            id_get = this_message.message_id
+                            #print (this_message[message_id])
+                            id_get = this_message['message_id']
+                            #id_get = this_message.message_id
                             new_id_get = id_get-304
                             new_id_get = str(new_id_get)
                             str_id_get = str(id_get)
