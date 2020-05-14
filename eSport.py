@@ -172,10 +172,9 @@ def executeSomething():
 
                 # ===============Алгоритм 0 - первый тайм ======================#
 
-                #if (int(the_time) >= 1 and int(the_time) <= 5) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2:
-                #        score_total_plus = str(score_total + 0.5)
-                if (int(the_time) >= 1 and int(the_time) <= 5):
-                        first_time_over = ("‼️ TEST 🌊 eSport ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
+                if (int(the_time) >= 1 and int(the_time) <= 5) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2:
+                        score_total_plus = str(score_total + 0.5)
+                        first_time_over = ("‼️ TEST 🌊 eSport ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
                         # чтение файла
                         handle = open("text.text", "r")
                         data = handle.read()
@@ -190,6 +189,7 @@ def executeSomething():
                             f.close()
 
                             this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
+                            print (this_message)
                             id_get = this_message.message_id
                             new_id_get = id_get-304
                             new_id_get = str(new_id_get)
