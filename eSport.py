@@ -79,7 +79,7 @@ def executeSomething():
                     league = int(1)
                     team_home = 1
                     team_away = 1
-                    print "%H:%M:%S  Была ошибка league"
+                    print ("%H:%M:%S  Была ошибка league")
 
                 try:
                     #-Scores
@@ -96,7 +96,7 @@ def executeSomething():
                     score_home = 0
                     score_away = 0
                     score_total = 0
-                    print "%H:%M:%S  Была ошибка -Scores-!"
+                    print ("%H:%M:%S  Была ошибка -Scores-!")
 
                 try:
                     #-Attacks
@@ -114,7 +114,7 @@ def executeSomething():
                     d_attacks_home = 0
                     d_attacks_away = 0
                     d_attacks_total = 0
-                    print "%H:%M:%S  Была ошибка -Atacks-!"
+                    print ("%H:%M:%S  Была ошибка -Atacks-!")
 
                 #-Corners
                 corner_home = a['stats']['corners'][0]
@@ -146,7 +146,7 @@ def executeSomething():
                     the_time = 0
 
                 if the_time > 6:
-                    print "Не входит в диапозон времени. Стопаем"
+                    print ("Не входит в диапозон времени. Стопаем")
                     time.sleep(1)
                     executeSomething()
 
@@ -185,7 +185,7 @@ def executeSomething():
                         handle = open("text.text", "r")
                         data = handle.read()
                         if teams_text in data:
-                            print 'ДУБЛЬ ЕБАНЫЙ!!!!!!'
+                            print ('ДУБЛЬ ЕБАНЫЙ!!!!!!')
                             pass
                         else:
                             # ЗАПИСЬ в файл начало
@@ -205,7 +205,7 @@ def executeSomething():
 
 
                 else:
-                    print (time.strftime("%H:%M:%S  ") + get_sport_id + " Не подходит условиям 1й тайм")
+                    print ((time.strftime("%H:%M:%S  ") + get_sport_id + " Не подходит условиям 1й тайм"))
                     pass
                     time.sleep(1)
 
@@ -214,7 +214,7 @@ def executeSomething():
 
         except (IndexError, KeyError, ValueError):
             pass
-            print "Пропускаем!"
+            print ("Пропускаем!")
             executeSomething()
 
 
