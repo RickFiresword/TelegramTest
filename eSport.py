@@ -13,9 +13,6 @@ import telebot
 import time
 
 
-
-sys.setdefaultencoding('utf8')
-
 #=============TELEGRAM BOT======================#
 token_i = '27503-R9VUM6NP7900Cw'
 
