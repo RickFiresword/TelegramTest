@@ -189,14 +189,14 @@ def executeSomething():
                             f.write(a)
                             f.close()
 
-                            this_message = (bot.send_message(chat_id=my_telegram_chat_id, text=first_time_over))
+                            this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
                             id_get = this_message.message_id
                             new_id_get = id_get-304
                             new_id_get = str(new_id_get)
                             str_id_get = str(id_get)
                             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
                             first_time_over2 = ("❗ Wave_" + new_id_get + "   TEST eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
-                            bot.edit_message_text(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
+                            bot.editMessage_text(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
 
 
                 else:
