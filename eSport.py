@@ -37,13 +37,11 @@ def executeSomething():
         r = requests.get(url).json()
         r = r['results']
         r = r[::-1]
-        r = str(r)
 
 
     except (IndexError, KeyError, ValueError):
         pass
         r = 0
-        r = str(r)
         print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
     for j in r:
