@@ -51,12 +51,10 @@ def executeSomething():
         event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + get_sport_id
 
         r2 = requests.get(event_view).json()
-        r2 = str(r2)
         time.sleep(0)
 
         try:
             r2 = r2['results']
-            r2 = str(r2)
 
 
         except (IndexError, KeyError, ValueError):
