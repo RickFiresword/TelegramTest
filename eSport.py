@@ -173,7 +173,7 @@ def executeSomething():
                         else:
                             # ЗАПИСЬ в файл начало
                             f = open('text.text', 'a')
-                            a = str(get_sport_id + '\n')
+                            a = str('\n' + get_sport_id)
                             f.write(a)
                             f.close()
 
