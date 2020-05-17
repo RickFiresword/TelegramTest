@@ -175,7 +175,7 @@ def executeSomething():
                         else:
                             # ЗАПИСЬ в файл начало
                             f = open('text.text', 'a')
-                            a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + "teams_text" + "]" )
+                            a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
                             f.write(a)
                             f.close()
 
