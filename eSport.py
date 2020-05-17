@@ -140,7 +140,7 @@ def executeSomething():
                 except (IndexError, KeyError, ValueError):
                     the_time = 0
 
-                if the_time > 6:
+                if the_time > 10:
                     print ("Time to high. Stoped")
                     time.sleep(2)
                     executeSomething()
