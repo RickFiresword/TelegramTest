@@ -132,6 +132,8 @@ def executeSomething():
                 yellow_away = a['stats']['yellowcards'][1]
                 yellow_total = int(yellow_home)+int(yellow_away)
 
+                time_status = a['time_status']
+
                 #-Time
                 try:
                     the_time = a['timer']['tm'] + 1
@@ -186,7 +188,7 @@ def executeSomething():
                             str_id_get = str(id_get)
                             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
                             #first_time_over2 = ("❗ Wave_" + new_id_get + "   TEST eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
-                            first_time_over2 = (str_id_get + "\n" + str(get_sport_id))
+                            first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status)
 
                             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
                             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
