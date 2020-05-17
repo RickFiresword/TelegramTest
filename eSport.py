@@ -167,13 +167,13 @@ def executeSomething():
                         # чтение файла
                         handle = open("text.text", "r")
                         data = handle.read()
-                        if teams_text in data:
+                        if str(get_sport_id) in data:
                             print ('FUCKING INFO !!!')
                             pass
                         else:
                             # ЗАПИСЬ в файл начало
                             f = open('text.text', 'a')
-                            a = str(teams_text)
+                            a = str(get_sport_id)
                             f.write(a)
                             f.close()
 
