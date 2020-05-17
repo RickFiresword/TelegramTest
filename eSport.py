@@ -20,9 +20,8 @@ token_i = '27503-R9VUM6NP7900Cw'
 #my_telegram_chat_ft = '-1001469274467' #testing
 
 
-my_telegram_chat_id = '-1001403893518'
-my_telegram_chat_ft = '-1001219317029'
-my_telegram_chat_corners = '-1001249261381'
+my_telegram_chat_id = '-1001414741135'
+
 
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
 chat_id = "message.from_user.id"
@@ -150,7 +149,7 @@ def executeSomething():
 
                 #--------------<Text Messages>------------->
 
-                league_name = ('🏆 League: ' + league)
+                league_name = ('🕹️ League: ' + league)
                 teams_text = ('Teams: ' + team_home + ' - ' + team_away)
 
                 the_time_text = ('⏱️ Time: ' + str(the_time) + "'")
@@ -193,7 +192,7 @@ def executeSomething():
                             #print (this_message[message_id])
                             id_get = this_message['message_id']
                             #id_get = this_message.message_id
-                            new_id_get = id_get-304
+                            new_id_get = id_get-5
                             new_id_get = str(new_id_get)
                             str_id_get = str(id_get)
                             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
