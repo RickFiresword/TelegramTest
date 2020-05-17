@@ -16,11 +16,11 @@ sys.setrecursionlimit(99999)
 #=============TELEGRAM BOT======================#
 token_i = '27503-R9VUM6NP7900Cw'
 
-#my_telegram_chat_id = '-1001469274467' #testing
-#my_telegram_chat_ft = '-1001469274467' #testing
+my_telegram_chat_id = '-1001469274467' #testing
+#
 
 
-my_telegram_chat_id = '-1001414741135'
+#my_telegram_chat_id = '-1001414741135' CYBER
 
 
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
@@ -156,23 +156,12 @@ def executeSomething():
 
                 score_total_text = ('⚽️ Score: ' + str(score_home) + " - " + str(score_away) + '  ( Total = ' + str(score_total) + ' )' )
 
-                s_attacks_total_text = ('🗡Attacks: ' + str(s_attacks_home) + " - " + str(s_attacks_away) + '  ( Total = ' + str(s_attacks_total) + ' )' )
-                d_attacks_total_text = ('  Danger attacks: ' + str(d_attacks_home) + " - " + str(d_attacks_away) + '  ( Total = ' + str(d_attacks_total) + ' )' )
-
-                onTarget_total_text = ('⚔️ On target: ' + str(onTarget_home) + " - " + str(onTarget_away) + '  ( Total = ' + str(onTarget_total) + ' )' )
-                offTarget_total_text = ('  Off target: ' + str(offTarget_home) + " - " + str(offTarget_away) + '  ( Total = ' + str(offTarget_total) + ' )' )
-
-                corner_total_text = ('⛳ Corners: ' + str(corner_home) + ' - ' + str(corner_away) + '  ( Total = ' + str(corner_total) + ' )' )
-
-                yellow_total_text = ('Yellow cards: ' + str(yellow_home) + ' - ' + str(yellow_away) + '  ( Total = ' + str(yellow_total) + ' )' )
-                red_total_text = ('Red cards: ' + str(red_home) + ' - ' + str(red_away) + '  ( Total = ' + str(red_total) + ' )' )
 
 
+                # =============== КИБЕР ФУТБОЛ ======================#
 
-                # ===============Алгоритм 0 - первый тайм ======================#
-
-                if (int(the_time) >= 1 and int(the_time) <= 5) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2:
-                #if the_time > 1:
+                #if (int(the_time) >= 1 and int(the_time) <= 5) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2:
+                if the_time > 1:
                         score_total_plus = str(score_total + 0.5)
                         first_time_over = ("‼️ TEST 🌊 eSport ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
                         # чтение файла
@@ -196,7 +185,9 @@ def executeSomething():
                             new_id_get = str(new_id_get)
                             str_id_get = str(id_get)
                             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
-                            first_time_over2 = ("❗ Wave_" + new_id_get + "   TEST eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
+                            #first_time_over2 = ("❗ Wave_" + new_id_get + "   TEST eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
+                            first_time_over2 = (new_id_get)
+
                             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
                             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
