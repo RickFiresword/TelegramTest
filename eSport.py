@@ -193,8 +193,13 @@ def executeSomething():
                             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
                             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
+                else:
+                    print (get_sport_id + " Bad conditions for 1st time")
+                    pass
+                    time.sleep(0.3)
 
-                elif int(the_time) < 10  and int(score_total) >= 1 and league_name == 'Esoccer Battle - 8 mins play':
+
+                if int(the_time) < 10  and int(score_total) >= 1 and league_name == 'Esoccer Battle - 8 mins play':
                 #if the_time > 0:
                         score_total_plus = str(score_total + 0.5)
                         first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' + 'Bet: ' + str(int(score_total)+1) + " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
