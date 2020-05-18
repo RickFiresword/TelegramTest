@@ -193,7 +193,7 @@ def executeSomething():
                             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
                             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
                             ff = open('ver.text', 'a')
-                            aa = str('\n' + "[" + "'" + event_view + "',"+ "'"+ id_get +"'"+ "]")
+                            aa = str('\n' + "[" + "'" + event_view + "',"+ "'"+ str(id_get) +"'"+ "]")
                             ff.write(a)
                             ff.close()
 
