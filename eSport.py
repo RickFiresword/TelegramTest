@@ -194,7 +194,7 @@ def executeSomething():
                             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
 
-                elif int(the_time) < 2  and int(score_total) >= 1 and league_name == 'Esoccer Battle - 8 mins play':
+                elif int(the_time) < 3  and int(score_total) >= 1 and league_name == 'Esoccer Battle - 8 mins play':
                 #if the_time > 0:
                         score_total_plus = str(score_total + 0.5)
                         first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' + 'Bet: ' + str(int(score_total)+1) + " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
