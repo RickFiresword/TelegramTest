@@ -194,7 +194,7 @@ def executeSomething():
                             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
                 else:
-                    print (get_sport_id + " Bad conditions for 1st time")
+                    print (get_sport_id + " Bad conditions for 10-12 Min GAMES")
                     pass
                     time.sleep(0.3)
 
@@ -233,7 +233,7 @@ def executeSomething():
 
 
                 else:
-                    print (get_sport_id + " Bad conditions for 1st time")
+                    print (get_sport_id + " Bad conditions for 8 Min GAMES")
                     pass
                     time.sleep(0.3)
 
