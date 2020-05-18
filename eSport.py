@@ -142,7 +142,7 @@ def executeSomething():
 
                 if the_time > 10:
                     print ("Time to high. Stoped")
-                    time.sleep(2)
+                    time.sleep(1)
                     executeSomething()
 
 
@@ -230,7 +230,7 @@ def executeSomething():
                 else:
                     print (get_sport_id + " Bad conditions for 1st time")
                     pass
-                    time.sleep(2)
+                    time.sleep(0.3)
 
 
 
@@ -245,7 +245,7 @@ def executeSomething():
 
 while True:
     executeSomething()
-    time.sleep(2)
+    time.sleep(1)
 
 
 
