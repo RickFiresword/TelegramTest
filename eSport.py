@@ -40,7 +40,7 @@ def executeSomething():
 
     except (IndexError, KeyError, ValueError):
         pass
-        r = 0
+        #r = 0
         print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
     for j in r:
