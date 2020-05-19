@@ -294,7 +294,7 @@ def executeSomething():
                 executeSomething()
 
     except (IndexError, KeyError, ValueError, TypeError):
-    pass
+        pass
         #/new
 
 
