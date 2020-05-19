@@ -51,7 +51,7 @@ def executeSomething():
 
             r2 = requests.get(event_view).json()
             time.sleep(0)
-        except (IndexError, KeyError, ValueError):
+        except (IndexError, KeyError, ValueError, TypeError):
             pass
         #pass
 
