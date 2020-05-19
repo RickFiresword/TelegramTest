@@ -40,12 +40,11 @@ def executeSomething():
 
     except (IndexError, KeyError, ValueError):
         pass
-        #r = 0
+        r = '123456'
         print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
     for j in r:
         
-        j = int(j)
         get_sport_id = int(j['id'])
         event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + get_sport_id
 
