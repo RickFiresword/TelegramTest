@@ -40,7 +40,7 @@ def executeSomething():
 
     except (IndexError, KeyError, ValueError):
         pass
-        r = ['123456']
+        r = ['123456','123456']
         print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
     for j in r:
@@ -70,9 +70,9 @@ def executeSomething():
                     team_home = a['home']['name']
                     team_away = a['away']['name']
                 except (IndexError, KeyError, ValueError):
-                    league = int(1)
-                    team_home = 1
-                    team_away = 1
+                    league = 'errore'
+                    team_home = 'errore'
+                    team_away = 'errore'
                     print ("%H:%M:%S  Errore league")
 
                 try:
