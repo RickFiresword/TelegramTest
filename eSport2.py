@@ -49,7 +49,7 @@ def executeSomething():
 
     for j in r:
         j = str(j)
-        get_sport_id = int(j)[str('id')]
+        get_sport_id = int(j)['id']
         event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + get_sport_id
 
         r2 = requests.get(event_view).json()
