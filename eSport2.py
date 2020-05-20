@@ -48,13 +48,13 @@ for j in r:
     r2 = requests.get(event_view).json()
     time.sleep(0)
 
-        try:
-            r2 = r2['results']
+    try:
+        r2 = r2['results']
 
 
-        except (IndexError, KeyError, ValueError, TypeError):
-            pass
-            print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
+    except (IndexError, KeyError, ValueError, TypeError):
+        pass
+        print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
 
 
 def executeSomething():
