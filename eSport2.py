@@ -271,7 +271,7 @@ def executeSomething():
                             new_id_get = str(new_id_get)
                             str_id_get = str(id_get)
                             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
-                            first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 30% on: ' + score_total_plus + " Over HT \n Bet: 70% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
+                            first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 30% on: ' + score_total_plus + " Over HT \nBet: 70% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
                             #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
 
                             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
