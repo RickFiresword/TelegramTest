@@ -75,9 +75,9 @@ def executeSomething():
                     league = a['league']['name']
                     team_home = a['home']['name']
                     team_away = a['away']['name']
-                except (IndexError, KeyError, ValueError):
-                    league = 'errore'
-                    team_home = 'errore'
+                except (IndexError, KeyError, ValueError, TypeError):
+                    league = str('errore')
+                    team_home = str('errore')
                     team_away = 'errore'
                     print ("%H:%M:%S  Errore league")
 
@@ -201,7 +201,7 @@ def executeSomething():
                 #             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
                 # else:
-                #     print (get_sport_id + " Bad conditions for 10-12 Min GAMES (1st str)")
+                #     print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (1st str)")
                 #     pass
                 #     time.sleep(0.3)
 
@@ -242,7 +242,7 @@ def executeSomething():
                 #             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
                 # else:
-                #     print (get_sport_id + " Bad conditions for 10-12 Min GAMES (2nd str)")
+                #     print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (2nd str)")
                 #     pass
                 #     time.sleep(0.3)    
 
