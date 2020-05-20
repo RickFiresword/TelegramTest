@@ -45,7 +45,8 @@ def executeSomething():
     except (IndexError, KeyError, ValueError):
         r = ['123456','123456']
         print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
-        executeSomething()
+        r = r[1]
+        #executeSomething()
 
     for j in r:
         get_sport_id = j['id']
