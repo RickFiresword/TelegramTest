@@ -39,13 +39,13 @@ def executeSomething():
     try:
         r = requests.get(url).json()
         r = r['results']
+        rr = r['results']
         r = r[::-1]
 
 
     except (IndexError, KeyError, ValueError):
-        r = ['123456','123456']
+        r = rr
         print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
-        r = r[::+1]
         #executeSomething()
 
     for j in r:
