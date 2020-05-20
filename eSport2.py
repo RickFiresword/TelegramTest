@@ -40,24 +40,26 @@ except (IndexError, KeyError, ValueError):
     r = ['123456','123456']
     print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
-for j in r:
-    
-    get_sport_id = j['id']
-    event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + get_sport_id
 
-    r2 = requests.get(event_view).json()
-    time.sleep(0)
-
-    try:
-        r2 = r2['results']
-
-
-    except (IndexError, KeyError, ValueError, TypeError):
-        pass
-        print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
 
 
     def executeSomething():
+
+        for j in r:
+            
+            get_sport_id = j['id']
+            event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + get_sport_id
+
+            r2 = requests.get(event_view).json()
+            time.sleep(0)
+
+            try:
+                r2 = r2['results']
+
+
+            except (IndexError, KeyError, ValueError, TypeError):
+                pass
+                print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
 
             try:
 
