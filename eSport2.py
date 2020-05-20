@@ -282,7 +282,7 @@ def executeSomething():
                 else:
                     print (get_sport_id + " Bad conditions for 8 Min GAMES")
                     pass
-                    time.sleep(0.3)
+                    time.sleep(0)
 
 
 
@@ -297,7 +297,7 @@ def executeSomething():
 
 while True:
     executeSomething()
-    time.sleep(1)
+    time.sleep(0)
 
 
 
