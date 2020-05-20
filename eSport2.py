@@ -29,21 +29,23 @@ chat_id = "message.from_user.id"
 bot = telepot.Bot(token)
 url = 'https://api.betsapi.com/v2/events/inplay?sport_id=1&token=27503-R9VUM6NP7900Cw'
 
-try:
-    r = requests.get(url).json()
-    r = r['results']
-    r = r[::-1]
 
-
-except (IndexError, KeyError, ValueError):
-    pass
-    r = ['123456','123456']
-    print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
 
 
 
     def executeSomething():
+
+        try:
+            r = requests.get(url).json()
+            r = r['results']
+            r = r[::-1]
+
+
+        except (IndexError, KeyError, ValueError):
+            pass
+            r = ['123456','123456']
+            print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
         for j in r:
             
