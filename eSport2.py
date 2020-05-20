@@ -47,10 +47,10 @@ def executeSomething():
         r = ['123456','123456']
         print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
 
-    for j in r:
+    for int(j) in r:
         
-        get_sport_id = int(j['id'])
-        str(event_view) = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + get_sport_id
+        get_sport_id = j['id']
+        event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + get_sport_id
 
         r2 = requests.get(event_view).json()
         time.sleep(0)
