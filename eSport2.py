@@ -40,11 +40,11 @@ def executeSomething():
         r = requests.get(url).json()
         r = r['results']
         r = r[::-1]
-    except:
-        print (r)
+    #except:
+    #    print (r)
 
-    #except (IndexError, KeyError, ValueError):
-    #    print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
+    except (IndexError, KeyError, ValueError):
+        print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
         #executeSomething()
 
     for j in r:
