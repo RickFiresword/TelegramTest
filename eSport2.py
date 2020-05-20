@@ -32,7 +32,7 @@ url = 'https://api.betsapi.com/v2/events/inplay?sport_id=1&token=27503-R9VUM6NP7
 try:
     r = requests.get(url).json()
     r = r['results']
-    #r = r[::-1]
+    r = r[::-1]
 
 
 except (IndexError, KeyError, ValueError):
