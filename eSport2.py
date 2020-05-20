@@ -45,7 +45,7 @@ def executeSomething():
     except (IndexError, KeyError, ValueError):
         r = ['123456','123456']
         print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
-        r = r[1]
+        r = r[+1]
         #executeSomething()
 
     for j in r:
