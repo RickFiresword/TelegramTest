@@ -44,8 +44,9 @@ def executeSomething():
     #    print (r)
 
     except (IndexError, KeyError, ValueError):
-        r = ['ID':'123456']
-        #executeSomething()
+        time.sleep(5)
+        executeSomething()
+        print ("Errore with R ======")
 
     for j in r:
         get_sport_id = j['id']
@@ -281,7 +282,7 @@ def executeSomething():
                 else:
                     print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
                     pass
-                    time.sleep(0)
+                    time.sleep(0,5)
 
 
 
@@ -296,7 +297,7 @@ def executeSomething():
 
 while True:
     executeSomething()
-    time.sleep(0)
+    time.sleep(1)
 
 
 
