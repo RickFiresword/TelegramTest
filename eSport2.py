@@ -44,7 +44,7 @@ def executeSomething():
     #    print (r)
 
     except (IndexError, KeyError, ValueError):
-        pass
+        r = ['ID':'123456']
         #executeSomething()
 
     for j in r:
