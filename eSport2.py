@@ -80,8 +80,8 @@ def executeSomething():
 
                 try:
                     #-Scores
-                    score_home_str = a['scores']['2']['home']
-                    score_away_str = a['scores']['2']['away']
+                    score_home_str = int(a['scores']['2']['home'])
+                    score_away_str = int(a['scores']['2']['away'])
                     score_home = int(score_home_str)
                     score_away = int(score_away_str)
                     score_total = score_away+score_home
@@ -282,7 +282,7 @@ def executeSomething():
                 else:
                     print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
                     pass
-                    time.sleep(0.5)
+                    time.sleep(1)
 
 
 
@@ -297,7 +297,7 @@ def executeSomething():
 
 while True:
     executeSomething()
-    time.sleep(1)
+    time.sleep(5)
 
 
 
