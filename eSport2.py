@@ -82,8 +82,8 @@ def executeSomething():
 
                 try:
                     #-Scores
-                    score_home_str = str(a['scores']['2']['home'])
-                    score_away_str = str(a['scores']['2']['away'])
+                    score_home_str = a['scores']['2']['home']
+                    score_away_str = a['scores']['2']['away']
                     score_home = int(score_home_str)
                     score_away = int(score_away_str)
                     score_total = score_away+score_home
