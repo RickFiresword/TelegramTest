@@ -91,8 +91,8 @@ def executeSomething():
                     odd_home = r3['results']['odds']['1_1'][1]['home_od']
                     odd_away = r3['results']['odds']['1_1'][1]['away_od']
                 except (IndexError, KeyError, ValueError):
-                    odd_home = 1
-                    odd_away = 1
+                    odd_home = str(1)
+                    odd_away = str(1)
                     print (time.strftime("%H:%M:%S  ") + "Errore -r3-! odd_home ID: " + get_sport_id)
                     print (time.strftime("%H:%M:%S  ") + "Errore -r3-! odd_away ID: " + get_sport_id)
                     #pass
