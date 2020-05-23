@@ -170,8 +170,6 @@ def executeSomething():
 
 
 
-                if (d_attacks_home > d_attacks_away) and (s_attacks_home > s_attacks_away) and (d_attacks_home > d_attacks_away)
-
 
 
                 #--------------</Settings>----------------->
