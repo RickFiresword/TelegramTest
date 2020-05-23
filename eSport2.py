@@ -169,6 +169,22 @@ def executeSomething():
 
 
 
+                if int(odd_home) > int(odd_away):
+                    under_team = team_away
+                    under_s_attacks = int(s_attacks_away)
+                    under_d_attacks = int(d_attacks_away)
+                    under_onTarget = int(onTarget_away)
+                    under_offTarget = int(offTarget_away)
+                    under_score = int(score_away)
+                else:
+                    under_team = team_home
+                    under_s_attacks = int(s_attacks_home)
+                    under_d_attacks = int(d_attacks_home)
+                    under_onTarget = int(onTarget_home)
+                    under_offTarget = int(offTarget_home)
+                    under_score = int(score_home)
+
+
 
 
 
@@ -304,7 +320,7 @@ def executeSomething():
 
                 else:
                     print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
-                    print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
+                    print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home + "\nUnderdog: " + under_team)
                     pass
                     time.sleep(1)
 
