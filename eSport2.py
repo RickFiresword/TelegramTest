@@ -51,8 +51,10 @@ def executeSomething():
     for j in r:
         get_sport_id = j['id']
         event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + str(get_sport_id)
+        odds_view = "https://api.betsapi.com/v2/event/odds?token=27503-R9VUM6NP7900Cw&event_id=" + str(get_sport_id)
 
         r2 = requests.get(event_view).json()
+        r3 = requests.get(odds_view).json()
         time.sleep(0)
 
         try:
@@ -62,6 +64,22 @@ def executeSomething():
         except (IndexError, KeyError, ValueError, TypeError):
             pass
             print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
+
+
+        try:
+
+            odd_home = r3['results']['odds']['1_1'][1]['home_od']
+            odd_away = r3['results']['odds']['1_1'][1]['away_od']
+        except (IndexError, KeyError, ValueError):
+            first_time_odd_over = "No odds"
+            first_time_odd_hand = "No Value"
+            print (time.strftime("%H:%M:%S  ") + "Была ошибка -r3-! odd_home ID: " + get_sport_id)
+            print (time.strftime("%H:%M:%S  ") + "Была ошибка -r3-! odd_away ID: " + get_sport_id)
+            pass
+
+
+
+
 
         try:
 
@@ -148,6 +166,11 @@ def executeSomething():
                     print ("Time to high. Stoped")
                     time.sleep(1)
                     executeSomething()
+
+
+
+
+                if (d_attacks_home > d_attacks_away) and (s_attacks_home > s_attacks_away) and (d_attacks_home > d_attacks_away)
 
 
 
@@ -281,6 +304,7 @@ def executeSomething():
 
                 else:
                     print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
+                    print ("Odd Away: " + odd_away + "\n Odd Home: " + odd_home)
                     pass
                     time.sleep(1)
 
