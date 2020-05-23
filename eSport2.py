@@ -51,10 +51,10 @@ def executeSomething():
     for j in r:
         get_sport_id = j['id']
         event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + str(get_sport_id)
-        odds_view = "https://api.betsapi.com/v2/event/odds?token=27503-R9VUM6NP7900Cw&event_id=" + str(get_sport_id)
+        #odds_view = "https://api.betsapi.com/v2/event/odds?token=27503-R9VUM6NP7900Cw&event_id=" + str(get_sport_id)
 
         r2 = requests.get(event_view).json()
-        r3 = requests.get(odds_view).json()
+        #r3 = requests.get(odds_view).json()
         time.sleep(0)
 
         try:
@@ -65,15 +65,15 @@ def executeSomething():
             pass
             print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
 
-        try:
-            odd_home = r3['results']['odds']['1_1'][0]['home_od']
-            odd_away = r3['results']['odds']['1_1'][0]['away_od']
-        except (IndexError, KeyError, ValueError):
-            odd_home = str(1)
-            odd_away = str(1)
-            print (time.strftime("%H:%M:%S  ") + "Errore -r3-! odd_home ID: " + get_sport_id)
-            print (time.strftime("%H:%M:%S  ") + "Errore -r3-! odd_away ID: " + get_sport_id)
-            #pass
+        # try:
+        #     odd_home = r3['results']['odds']['1_1'][0]['home_od']
+        #     odd_away = r3['results']['odds']['1_1'][0]['away_od']
+        # except (IndexError, KeyError, ValueError):
+        #     odd_home = str(1)
+        #     odd_away = str(1)
+        #     print (time.strftime("%H:%M:%S  ") + "Errore -r3-! odd_home ID: " + get_sport_id)
+        #     print (time.strftime("%H:%M:%S  ") + "Errore -r3-! odd_away ID: " + get_sport_id)
+        #     #pass
 
 
 
@@ -238,7 +238,7 @@ def executeSomething():
 
                 else:
                     print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (1st str)")
-                    print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
+                    #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
                     pass
                     time.sleep(0.3)
 
@@ -280,7 +280,7 @@ def executeSomething():
 
                 else:
                     print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (2nd str)")
-                    print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
+                    #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
                     pass
                     time.sleep(0.3)    
 
@@ -322,7 +322,7 @@ def executeSomething():
 
                 else:
                     print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
-                    print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home + "\nUnderdog: " + under_team)
+                    #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home + "\nUnderdog: " + under_team)
                     pass
                     time.sleep(1)
 
