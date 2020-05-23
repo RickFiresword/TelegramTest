@@ -169,22 +169,22 @@ def executeSomething():
 
 
 
-                if int(odd_home) > int(odd_away):
-                    under_team = team_away
-                    under_s_attacks = int(s_attacks_away)
-                    under_d_attacks = int(d_attacks_away)
-                    under_onTarget = int(onTarget_away)
-                    under_offTarget = int(offTarget_away)
-                    under_score = int(score_away)
-                elif int(odd_home) == int(odd_away):
-                    under_team = 'No underdog'
-                else:
-                    under_team = team_home
-                    under_s_attacks = int(s_attacks_home)
-                    under_d_attacks = int(d_attacks_home)
-                    under_onTarget = int(onTarget_home)
-                    under_offTarget = int(offTarget_home)
-                    under_score = int(score_home)
+                # if int(odd_home) > int(odd_away):
+                #     under_team = team_away
+                #     under_s_attacks = int(s_attacks_away)
+                #     under_d_attacks = int(d_attacks_away)
+                #     under_onTarget = int(onTarget_away)
+                #     under_offTarget = int(offTarget_away)
+                #     under_score = int(score_away)
+                # elif int(odd_home) == int(odd_away):
+                #     under_team = 'No underdog'
+                # else:
+                #     under_team = team_home
+                #     under_s_attacks = int(s_attacks_home)
+                #     under_d_attacks = int(d_attacks_home)
+                #     under_onTarget = int(onTarget_home)
+                #     under_offTarget = int(offTarget_home)
+                #     under_score = int(score_home)
 
 
 
