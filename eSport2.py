@@ -220,6 +220,7 @@ def executeSomething():
 
                 else:
                     print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (1st str)")
+                    print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
                     pass
                     time.sleep(0.3)
 
@@ -261,6 +262,7 @@ def executeSomething():
 
                 else:
                     print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (2nd str)")
+                    print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
                     pass
                     time.sleep(0.3)    
 
@@ -302,7 +304,7 @@ def executeSomething():
 
                 else:
                     print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
-                    print ("Odd Away: " + odd_away + "\n Odd Home: " + odd_home)
+                    print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
                     pass
                     time.sleep(1)
 
