@@ -73,8 +73,8 @@ def executeSomething():
         except (IndexError, KeyError, ValueError):
             first_time_odd_over = "No odds"
             first_time_odd_hand = "No Value"
-            print (time.strftime("%H:%M:%S  ") + "Была ошибка -r3-! odd_home ID: " + get_sport_id)
-            print (time.strftime("%H:%M:%S  ") + "Была ошибка -r3-! odd_away ID: " + get_sport_id)
+            print (time.strftime("%H:%M:%S  ") + "Errore -r3-! odd_home ID: " + get_sport_id)
+            print (time.strftime("%H:%M:%S  ") + "Errore -r3-! odd_away ID: " + get_sport_id)
             pass
 
 
