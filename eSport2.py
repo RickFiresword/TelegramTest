@@ -177,6 +177,8 @@ def executeSomething():
                     under_onTarget = int(onTarget_away)
                     under_offTarget = int(offTarget_away)
                     under_score = int(score_away)
+                elif int(odd_home) == int(odd_away):
+                    under_team = 'No underdog'
                 else:
                     under_team = team_home
                     under_s_attacks = int(s_attacks_home)
