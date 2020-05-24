@@ -51,10 +51,6 @@ def executeSomething():
 
 
 
-while True:
-    executeSomething()
-    time.sleep(5)
-
 
 
 
