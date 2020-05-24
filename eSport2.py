@@ -315,6 +315,22 @@ def executeSomething():
                             first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + score_total_plus + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
                             #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
 
+                            ff = open('all_links.txt', 'a')
+                            f = open(get_sport_id, 'a')
+
+                            a = str_id_get
+                            a = str(a)
+                            b = get_sport_id 
+                            b = str(b)
+                            
+                            f.write(a)
+                            ff.write(b)
+
+                            f.close()
+                            ff.close()
+
+
+
                             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
                             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
