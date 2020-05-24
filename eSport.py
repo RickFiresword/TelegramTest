@@ -56,8 +56,8 @@ def executeSomething():
                     data2 = handle2.read().splitlines()
                     data2 = data2[0]
 
-                    #if time_status > 2:
-                    #    bot.editMessageText(telepot.message_identifier(data2), text="POLYCHILOS!!!")
+                    if time_status > 2:
+                        bot.editMessageText(telepot.message_identifier(data2), text="POLYCHILOS!!!")
 
 
 
