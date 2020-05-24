@@ -60,7 +60,7 @@ def executeSomething():
 
                     if time_status > 0:
                         print ("STATUS > 2")
-                        bot.editMessageText(chat_id=my_telegram_chat_id, message_id=data2, text="тру-ту-ту"
+                        bot.editMessageText(chat_id=my_telegram_chat_id, message_id=data2, text="тру-ту-ту")
                         #bot.editMessageText(telepot.message_identifier(data2), text="SUCKKKKKKKK")
                         
 
