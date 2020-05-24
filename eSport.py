@@ -86,10 +86,11 @@ def executeSomething():
 
                     try:
                         if (time_status == 3) and ('10' in league) and score_total > 1:
-                            print ("STATUS > 2")
+                            print ("STATUS > 1")
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
                         elif (time_status == 3) and (8 in league) and score_total < 2:
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
+                            print ("STATUS < 2")
                         else:
                             pass
 
