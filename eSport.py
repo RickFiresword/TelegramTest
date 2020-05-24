@@ -139,16 +139,6 @@ def executeSomething():
 
                 time_status = a['time_status']
 
-                #-Time
-                try:
-                    the_time = a['timer']['tm'] + 1
-                except (IndexError, KeyError, ValueError):
-                    the_time = 0
-
-                if the_time > 10:
-                    print ("Time to high. Stoped")
-                    time.sleep(1)
-                    executeSomething()
 
 
 
@@ -174,11 +164,11 @@ def executeSomething():
                     rr = rr.replace('.text','')
                     r = requests.get(rr).text
                     soup = BeautifulSoup(r, features="html.parser")
-
                     handle2 = open(i +'.txt', "r")
                     data2 = handle2.read().splitlines()
-                    data2 = data2[0]
-                     
+                    data2 = data[0]
+
+                    print (data2)
                     
 
 
