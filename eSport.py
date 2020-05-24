@@ -174,7 +174,7 @@ def executeSomething():
                     rr = rr.replace('.text','')
                     r = requests.get(rr).text
                     soup = BeautifulSoup(r, features="html.parser")
-                    print (rr)
+                    print (soup)
 
 
 
