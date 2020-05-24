@@ -175,7 +175,7 @@ def executeSomething():
                     r = requests.get(rr).text
                     soup = BeautifulSoup(r, features="html.parser")
 
-                    handle2 = open(i, "r")
+                    handle2 = open(i +'.txt', "r")
                     data2 = handle2.read().splitlines()
                     print (data2)
 
