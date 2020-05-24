@@ -51,7 +51,7 @@ def executeSomething():
                 data2 = handle2.read().splitlines()
                 data2 = data2[0]
 
-                time_status = 123
+                time_status = r['results']
 
 
 
@@ -59,7 +59,7 @@ def executeSomething():
 
 
 
-                print (data2)       
+                print (time_status)       
                     
 
 
