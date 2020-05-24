@@ -174,10 +174,14 @@ def executeSomething():
                     rr = rr.replace('.text','')
                     r = requests.get(rr).text
                     soup = BeautifulSoup(r, features="html.parser")
-
                     handle2 = open(i +'.txt', "r")
                     data2 = handle2.read().splitlines()
-                    print (data2)
+                    data2 = data2.replace("['","").replace("']","")
+
+                    print 
+                    
+
+
 
 
 
