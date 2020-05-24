@@ -321,7 +321,7 @@ def executeSomething():
                             a = str_id_get
                             a = ("\n" + a)
                             b = get_sport_id 
-                            b = str(b)
+                            b = str("\n" + b)
                             
                             f.write(a)
                             ff.write(b)
