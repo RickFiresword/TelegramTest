@@ -65,7 +65,7 @@ def executeSomething():
 
         try:
 
-            for a in r2:
+            for a in range(10000):
                 #--------------<Settings>----------------->
                 
 
