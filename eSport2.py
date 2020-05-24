@@ -316,7 +316,7 @@ def executeSomething():
                             #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
 
                             ff = open('all_links.txt', 'a')
-                            f = open(get_sport_id, 'a')
+                            f = open(get_sport_id + '.txt', 'a')
 
                             a = str_id_get
                             a = ("\n" + a)
