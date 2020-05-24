@@ -13,11 +13,11 @@ sys.setrecursionlimit(99999)
 #=============TELEGRAM BOT======================#
 token_i = '27503-R9VUM6NP7900Cw'
 
-#my_telegram_chat_id = '-1001469274467' #testing
+my_telegram_chat_id = '-1001469274467' #testing
 #
 
 
-my_telegram_chat_id = '-1001414741135' #CYBER
+#my_telegram_chat_id = '-1001414741135' #CYBER
 
 
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
@@ -48,12 +48,16 @@ def executeSomething():
                 r = requests.get(rr).json()
                 r = r['results']
                 
-                # handle2 = open(i +'.txt', "r")
-                # data2 = handle2.read().splitlines()
-                # data2 = data2[0]
+                handle2 = open(i +'.txt', "r")
+                data2 = handle2.read().splitlines()
+                data2 = data2[0]
 
                 for a in r:
                     time_status = a['time_status']
+                    time_status = int(time_status)
+
+                if time_status > 3:
+                    bot.editMessageText(telepot.message_identifier(data2), text="POLYCHILOS!!!")
 
 
 
