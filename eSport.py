@@ -59,22 +59,29 @@ def executeSomething():
         except (IndexError, KeyError, ValueError, TypeError):
             pass
             print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
-  
 
 
-            handle = open("all_links.txt", "r")
-            data = handle.read().splitlines()
 
-            for i in data:
-                rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
-                rr = rr.replace('.text','')
-                r = requests.get(rr).text
-                soup = BeautifulSoup(r, features="html.parser")
-                handle2 = open(i +'.txt', "r")
-                data2 = handle2.read().splitlines()
-                data2 = data2[0]
 
-                print (data2)
+        try:
+
+            for a in r2:
+                #--------------<Settings>----------------->
+                
+
+                handle = open("all_links.txt", "r")
+                data = handle.read().splitlines()
+
+                for i in data:
+                    rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
+                    rr = rr.replace('.text','')
+                    r = requests.get(rr).text
+                    soup = BeautifulSoup(r, features="html.parser")
+                    handle2 = open(i +'.txt', "r")
+                    data2 = handle2.read().splitlines()
+                    data2 = data2[0]
+
+                    print (data2)
                     
 
 
