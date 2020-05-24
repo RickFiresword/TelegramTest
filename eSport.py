@@ -33,20 +33,19 @@ url = 'https://api.betsapi.com/v2/events/inplay?sport_id=1&token=27503-R9VUM6NP7
 
 def executeSomething():
   
-    try:
 
-        handle = open("all_links.txt", "r")
-        data = handle.read().splitlines()
+    handle = open("all_links.txt", "r")
+    data = handle.read().splitlines()
 
-        for i in data:
-            rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
-            rr = rr.replace('.text','')
-            r = requests.get(rr).text
-            soup = BeautifulSoup(r, features="html.parser")
-            handle2 = open(i +'.txt', "r")
-            data2 = handle2.read().splitlines()
-            data2 = data2[0]
-            print (data2)       
+    for i in data:
+        rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
+        rr = rr.replace('.text','')
+        r = requests.get(rr).text
+        soup = BeautifulSoup(r, features="html.parser")
+        handle2 = open(i +'.txt', "r")
+        data2 = handle2.read().splitlines()
+        data2 = data2[0]
+        print (data2)       
 
 
 
