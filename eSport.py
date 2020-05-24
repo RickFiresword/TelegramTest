@@ -56,7 +56,7 @@ def executeSomething():
                     time_status = a['time_status']
                     time_status = int(time_status)
 
-                if time_status > 3:
+                if time_status > 2 :
                     bot.editMessageText(telepot.message_identifier(data2), text="POLYCHILOS!!!")
 
 
