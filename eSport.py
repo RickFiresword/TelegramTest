@@ -85,7 +85,7 @@ def executeSomething():
                     first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + score_total_plus + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n❌")
 
                     try:
-                        if (time_status == 3) and ('10' in league) and score_total > 1:
+                        if (time_status == 3) and ('8' in league) and score_total > 1:
                             print ("STATUS > 1")
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
                         elif (time_status == 3) and (8 in league) and score_total < 2:
