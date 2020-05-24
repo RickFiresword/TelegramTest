@@ -52,7 +52,7 @@ def executeSomething():
                 data2 = data2[0]
 
                 for a in r:
-                    time_status = a['time_status']
+                    time_status = int(a['time_status'])
 
 
 
