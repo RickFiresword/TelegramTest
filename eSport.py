@@ -59,7 +59,7 @@ def executeSomething():
 
                     if time_status > 2:
                         print ("STATUS > 2")
-                        bot.editMessageText(telepot.message_identifier(data2), text="POLYCHILOS!!!")
+                        bot.editMessageText(chat_id=my_telegram_chat_id, message_id=data2, text="SUCKKKKKKKK")
 
 
 
