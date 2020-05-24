@@ -58,19 +58,22 @@ def executeSomething():
                     data2 = data2[0]
                     dats2 = int(data2)
 
-                    if time_status > 0:
-                        print ("STATUS > 2")
-                        #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=data2, text="тру-ту-ту")
-                        bot.editMessageText((my_telegram_chat_id, data2), 'new_text')
-                        #bot.editMessageText(telepot.message_identifier(data2), text="SUCKKKKKKKK")
-                        
+
+                    try:
+                        if time_status > 0:
+                            print ("STATUS > 2")
+                            #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=data2, text="тру-ту-ту")
+                            bot.editMessageText((my_telegram_chat_id, data2), 'fsdfdsfsdfsf')
+                            #bot.editMessageText(telepot.message_identifier(data2), text="SUCKKKKKKKK")
+                    except:
+                        pass
 
 
 
 
 
 
-                        print (time_status)       
+                        #print (time_status)       
                     
 
 
