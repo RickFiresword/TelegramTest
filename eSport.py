@@ -13,7 +13,8 @@ sys.setrecursionlimit(99999)
 #=============TELEGRAM BOT======================#
 token_i = '27503-R9VUM6NP7900Cw'
 
-my_telegram_chat_id = '-1001469274467' #testing
+#my_telegram_chat_id = '-1001469274467' #testing
+my_telegram_chat_id ='-1001451066908'
 #
 
 
