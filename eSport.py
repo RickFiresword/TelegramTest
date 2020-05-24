@@ -3,12 +3,9 @@
 
 import threading
 import sys
-
+from bs4 import BeautifulSoup
 from telepot import loop
-
-
 import requests
-
 import telepot
 import time
 sys.setrecursionlimit(99999)
