@@ -80,7 +80,7 @@ def executeSomething():
 
 
 
-    except (IndexError, KeyError, ValueError):
+    except:
         pass
         print ("Passed!")
         #executeSomething()
