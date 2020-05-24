@@ -319,7 +319,7 @@ def executeSomething():
                             f = open(get_sport_id, 'a')
 
                             a = str_id_get
-                            a = str(a)
+                            a = str("\n"+a)
                             b = get_sport_id 
                             b = str(b)
                             
