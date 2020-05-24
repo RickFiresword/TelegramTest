@@ -176,9 +176,9 @@ def executeSomething():
                     soup = BeautifulSoup(r, features="html.parser")
                     handle2 = open(i +'.txt', "r")
                     data2 = handle2.read().splitlines()
-                    data2 = data2.replace("['","").replace("']","")
-
-                    print 
+                    data2 = data2[0]
+                    print (data2)
+                     
                     
 
 
