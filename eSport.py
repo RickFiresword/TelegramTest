@@ -174,6 +174,13 @@ def executeSomething():
                     rr = rr.replace('.text','')
                     r = requests.get(rr).text
                     soup = BeautifulSoup(r, features="html.parser")
+
+                    handle2 = open(i, "r")
+                    data2 = handle2.read().splitlines()
+                    print (data2)
+
+
+
                     print (soup)
 
 
