@@ -29,6 +29,10 @@ chat_id = "message.from_user.id"
 bot = telepot.Bot(token)
 url = 'https://api.betsapi.com/v2/events/inplay?sport_id=1&token=27503-R9VUM6NP7900Cw'
 
+rr = 0
+
+
+
 
 def executeSomething():
 
@@ -39,16 +43,16 @@ def executeSomething():
 
 
     except (IndexError, KeyError, ValueError):
-        pass
-        r = ['123456','123456']
-        print (time.strftime("%H:%M:%S  ") + "Errore -r-!")
+        time.sleep(5)
+        executeSomething()
+        print ("Errore with R ======")
 
     for j in r:
-        
         get_sport_id = j['id']
-        event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + get_sport_id
+        event_view = "https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=" + str(get_sport_id)
 
         r2 = requests.get(event_view).json()
+        #r3 = requests.get(odds_view).json()
         time.sleep(0)
 
         try:
@@ -60,6 +64,8 @@ def executeSomething():
             print (time.strftime("%H:%M:%S  ") + "Errore -r2-! ID: " + get_sport_id)
 
 
+
+
         try:
 
             for a in r2:
@@ -69,16 +75,17 @@ def executeSomething():
                     league = a['league']['name']
                     team_home = a['home']['name']
                     team_away = a['away']['name']
-                except (IndexError, KeyError, ValueError):
-                    league = 'errore'
-                    team_home = 'errore'
+                except (IndexError, KeyError, ValueError, TypeError):
+                    league = str('errore')
+                    team_home = str('errore')
                     team_away = 'errore'
                     print ("%H:%M:%S  Errore league")
 
+
                 try:
                     #-Scores
-                    score_home_str = str(a['scores']['2']['home'])
-                    score_away_str = str(a['scores']['2']['away'])
+                    score_home_str = int(a['scores']['2']['home'])
+                    score_away_str = int(a['scores']['2']['away'])
                     score_home = int(score_home_str)
                     score_away = int(score_away_str)
                     score_total = score_away+score_home
@@ -148,6 +155,7 @@ def executeSomething():
 
 
 
+
                 #--------------</Settings>----------------->
 
                 #--------------<Text Messages>------------->
@@ -158,128 +166,20 @@ def executeSomething():
                 the_time_text = ('⏱️ Time: ' + str(the_time) + "'")
 
                 score_total_text = ('⚽️ Score: ' + str(score_home) + " - " + str(score_away) + '  ( Total = ' + str(score_total) + ' )' )
+  
+
+
+                handle = open("all_links.txt", "r")
+                data = handle.read().splitlines()
+
+                for i in data:
+                    rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
+                    r = requests.get(rr).text
+                    soup = BeautifulSoup(r, features="html.parser")
+                    print (soup)
 
 
 
-                # =============== КИБЕР ФУТБОЛ 2,5 OVER ======================#
-
-                if (int(the_time) >= 4 and int(the_time) <= 6) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2 and int(red_total) == 0:
-                #if the_time > 0:
-                        score_total_plus = str(score_total + 0.5)
-                        first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
-                        # чтение файла
-                        handle = open("text.text", "r")
-                        data = handle.read()
-                        if str(get_sport_id) in data:
-                            print ('FUCKING INFO !!!')
-                            pass
-                        else:
-                            # ЗАПИСЬ в файл начало
-                            f = open('text.text', 'a')
-                            a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
-                            f.write(a)
-                            f.close()
-
-                            this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
-                            #print (this_message[message_id])
-                            id_get = this_message['message_id']
-                            #id_get = this_message.message_id
-                            new_id_get = id_get-9
-                            new_id_get = str(new_id_get)
-                            str_id_get = str(id_get)
-                            print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
-                            first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
-                            #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
-
-                            #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
-                            bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
-
-                else:
-                    print (get_sport_id + " Bad conditions for 10-12 Min GAMES (1st str)")
-                    pass
-                    time.sleep(0.3)
-
-
-
-
-                # =============== КИБЕР ФУТБОЛ 2,5 OVER (2nd)======================#
-
-                if int(the_time) < 8 and (int(s_attacks_total) >= 25) and (int(d_attacks_total) >= 20) and int(score_total) == 2 and int(corner_total) == 2 and int(red_total) == 0 and int(yellow_total) == 0 and (int(onTarget_total)+int(offTarget_total) == 2):
-                #if the_time > 0:
-                        score_total_plus = str(score_total + 0.5)
-                        first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
-                        # чтение файла
-                        handle = open("text.text", "r")
-                        data = handle.read()
-                        if str(get_sport_id) in data:
-                            print ('FUCKING INFO !!!')
-                            pass
-                        else:
-                            # ЗАПИСЬ в файл начало
-                            f = open('text.text', 'a')
-                            a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
-                            f.write(a)
-                            f.close()
-
-                            this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
-                            #print (this_message[message_id])
-                            id_get = this_message['message_id']
-                            #id_get = this_message.message_id
-                            new_id_get = id_get-9
-                            new_id_get = str(new_id_get)
-                            str_id_get = str(id_get)
-                            print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
-                            first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
-                            #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
-
-                            #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
-                            bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
-
-                else:
-                    print (get_sport_id + " Bad conditions for 10-12 Min GAMES (2nd str)")
-                    pass
-                    time.sleep(0.3)    
-
-
-
-                # =============== КИБЕР ФУТБОЛ 8 min games ======================#
-                if int(the_time) > 0 and int(the_time) < 2 and '8 mins' in league_name and int(score_total) == 1:
-                #if the_time > 0:
-                        score_total_plus = str(score_total + 0.5)
-                        first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' + 'Bet: ' + score_total_plus + " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
-                        # чтение файла
-                        handle = open("text.text", "r")
-                        data = handle.read()
-                        if str(get_sport_id) in data:
-                            print ('FUCKING INFO !!!')
-                            pass
-                        else:
-                            # ЗАПИСЬ в файл начало
-                            f = open('text.text', 'a')
-                            a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
-                            f.write(a)
-                            f.close()
-
-                            this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
-                            #print (this_message[message_id])
-                            id_get = this_message['message_id']
-                            #id_get = this_message.message_id
-                            new_id_get = id_get-9
-                            new_id_get = str(new_id_get)
-                            str_id_get = str(id_get)
-                            print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
-                            first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 30% on: ' + score_total_plus + " Over HT \n Bet: 70% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
-                            #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
-
-                            #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
-                            bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
-
-
-
-                else:
-                    print (get_sport_id + " Bad conditions for 8 Min GAMES")
-                    pass
-                    time.sleep(0.3)
 
 
 
@@ -287,14 +187,14 @@ def executeSomething():
         except (IndexError, KeyError, ValueError):
             pass
             print ("Passed!")
-            executeSomething()
+            #executeSomething()
 
 
 
 
 while True:
     executeSomething()
-    time.sleep(1)
+    time.sleep(5)
 
 
 
