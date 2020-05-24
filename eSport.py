@@ -46,9 +46,8 @@ def executeSomething():
             handle2 = open(i +'.txt', "r")
             data2 = handle2.read().splitlines()
             data2 = data2[0]
-                    
-    except:
-        print ('hwt')            
+            print (data2)       
+
 
 
 
