@@ -319,7 +319,7 @@ def executeSomething():
                             f = open(get_sport_id + '.txt', 'a')
 
                             a = str_id_get
-                            a = ("\n" + a)
+                            a = (a)
                             b = get_sport_id 
                             b = str("\n" + b)
                             
