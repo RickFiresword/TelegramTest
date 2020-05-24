@@ -139,6 +139,16 @@ def executeSomething():
 
                 time_status = a['time_status']
 
+                #-Time
+                try:
+                    the_time = a['timer']['tm'] + 1
+                except (IndexError, KeyError, ValueError):
+                    the_time = 0
+
+                if the_time > 10:
+                    print ("Time to high. Stoped")
+                    time.sleep(1)
+                    executeSomething()
 
 
 
