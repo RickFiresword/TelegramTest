@@ -47,14 +47,13 @@ def executeSomething():
                 rr = rr.replace('.text','')
                 r = requests.get(rr).json()
                 r = r['results']
-                
-                handle2 = open(i +'.txt', "r")
-                data2 = handle2.read().splitlines()
-                data2 = data2[0]
-
                 for a in r:
                     time_status = a['time_status']
                     time_status = int(time_status)
+                
+                    handle2 = open(i +'.txt', "r")
+                    data2 = handle2.read().splitlines()
+                    data2 = data2[0]
 
                     if time_status > 2:
                         bot.editMessageText(telepot.message_identifier(data2), text="POLYCHILOS!!!")
