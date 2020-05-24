@@ -46,7 +46,7 @@ def executeSomething():
                 rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
                 rr = rr.replace('.text','')
                 r = requests.get(rr).json()
-                soup = BeautifulSoup(r, features="html.parser")
+                
                 handle2 = open(i +'.txt', "r")
                 data2 = handle2.read().splitlines()
                 data2 = data2[0]
