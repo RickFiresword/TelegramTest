@@ -35,7 +35,7 @@ def executeSomething():
 
     try:
 
-        for a in range(10000):
+        for a in range(100000000000):
             #--------------<Settings>----------------->
             
 
@@ -45,11 +45,19 @@ def executeSomething():
             for i in data:
                 rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
                 rr = rr.replace('.text','')
-                r = requests.get(rr).text
+                r = requests.get(rr).json()
                 soup = BeautifulSoup(r, features="html.parser")
                 handle2 = open(i +'.txt', "r")
                 data2 = handle2.read().splitlines()
                 data2 = data2[0]
+
+                time_status = 123
+
+
+
+
+
+
 
                 print (data2)       
                     
