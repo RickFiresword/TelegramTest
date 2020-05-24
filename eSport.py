@@ -58,7 +58,7 @@ def executeSomething():
                     data2 = data2[0]
                     dats2 = int(data2)
 
-                    if time_status > 2:
+                    if time_status > 0:
                         print ("STATUS > 2")
                         bot.editMessageText(chat_id=my_telegram_chat_id, message_id=data2, text="SUCKKKKKKKK")
 
