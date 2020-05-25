@@ -195,12 +195,15 @@ def executeSomething():
                 #--------------<Text Messages>------------->
                 league = str(league)
                 league_name = ('🕹️ League: ' + league)
+                league_name = str(league_name)
                 teams_text = ('Teams: ' + team_home + ' - ' + team_away)
+                teams_text = str(teams_text)
 
                 the_time_text = ('⏱️ Time: ' + str(the_time) + "'")
+                the_time_text = str(the_time_text)
 
                 score_total_text = ('⚽️ Score: ' + str(score_home) + " - " + str(score_away) + '  ( Total = ' + str(score_total) + ' )' )
-
+                score_total_text = str(score_total_text)
 
                 # =============== КИБЕР ФУТБОЛ 2,5 OVER ======================#
 
@@ -312,19 +315,19 @@ def executeSomething():
                             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
                             first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + score_total_plus + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
 
-                            # ff = open('all_links.txt', 'a')
-                            # f = open(get_sport_id + '.txt', 'a')
+                            ff = open('all_links.txt', 'a')
+                            f = open(get_sport_id + '.txt', 'a')
 
-                            # a = str_id_get
-                            # a = (a)
-                            # b = get_sport_id 
-                            # b = str("\n" + b)
+                            a = str_id_get
+                            a = (a)
+                            b = get_sport_id 
+                            b = str("\n" + b)
                             
-                            # f.write(a)
-                            # ff.write(b)
+                            f.write(a)
+                            ff.write(b)
 
-                            # f.close()
-                            # ff.close()
+                            f.close()
+                            ff.close()
 
 
 
