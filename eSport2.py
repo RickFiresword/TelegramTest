@@ -16,11 +16,11 @@ sys.setrecursionlimit(99999)
 #=============TELEGRAM BOT======================#
 token_i = '27503-R9VUM6NP7900Cw'
 
-#my_telegram_chat_id = '-1001469274467' #testing
+my_telegram_chat_id = '-1001469274467' #testing
 #my_telegram_chat_id ='-1001451066908'
 
 
-my_telegram_chat_id = '-1001414741135' #CYBER
+#my_telegram_chat_id = '-1001414741135' #CYBER
 
 
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
@@ -210,6 +210,7 @@ def executeSomething():
                         first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
                         # чтение файла
                         handle = open("text.text", "r")
+                        
                         data = handle.read()
                         if str(get_sport_id) in data:
                             print ('FUCKING INFO !!!')
@@ -311,19 +312,19 @@ def executeSomething():
                             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
                             first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + score_total_plus + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
 
-                            ff = open('all_links.txt', 'a')
-                            f = open(get_sport_id + '.txt', 'a')
+                            # ff = open('all_links.txt', 'a')
+                            # f = open(get_sport_id + '.txt', 'a')
 
-                            a = str_id_get
-                            a = (a)
-                            b = get_sport_id 
-                            b = str("\n" + b)
+                            # a = str_id_get
+                            # a = (a)
+                            # b = get_sport_id 
+                            # b = str("\n" + b)
                             
-                            f.write(a)
-                            ff.write(b)
+                            # f.write(a)
+                            # ff.write(b)
 
-                            f.close()
-                            ff.close()
+                            # f.close()
+                            # ff.close()
 
 
 
