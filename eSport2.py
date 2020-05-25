@@ -200,7 +200,7 @@ def executeSomething():
                 the_time_text = ('⏱️ Time: ' + str(the_time) + "'")
 
                 score_total_text = ('⚽️ Score: ' + str(score_home) + " - " + str(score_away) + '  ( Total = ' + str(score_total) + ' )' )
-
+                print (league_name)
 
 
                 # =============== КИБЕР ФУТБОЛ 2,5 OVER ======================#
@@ -287,57 +287,57 @@ def executeSomething():
 
 
                 # =============== КИБЕР ФУТБОЛ 8 min games ======================#
-                if int(the_time) > 0 and int(the_time) < 2 and '8 mins' in league_name and int(score_total) == 1:
-                #if the_time > 0:
-                        score_total_plus = str(score_total + 0.5)
-                        first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' + 'Bet: ' + score_total_plus + " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
-                        # чтение файла
-                        handle = open("text.text", "r")
-                        data = handle.read()
-                        if str(get_sport_id) in data:
-                            print ('FUCKING INFO !!!')
-                            pass
-                        else:
-                            # ЗАПИСЬ в файл начало
-                            f = open('text.text', 'a')
-                            a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
-                            f.write(a)
-                            f.close()
+                # if int(the_time) > 0 and int(the_time) < 2 and '8 mins' in league_name and int(score_total) == 1:
+                # #if the_time > 0:
+                #         score_total_plus = str(score_total + 0.5)
+                #         first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' + 'Bet: ' + score_total_plus + " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
+                #         # чтение файла
+                #         handle = open("text.text", "r")
+                #         data = handle.read()
+                #         if str(get_sport_id) in data:
+                #             print ('FUCKING INFO !!!')
+                #             pass
+                #         else:
+                #             # ЗАПИСЬ в файл начало
+                #             f = open('text.text', 'a')
+                #             a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
+                #             f.write(a)
+                #             f.close()
 
-                            this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
-                            id_get = this_message['message_id']
-                            new_id_get = id_get-9
-                            new_id_get = str(new_id_get)
-                            str_id_get = str(id_get)
-                            print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
-                            first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + score_total_plus + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
+                #             this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
+                #             id_get = this_message['message_id']
+                #             new_id_get = id_get-9
+                #             new_id_get = str(new_id_get)
+                #             str_id_get = str(id_get)
+                #             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
+                #             first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + score_total_plus + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
 
-                            ff = open('all_links.txt', 'a')
-                            f = open(get_sport_id + '.txt', 'a')
+                #             ff = open('all_links.txt', 'a')
+                #             f = open(get_sport_id + '.txt', 'a')
 
-                            a = str_id_get
-                            a = (a)
-                            b = get_sport_id 
-                            b = str("\n" + b)
+                #             a = str_id_get
+                #             a = (a)
+                #             b = get_sport_id 
+                #             b = str("\n" + b)
                             
-                            f.write(a)
-                            ff.write(b)
+                #             f.write(a)
+                #             ff.write(b)
 
-                            f.close()
-                            ff.close()
-
-
-
-                            #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
-                            bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
+                #             f.close()
+                #             ff.close()
 
 
 
-                else:
-                    print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
-                    #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home + "\nUnderdog: " + under_team)
-                    #pass
-                    time.sleep(1)
+                #             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
+                #             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
+
+
+
+                # else:
+                #     print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
+                #     #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home + "\nUnderdog: " + under_team)
+                #     pass
+                #     time.sleep(1)
 
 
 
