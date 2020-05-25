@@ -285,7 +285,7 @@ def executeSomething():
 
 
 
-                =============== КИБЕР ФУТБОЛ 8 min games ======================#
+                                #=============== КИБЕР ФУТБОЛ 8 min games ======================#
                 if int(the_time) > 0 and int(the_time) < 2 and '8 mins' in league_name and int(score_total) == 1:
                 #if the_time > 0:
                         score_total_plus = str(score_total + 0.5)
