@@ -31,17 +31,21 @@ rr = 0
 
 
 
-
 def executeSomething():
+
 
     try:
 
-        for a in range(100000000000):
+
             #--------------<Settings>----------------->
             
 
-            handle = open("all_links.txt", "r")
-            data = handle.read().splitlines()
+        handle = open("all_links.txt", "r")
+        data = handle.read().splitlines()
+        stroki=count_lines('all_links.txt')
+        print (stroki)
+
+        for a in range(100000000000):
 
             for i in data:
                 rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
@@ -110,7 +114,8 @@ def executeSomething():
                     except:
                         pass
 
-
+            handle.close()
+            handle2.close()
 
 
 
