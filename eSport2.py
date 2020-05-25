@@ -305,28 +305,26 @@ def executeSomething():
                             f.close()
 
                             this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
-                            #print (this_message[message_id])
                             id_get = this_message['message_id']
-                            #id_get = this_message.message_id
                             new_id_get = id_get-9
                             new_id_get = str(new_id_get)
                             str_id_get = str(id_get)
                             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
                             first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + score_total_plus + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
 
-                            # ff = open('all_links.txt', 'a')
-                            # f = open(get_sport_id + '.txt', 'a')
+                            ff = open('all_links.txt', 'a')
+                            f = open(get_sport_id + '.txt', 'a')
 
-                            # a = str_id_get
-                            # a = (a)
-                            # b = get_sport_id 
-                            # b = str("\n" + b)
+                            a = str_id_get
+                            a = (a)
+                            b = get_sport_id 
+                            b = str("\n" + b)
                             
-                            # f.write(a)
-                            # ff.write(b)
+                            f.write(a)
+                            ff.write(b)
 
-                            # f.close()
-                            # ff.close()
+                            f.close()
+                            ff.close()
 
 
 
@@ -345,8 +343,8 @@ def executeSomething():
 
 
         except (IndexError, KeyError, ValueError):
-            pass
-            print ("Passed!")
+            #pass
+            #print ("Passed!")
             #executeSomething()
 
 
