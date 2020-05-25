@@ -118,47 +118,55 @@ def executeSomething():
                     s_attacks_home = a['stats']['attacks'][0]
                     s_attacks_away = a['stats']['attacks'][1]
                     s_attacks_total = int(s_attacks_home)+int(s_attacks_away)
+                    s_attacks_total = str(s_attacks_total)
                     d_attacks_home = a['stats']['dangerous_attacks'][0]
                     d_attacks_away = a['stats']['dangerous_attacks'][1]
                     d_attacks_total = int(d_attacks_home)+int(d_attacks_away)
+                    d_attacks_total = str(d_attacks_total)
 
                 except (IndexError, KeyError, ValueError):
-                    s_attacks_home = 0
-                    s_attacks_away = 0
-                    s_attacks_total = 0
-                    d_attacks_home = 0
-                    d_attacks_away = 0
-                    d_attacks_total = 0
+                    s_attacks_home = '0'
+                    s_attacks_away = '0'
+                    s_attacks_total = '0'
+                    d_attacks_home = '0'
+                    d_attacks_away = '0'
+                    d_attacks_total = '0'
                     print ("%H:%M:%S  Была ошибка -Atacks-!")
 
                 #-Corners
                 corner_home = a['stats']['corners'][0]
                 corner_away = a['stats']['corners'][1]
                 corner_total = int(corner_home)+int(corner_away)
+                corner_total = str(corner_total)
 
                 #-Targets
                 onTarget_home = a['stats']['on_target'][0]
                 onTarget_away = a['stats']['on_target'][1]
                 onTarget_total = int(onTarget_away)+int(onTarget_home)
+                onTarget_total = str(onTarget_total)
                 offTarget_home = a['stats']['off_target'][0]
                 offTarget_away = a['stats']['off_target'][1]
                 offTarget_total = int(offTarget_away)+int(offTarget_home)
+                offTarget_total = str(offTarget_total)
 
 
                 #Cards
                 red_home = a['stats']['redcards'][0]
                 red_away = a['stats']['redcards'][1]
                 red_total = int(red_home)+int(red_away)
+                red_total = str(red_total)
                 #<
                 yellow_home = a['stats']['yellowcards'][0]
                 yellow_away = a['stats']['yellowcards'][1]
                 yellow_total = int(yellow_home)+int(yellow_away)
+                yellow_total = str(yellow_total)
 
                 time_status = a['time_status']
 
                 #-Time
                 try:
                     the_time = a['timer']['tm'] + 1
+                    the_time = str(the_time)
                 except (IndexError, KeyError, ValueError):
                     the_time = 0
 
