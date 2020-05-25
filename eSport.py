@@ -87,7 +87,7 @@ def executeSomething():
 
                     score_total_text = ('⚽️ Score total: 1' )
                     score_total_text = str(score_total_text)
-
+                    print(team_home)
 
 
                 
