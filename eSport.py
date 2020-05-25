@@ -43,9 +43,10 @@ def executeSomething():
         handle = open("all_links.txt", "r")
         data = handle.read().splitlines()
         stroki=len(data)
+        stroki = str(stroki)
         print (stroki)
 
-        for a in range(100000000000):
+        for a in range(stroki):
 
             for i in data:
                 rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
