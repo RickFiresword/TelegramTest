@@ -69,7 +69,7 @@ def executeSomething():
 
                     the_time_text = ('⏱️ Time: ' + str(the_time) + "'")
 
-                    score_total_text = ('⚽️ Score: ' + str(score_home) + " - " + str(score_away) + '  ( Total = ' + str(score_total) + ' )' )
+                    score_total_text = ('⚽️ Score total: 1' )
 
 
 
