@@ -322,7 +322,7 @@ def executeSomething():
 
 
                                 #=============== КИБЕР ФУТБОЛ 8 min games ======================#
-                if int(the_time) > 0 and int(the_time) < 2 and '8 mins' in league_name and int(score_total) == 1:
+                if int(the_time) > 0 and int(the_time) < 10 and '8 mins' in league_name and int(score_total) == 1:
                 #if the_time > 0:
                         score_total_plus = str(score_total + 0.5)
                         first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' + 'Bet: ' + score_total_plus + " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
