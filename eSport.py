@@ -68,13 +68,19 @@ def executeSomething():
                     score_away_str = int(a['scores']['2']['away'])
                     score_home = int(score_home_str)
                     score_away = int(score_away_str)
+
                     score_total = score_away+score_home
+                    score_total = str(score_total)
                     league_name = ('🕹️ League: ' + league)
+                    league_name = str(league_name)
                     teams_text = ('Teams: ' + team_home + ' - ' + team_away)
+                    teams_text = str(teams_text)
 
                     the_time_text = ('⏱️ Time: ' + str(the_time) + "'")
+                    the_time_text = str(the_time_text)
 
                     score_total_text = ('⚽️ Score total: 1' )
+                    score_total_text = str(score_total_text)
 
 
 
