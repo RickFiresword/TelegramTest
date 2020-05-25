@@ -193,7 +193,7 @@ def executeSomething():
                 #--------------</Settings>----------------->
 
                 #--------------<Text Messages>------------->
-
+                league = sttr(league)
                 league_name = ('🕹️ League: ' + league)
                 teams_text = ('Teams: ' + team_home + ' - ' + team_away)
 
