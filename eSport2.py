@@ -336,7 +336,7 @@ def executeSomething():
                 else:
                     print (str(get_sport_id) + " Bad conditions for 8 Min GAMES")
                     #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home + "\nUnderdog: " + under_team)
-                    pass
+                    #pass
                     time.sleep(1)
 
 
