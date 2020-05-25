@@ -42,7 +42,7 @@ def executeSomething():
 
         handle = open("all_links.txt", "r")
         data = handle.read().splitlines()
-        stroki=count_lines('all_links.txt')
+        stroki=len(data)
         print (stroki)
 
         for a in range(100000000000):
