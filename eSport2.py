@@ -41,7 +41,7 @@ def executeSomething():
         r = r['results']
         r = r[::-1]
     #except:
-        print (r)
+        #print (r)
 
     except (IndexError, KeyError, ValueError):
         time.sleep(5)
