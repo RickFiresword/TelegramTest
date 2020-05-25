@@ -166,7 +166,7 @@ def executeSomething():
                 #-Time
                 try:
                     the_time = a['timer']['tm'] + 1
-                    the_time = str(the_time)
+                    #the_time = str(the_time)
                 except (IndexError, KeyError, ValueError):
                     the_time = 0
 
