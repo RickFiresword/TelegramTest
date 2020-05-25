@@ -344,7 +344,7 @@ def executeSomething():
 
         except (IndexError, KeyError, ValueError):
             #pass
-            #print ("Passed!")
+            print ("Passed!")
             #executeSomething()
 
 
