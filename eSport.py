@@ -44,7 +44,7 @@ def executeSomething():
         data = handle.read().splitlines()
         stroki=len(data)
         stroki = int(stroki)
-        print (stroki)
+
 
         for a in range(stroki):
 
@@ -61,13 +61,19 @@ def executeSomething():
                     time_status = int(time_status)
                     #-Names
                     league = a['league']['name']
+                    league = str(league)
                     team_home = a['home']['name']
+                    team_home = str(team_home)
                     team_away = a['away']['name']
-                    the_time = 2
+                    team_away = str(team_away)
+
+                    the_time = '2'
                     score_home_str = int(a['scores']['2']['home'])
                     score_away_str = int(a['scores']['2']['away'])
                     score_home = int(score_home_str)
                     score_away = int(score_away_str)
+                    score_home = str(score_home)
+                    score_away = str(score_away)
 
                     score_total = score_away+score_home
                     score_total = str(score_total)
