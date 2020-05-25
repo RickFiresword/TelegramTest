@@ -14,11 +14,11 @@ sys.setrecursionlimit(99999)
 token_i = '27503-R9VUM6NP7900Cw'
 
 #my_telegram_chat_id = '-1001469274467' #testing
-my_telegram_chat_id ='-1001451066908'
+#my_telegram_chat_id ='-1001451066908'
 #
 
 
-#my_telegram_chat_id = '-1001414741135' #CYBER
+my_telegram_chat_id = '-1001414741135' #CYBER
 
 
 token = '399177903:AAGgSX7V3G8vRyPpC_IaAWH9Q9JaHNMDJV0'
@@ -48,7 +48,7 @@ def executeSomething():
                 rr = rr.replace('.text','')
                 r = requests.get(rr).json()
                 r = r['results']
-                r = r[::-1]
+                #r = r[::-1]
 
                 for a in r:
                     
