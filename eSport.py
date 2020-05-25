@@ -43,7 +43,7 @@ def executeSomething():
         handle = open("all_links.txt", "r")
         data = handle.read().splitlines()
         stroki=len(data)
-        stroki = str(stroki)
+        stroki = int(stroki)
         print (stroki)
 
         for a in range(stroki):
@@ -130,6 +130,7 @@ def executeSomething():
 
 while True:
     executeSomething()
+    print ("ALL OVER")
     time.sleep(300)
 
 
