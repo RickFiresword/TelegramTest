@@ -112,7 +112,7 @@ def executeSomething():
                     time.sleep(0)
                     
                     if league == "Esoccer Live Arena - 10 mins play" and ((score_away+score_away)<=2) and time_status == 3:
-                        print (team_home+team_away)
+                        print(team_home + team_away)
 
                     else:
                         print("suka")
@@ -124,8 +124,8 @@ def executeSomething():
 
 
 
-                    bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
-                        print ("10/12 min games >>> Total over YES")
+                    #bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
+                        #print ("10/12 min games >>> Total over YES")
 
 
 
