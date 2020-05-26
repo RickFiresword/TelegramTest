@@ -107,32 +107,34 @@ def executeSomething():
                 first_time_over4 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text2 + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n❌ Final score: " + str(score_home) + " - " + str(score_away) + " ❌")
                 handle.close()
                 handle2.close()
-                
+
                 try:
                     time.sleep(0)
-                    if (time_status == 3) and ('8' in league) and int(score_total) > 1:
+                    if (time_status == 3) and ('8 mins' in league) and int(score_total) > 1:
                         print ("8 min games >>> Total over YES")
                         
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
 
 
-                    elif (time_status == 3) and ('8' in league) and int(score_total) < 2:
+                    elif (time_status == 3) and ('8 mins' in league) and int(score_total) < 2:
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
                         print ("8 min games <<< Total over NO")
-                    else: 
+                    else:
+                        pass 
                         print("Not over")
 
 
-                    if (time_status == 3) and ('1' in league) and int(score_total) < 3:
+                    if (time_status == 3) and ( ('10 mins' in league) or ('12 mins' in league) ) and int(score_total) < 3:
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
                         print ("10/12 min games <<< Total over NO")
 
-                    elif (time_status == 3) and ('1' in league) and int(score_total) > 2:
+                    elif (time_status == 3) and ( ('10 mins' in league) or ('12 mins' in league) ) and int(score_total) > 2:
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
                         print ("10/12 min games >>> Total over YES")
 
                     else:
                         print("not over")
+                        pass
 
 
                 except:
