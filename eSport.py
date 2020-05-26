@@ -107,6 +107,7 @@ def executeSomething():
                         time.sleep(2)
                         if (time_status == 3) and ('8' in league) and score_total > 1:
                             print ("8 min games >>> Total over YES")
+                            
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
                         elif (time_status == 3) and ('8' in league) and score_total < 2:
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
