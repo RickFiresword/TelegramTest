@@ -75,7 +75,9 @@ def executeSomething():
                 score_away = int(score_away_str)
                 score_home = str(score_home)
                 score_away = str(score_away)
-                ss = a['ss']
+                ss = a['ss'][0]
+                ss2 = a['ss'][2]
+                ss3 = int(ss) + int(ss2)
 
                 score_total = score_away+score_home
                 score_total = str(score_total)
@@ -112,7 +114,7 @@ def executeSomething():
                 time.sleep(0)
                 
                 if str(league) == "Esoccer Live Arena - 10 mins play" and int(time_status) == 3:
-                    print(ss[0])
+                    print(ss3)
                     #bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
 
                 else:
