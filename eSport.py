@@ -49,7 +49,7 @@ def executeSomething():
         #for a in range(stroki):
 
         for a in data:
-            rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + i
+            rr = 'https://api.betsapi.com/v1/event/view?token=27503-R9VUM6NP7900Cw&event_id=' + a
             rr = rr.replace('.text','')
             r = requests.get(rr).json()
             r = r['results']
