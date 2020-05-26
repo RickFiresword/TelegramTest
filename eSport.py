@@ -111,7 +111,7 @@ def executeSomething():
                 try:
                     time.sleep(0)
                     
-                    if str(league) == "Esoccer Live Arena - 10 mins play" and (score_total <= 2) and int(time_status) == 3:
+                    if str(league) == "Esoccer Live Arena - 10 mins play" and (score_total <= '2') and int(time_status) == 3:
                         print(team_home + team_away)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
 
