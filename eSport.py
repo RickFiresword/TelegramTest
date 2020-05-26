@@ -141,6 +141,9 @@ def executeSomething():
                     print("suka")
                     pass
 
+                print ("sleep mode")
+                time.sleep(300)
+                
 
 
 
