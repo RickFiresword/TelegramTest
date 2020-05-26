@@ -124,12 +124,12 @@ def executeSomething():
                         print("Not over")
 
 
-                    if (time_status == 3) and ( ('10 mins' in league) or ('12 mins' in league) ) and int(score_total) <= 2:
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
+                    if (time_status == 3) and ( (league == 'Esoccer Live Arena - 10 mins play') or (league == 'Esoccer Liga Pro - 12 mins play') ) and int(score_total) > 2:
+                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
                         print ("10/12 min games <<< Total over NO")
 
-                    elif (time_status == 3) and ( ('10 mins' in league) or ('12 mins' in league) ) and int(score_total) >= 3:
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
+                    elif (time_status == 3) and ( (league == 'Esoccer Live Arena - 10 mins play') or (league == 'Esoccer Liga Pro - 12 mins play') ) and int(score_total)  <= 2 :
+                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
                         print ("10/12 min games >>> Total over YES")
 
                     else:
