@@ -111,7 +111,7 @@ def executeSomething():
                 try:
                     time.sleep(0)
                     
-                    if league == "Esoccer Live Arena - 10 mins play" and ((score_away+score_away)<=2) and time_status == 3:
+                    if str(league) == "Esoccer Live Arena - 10 mins play" and ((int(score_away)+int(score_away))<=2) and int(time_status) == 3:
                         print(team_home + team_away)
 
                     else:
