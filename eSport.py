@@ -94,7 +94,7 @@ def executeSomething():
 
 
             
-                handle2 = open(i +'.txt', "r")
+                handle2 = open(a +'.txt', "r")
                 data2 = handle2.read().splitlines()
                 data2 = data2[0]
                 data2 = int(data2)
