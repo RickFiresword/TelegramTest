@@ -110,31 +110,24 @@ def executeSomething():
 
                 try:
                     time.sleep(0)
-                    if (int(time_status) == 3) and ('8 mins' in str(league)) and int(score_total) > 1:
-                        print ("8 min games >>> Total over YES")
-                        
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
+                    
+                    if league == "Esoccer Live Arena - 10 mins play" and ((score_away+score_away)<=2) and time_status == 3:
+                        print (team_home+team_away)
 
-
-                    elif (int(time_status) == 3) and ('8 mins' in str(league)) and int(score_total) < 2:
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
-                        print ("8 min games <<< Total over NO")
                     else:
-                        pass 
-                        print("Not over")
+                        print("suka")
 
 
-                    if (int(time_status) == 3) and ( (str(league) == 'Esoccer Live Arena - 10 mins play') or (str(league) == 'Esoccer Liga Pro - 12 mins play') ) and int(score_total) > 2:
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
-                        print ("10/12 min games <<< Total over NO")
 
-                    elif (int(time_status) == 3) and ( (str(league) == 'Esoccer Live Arena - 10 mins play') or (str(league) == 'Esoccer Liga Pro - 12 mins play') ) and int(score_total)  <= 2 :
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
+
+
+
+
+
+                    bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
                         print ("10/12 min games >>> Total over YES")
 
-                    else:
-                        print("not over")
-                        pass
+
 
 
                 except:
