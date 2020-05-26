@@ -105,25 +105,30 @@ def executeSomething():
 
                     try:
                         time.sleep(2)
-                        if (time_status == 3) and ('8' in league) and score_total > 1:
+                        if (time_status == 3) and ('8' in league) and int(score_total) > 1:
                             print ("8 min games >>> Total over YES")
                             
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
-                        elif (time_status == 3) and ('8' in league) and score_total < 2:
+
+
+                        elif (time_status == 3) and ('8' in league) and int(score_total) < 2:
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
                             print ("8 min games <<< Total over NO")
+                        else: 
+                            print("Not over")
 
 
-                        elif (time_status == 3) and ('1' in league) and score_total < 3:
+                        if (time_status == 3) and ('1' in league) and int(score_total) < 3:
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
                             print ("10/12 min games <<< Total over NO")
 
-                        elif (time_status == 3) and ('1' in league) and score_total > 2:
+                        elif (time_status == 3) and ('1' in league) and int(score_total) > 2:
                             bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
                             print ("10/12 min games >>> Total over YES")
 
                         else:
-                            pass
+                            print("not over")
+
 
                     except:
                         pass
