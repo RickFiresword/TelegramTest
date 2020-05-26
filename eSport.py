@@ -104,7 +104,7 @@ def executeSomething():
                     first_time_over4 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n❌ Final score: " + str(score_home) + " - " + str(score_away) + " ❌")
 
                     try:
-                        time.sleep(2)
+                        time.sleep(0)
                         if (time_status == 3) and ('8' in league) and int(score_total) > 1:
                             print ("8 min games >>> Total over YES")
                             
