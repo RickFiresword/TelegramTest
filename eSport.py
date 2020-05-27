@@ -119,26 +119,26 @@ def executeSomething():
 
                 try:
                 
-                    if str(league) == "Esoccer Live Arena - 10 mins play" and int(time_status) == 3 and int(ss3) <= 2:
+                    if str(league) == "Esoccer Live Arena - 10 mins play" and str(time_status) == '3' and int(ss3) <= 2:
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
 
-                    elif str(league) == "Esoccer Live Arena - 10 mins play" and int(time_status) == 3 and int(ss3) > 2:
+                    elif str(league) == "Esoccer Live Arena - 10 mins play" and str(time_status) == '3' and int(ss3) > 2:
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
 
-                    elif str(league) == "Esoccer GT Leagues - 12 mins play" and int(time_status) == 3 and int(ss3) <= 2:
+                    elif str(league) == "Esoccer GT Leagues - 12 mins play" and str(time_status) == '3' and int(ss3) <= 2:
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
 
-                    elif str(league) == "Esoccer GT Leagues - 12 mins play" and int(time_status) == 3 and int(ss3) > 2:
+                    elif str(league) == "Esoccer GT Leagues - 12 mins play" and str(time_status) == '3' and int(ss3) > 2:
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
 
-                    elif str(league) == "Esoccer Battle - 8 mins play" and int(time_status) == 3 and int(ss3) > 1:
+                    elif str(league) == "Esoccer Battle - 8 mins play" and str(time_status) == '3' and int(ss3) > 1:
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
-                    elif str(league) == "Esoccer Battle - 8 mins play" and int(time_status) == 3 and int(ss3) <= 1:
+                    elif str(league) == "Esoccer Battle - 8 mins play" and str(time_status) == '3' and int(ss3) <= 1:
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
 
