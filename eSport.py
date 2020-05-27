@@ -86,35 +86,36 @@ def executeSomething():
 
                 league_name = ('🕹️ League: ' + league)
                 league_name = str(league_name)
+                print (league_name)
 
-                teams_text = ('Teams: ' + team_home + ' - ' + team_away)
-                teams_text = str(teams_text)
+                # teams_text = ('Teams: ' + team_home + ' - ' + team_away)
+                # teams_text = str(teams_text)
 
-                the_time_text = ('⏱️ Time: ' + str(the_time) + "'")
-                the_time_text = str(the_time_text)
-                the_time_text2 = ('⏱️ Time: ' + str(the_time2) + "'")
-                the_time_text2 = str(the_time_text2)
+                # the_time_text = ('⏱️ Time: ' + str(the_time) + "'")
+                # the_time_text = str(the_time_text)
+                # the_time_text2 = ('⏱️ Time: ' + str(the_time2) + "'")
+                # the_time_text2 = str(the_time_text2)
 
-                score_total_text = ('⚽️ Score total: 1' )
-                score_total_text = str(score_total_text)
-                print(team_home + " === " + team_away)
+                # score_total_text = ('⚽️ Score total: 1' )
+                # score_total_text = str(score_total_text)
+                # print(team_home + " === " + team_away)
 
 
             
-                handle2 = open(i +'.txt', "r")
-                data2 = handle2.read().splitlines()
-                data2 = data2[0]
-                data2 = int(data2)
-                new_id_get = data2-9
-                new_id_get = str(new_id_get)
-                score_total_plus = str(1.5)
-                first_time_over1 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + str(score_total_plus) + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n✅ Final score: " + str(score_home) + " - " + str(score_away) + " ✅")
-                first_time_over2 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + str(score_total_plus) + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n❌ Final score: " + str(score_home) + " - " + str(score_away) + " ❌")
-                first_time_over3 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text2) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n✅ Final score: " + str(score_home) + " - " + str(score_away) + " ✅")
-                first_time_over4 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text2) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n❌ Final score: " + str(score_home) + " - " + str(score_away) + " ❌")
+                # handle2 = open(i +'.txt', "r")
+                # data2 = handle2.read().splitlines()
+                # data2 = data2[0]
+                # data2 = int(data2)
+                # new_id_get = data2-9
+                # new_id_get = str(new_id_get)
+                # score_total_plus = str(1.5)
+                # first_time_over1 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + str(score_total_plus) + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n✅ Final score: " + str(score_home) + " - " + str(score_away) + " ✅")
+                # first_time_over2 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 15% on: ' + str(score_total_plus) + " Over HT \nBet: 85% on 1.5 Over FT" +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n❌ Final score: " + str(score_home) + " - " + str(score_away) + " ❌")
+                # first_time_over3 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text2) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n✅ Final score: " + str(score_home) + " - " + str(score_away) + " ✅")
+                # first_time_over4 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text2) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n❌ Final score: " + str(score_home) + " - " + str(score_away) + " ❌")
 
-                print (data2)
-                time.sleep(0)
+
+                # time.sleep(0)
 
             #     try:
                 
