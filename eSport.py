@@ -57,14 +57,14 @@ def executeSomething():
                 
                 time_status = a['time_status']
                 time_status = int(time_status)
-                #-Names
-                league = a['league']['name']
-                league = str(league)
-                team_home = a['home']['name']
-                team_home = str(team_home)
-                team_away = a['away']['name']
-                team_away = str(team_away)
-                print (team_away)
+                print (time_status)
+            #     #-Names
+            #     league = a['league']['name']
+            #     league = str(league)
+            #     team_home = a['home']['name']
+            #     team_home = str(team_home)
+            #     team_away = a['away']['name']
+            #     team_away = str(team_away)
 
             #     the_time = '2'
             #     the_time2 = '4'
@@ -152,8 +152,8 @@ def executeSomething():
 
 
 
-            #         #bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
-            #             #print ("10/12 min games >>> Total over YES")
+                    #bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
+                        #print ("10/12 min games >>> Total over YES")
 
 
 
