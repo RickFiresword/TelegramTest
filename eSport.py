@@ -61,13 +61,13 @@ def executeSomething():
                 #-Names
                 league = str(a['league']['name'])
                 #league = str(league)
+                print (league)
 
-                team_home = a['home']['name']
-                team_home = str(team_home)
+                # team_home = a['home']['name']
+                # team_home = str(team_home)
 
-                team_away = a['away']['name']
-                team_away = str(team_away)
-                print (team_away)
+                # team_away = a['away']['name']
+                # team_away = str(team_away)
 
                 # the_time = '2'
                 # the_time2 = '4'
