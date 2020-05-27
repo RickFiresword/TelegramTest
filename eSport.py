@@ -107,41 +107,41 @@ def executeSomething():
                 first_time_over3 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text2) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n✅ Final score: " + str(score_home) + " - " + str(score_away) + " ✅")
                 first_time_over4 = ("❗ Wave_" + str(new_id_get) + "  eSport ❗"+ "\n" + "\n" + str(league_name) + "\n" + str(teams_text) + "\n" + "•" + "\n" + str(score_total_text) + "\n" + str(the_time_text2) + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ \n❌ Final score: " + str(score_home) + " - " + str(score_away) + " ❌")
 
-
+                print (new_id_get)
                 time.sleep(0)
 
-                try:
+                # try:
                 
-                    if str(league) == "Esoccer Live Arena - 10 mins play" and int(time_status) == 3 and int(ss3) <= 2:
-                        print(ss3)
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
+                #     if str(league) == "Esoccer Live Arena - 10 mins play" and int(time_status) == 3 and int(ss3) <= 2:
+                #         print(ss3)
+                #         bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
 
-                    elif str(league) == "Esoccer Live Arena - 10 mins play" and int(time_status) == 3 and int(ss3) > 2:
-                        print(ss3)
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
+                #     elif str(league) == "Esoccer Live Arena - 10 mins play" and int(time_status) == 3 and int(ss3) > 2:
+                #         print(ss3)
+                #         bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
 
-                    elif str(league) == "Esoccer GT Leagues – 12 mins play" and int(time_status) == 3 and int(ss3) <= 2:
-                        print(ss3)
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
+                #     elif str(league) == "Esoccer GT Leagues – 12 mins play" and int(time_status) == 3 and int(ss3) <= 2:
+                #         print(ss3)
+                #         bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
 
-                    elif str(league) == "Esoccer GT Leagues – 12 mins play" and int(time_status) == 3 and int(ss3) > 2:
-                        print(ss3)
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
+                #     elif str(league) == "Esoccer GT Leagues – 12 mins play" and int(time_status) == 3 and int(ss3) > 2:
+                #         print(ss3)
+                #         bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
 
-                    elif str(league) == "Esoccer Battle - 8 mins play" and int(time_status) == 3 and int(ss3) > 1:
-                        print(ss3)
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
-                    elif str(league) == "Esoccer Battle - 8 mins play" and int(time_status) == 3 and int(ss3) <= 1:
-                        print(ss3)
-                        bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
+                #     elif str(league) == "Esoccer Battle - 8 mins play" and int(time_status) == 3 and int(ss3) > 1:
+                #         print(ss3)
+                #         bot.editMessageText((my_telegram_chat_id, data2), first_time_over1)
+                #     elif str(league) == "Esoccer Battle - 8 mins play" and int(time_status) == 3 and int(ss3) <= 1:
+                #         print(ss3)
+                #         bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
 
 
-                    else:
-                        print("suka")
-                        #pass
+                #     else:
+                #         print("suka")
+                #         #pass
 
-                except:
-                    pass
+                # except:
+                #     pass
 
 
             handle.close()
