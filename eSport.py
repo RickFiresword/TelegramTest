@@ -86,7 +86,7 @@ def executeSomething():
 
                 league_name = ('🕹️ League: ' + league)
                 league_name = str(league_name)
-                
+
                 teams_text = ('Teams: ' + team_home + ' - ' + team_away)
                 teams_text = str(teams_text)
 
@@ -126,11 +126,11 @@ def executeSomething():
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
 
-                    elif str(league) == "Esoccer GT Leagues – 12 mins play" and int(time_status) == 3 and int(ss3) <= 2:
+                    elif str(league) == "Esoccer GT Leagues - 12 mins play" and int(time_status) == 3 and int(ss3) <= 2:
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
 
-                    elif str(league) == "Esoccer GT Leagues – 12 mins play" and int(time_status) == 3 and int(ss3) > 2:
+                    elif str(league) == "Esoccer GT Leagues - 12 mins play" and int(time_status) == 3 and int(ss3) > 2:
                         print(ss3)
                         bot.editMessageText((my_telegram_chat_id, data2), first_time_over3)
 
