@@ -51,7 +51,7 @@ def executeSomething():
             rr = rr.replace('.text','')
             r = requests.get(rr).json()
             r = r['results']
-            #r = r[::-1]
+            r = r[::-1]
 
             for a in r:
                 
