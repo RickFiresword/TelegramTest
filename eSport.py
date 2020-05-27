@@ -67,26 +67,26 @@ def executeSomething():
 
                 team_away = a['away']['name']
                 team_away = str(team_away)
+                print (team_away)
 
-                the_time = '2'
-                the_time2 = '4'
-                score_home_str = int(a['scores']['2']['home'])
-                score_away_str = int(a['scores']['2']['away'])
-                score_home = int(score_home_str)
-                score_away = int(score_away_str)
-                score_home = str(score_home)
-                score_away = str(score_away)
+                # the_time = '2'
+                # the_time2 = '4'
+                # score_home_str = int(a['scores']['2']['home'])
+                # score_away_str = int(a['scores']['2']['away'])
+                # score_home = int(score_home_str)
+                # score_away = int(score_away_str)
+                # score_home = str(score_home)
+                # score_away = str(score_away)
 
-                ss = a['ss'][0]
-                ss2 = a['ss'][2]
-                ss3 = int(ss) + int(ss2)
+                # ss = a['ss'][0]
+                # ss2 = a['ss'][2]
+                # ss3 = int(ss) + int(ss2)
 
-                score_total = score_away+score_home
-                score_total = str(score_total)
+                # score_total = score_away+score_home
+                # score_total = str(score_total)
 
-                league_name = ('🕹️ League: ' + league)
-                league_name = str(league_name)
-                print (league_name)
+                # league_name = ('🕹️ League: ' + league)
+                # league_name = str(league_name)
 
                 # teams_text = ('Teams: ' + team_home + ' - ' + team_away)
                 # teams_text = str(teams_text)
