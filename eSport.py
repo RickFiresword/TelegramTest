@@ -62,11 +62,11 @@ def executeSomething():
                 league = str(a['league']['name'])
                 #league = str(league)
 
-                # team_home = a['home']['name']
-                # team_home = str(team_home)
+                team_home = a['home']['name']
+                team_home = str(team_home)
 
-                # team_away = a['away']['name']
-                # team_away = str(team_away)
+                team_away = a['away']['name']
+                team_away = str(team_away)
 
                 the_time = '2'
                 the_time2 = '4'
@@ -83,8 +83,10 @@ def executeSomething():
 
                 score_total = score_away+score_home
                 score_total = str(score_total)
+
                 league_name = ('🕹️ League: ' + league)
                 league_name = str(league_name)
+                
                 teams_text = ('Teams: ' + team_home + ' - ' + team_away)
                 teams_text = str(teams_text)
 
