@@ -138,7 +138,7 @@ def executeSomething():
 
                     else:
                         print("suka")
-                        pass
+                        #pass
 
                 except:
                     pass
