@@ -157,11 +157,6 @@ def executeSomething():
 
 
 
-                    bot.editMessageText((my_telegram_chat_id, data2), first_time_over4)
-                        print ("10/12 min games >>> Total over YES")
-
-
-
         
 
 
