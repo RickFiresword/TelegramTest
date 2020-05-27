@@ -57,10 +57,10 @@ def executeSomething():
                 
                 time_status = a['time_status']
                 time_status = int(time_status)
-                print (time_status)
+
                 #-Names
-                league = a['league']['name']
-                league = str(league)
+                league = str(a['league']['name'])
+                #league = str(league)
                 print (league)
 
                 # team_home = a['home']['name']
