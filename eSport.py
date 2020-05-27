@@ -141,6 +141,8 @@ def executeSomething():
                 elif str(league) == "Esoccer Battle - 8 mins play" and str(time_status) == '3' and int(ss3) <= 1:
                     print(ss3)
                     bot.editMessageText((my_telegram_chat_id, data2), first_time_over2)
+                elif telepot.exception.TelegramError:
+                    pass
 
 
                 else:
