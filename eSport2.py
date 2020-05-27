@@ -213,111 +213,111 @@ def executeSomething():
                 score_total_text = ('⚽️ Score: ' + str(score_home) + " - " + str(score_away) + '  ( Total = ' + str(score_total) + ' )' )
                 score_total_text = str(score_total_text)
 
-                # =============== КИБЕР ФУТБОЛ 2,5 OVER ======================#
+                # # =============== КИБЕР ФУТБОЛ 2,5 OVER ======================#
 
-                if (int(the_time) >= 4 and int(the_time) <= 6) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2 and int(red_total) == 0:
-                #if the_time > 0:
-                        score_total_plus = str(score_total + 0.5)
-                        first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
-                        # чтение файла
-                        handle = open("text.text", "r")
+                # if (int(the_time) >= 4 and int(the_time) <= 6) and (int(s_attacks_total) >= 15) and (int(d_attacks_total) >= 7) and (int(s_attacks_home) >= 6 and int(s_attacks_away) >= 6) and (int(d_attacks_home) >= 2 and int(d_attacks_away) >= 5) and int(score_total) == 1 and int(corner_total) <= 2 and int(red_total) == 0:
+                # #if the_time > 0:
+                #         score_total_plus = str(score_total + 0.5)
+                #         first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
+                #         # чтение файла
+                #         handle = open("text.text", "r")
                         
-                        data = handle.read()
-                        if str(get_sport_id) in data:
-                            print ('FUCKING INFO !!!')
-                            pass
-                        else:
-                            # ЗАПИСЬ в файл начало
-                            f = open('text.text', 'a')
-                            a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
-                            f.write(a)
-                            f.close()
+                #         data = handle.read()
+                #         if str(get_sport_id) in data:
+                #             print ('FUCKING INFO !!!')
+                #             pass
+                #         else:
+                #             # ЗАПИСЬ в файл начало
+                #             f = open('text.text', 'a')
+                #             a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
+                #             f.write(a)
+                #             f.close()
 
-                            this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
-                            #print (this_message[message_id])
-                            id_get = this_message['message_id']
-                            #id_get = this_message.message_id
-                            new_id_get = id_get-9
-                            new_id_get = str(new_id_get)
-                            str_id_get = str(id_get)
-                            print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
-                            first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
-                            #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
-                            ff = open('all_links.txt', 'a')
-                            f = open(get_sport_id + '.txt', 'a')
+                #             this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
+                #             #print (this_message[message_id])
+                #             id_get = this_message['message_id']
+                #             #id_get = this_message.message_id
+                #             new_id_get = id_get-9
+                #             new_id_get = str(new_id_get)
+                #             str_id_get = str(id_get)
+                #             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
+                #             first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
+                #             #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
+                #             ff = open('all_links.txt', 'a')
+                #             f = open(get_sport_id + '.txt', 'a')
 
-                            a = str_id_get
-                            a = (a)
-                            b = get_sport_id 
-                            b = str("\n" + b)
+                #             a = str_id_get
+                #             a = (a)
+                #             b = get_sport_id 
+                #             b = str("\n" + b)
                             
-                            f.write(a)
-                            ff.write(b)
+                #             f.write(a)
+                #             ff.write(b)
 
-                            f.close()
-                            ff.close()
-                            #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
-                            bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
+                #             f.close()
+                #             ff.close()
+                #             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
+                #             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
-                else:
-                    print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (1st str)")
-                    #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
-                    pass
-                    time.sleep(0.3)
-
-
+                # else:
+                #     print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (1st str)")
+                #     #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
+                #     pass
+                #     time.sleep(0.3)
 
 
-                # =============== КИБЕР ФУТБОЛ 2,5 OVER (2nd)======================#
 
-                if int(the_time) < 8 and (int(s_attacks_total) >= 25) and (int(d_attacks_total) >= 20) and int(score_total) == 2 and int(corner_total) == 2 and int(red_total) == 0 and int(yellow_total) == 0 and (int(onTarget_total)+int(offTarget_total) == 2):
-                #if the_time > 0:
-                        score_total_plus = str(score_total + 0.5)
-                        first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
-                        # чтение файла
-                        handle = open("text.text", "r")
-                        data = handle.read()
-                        if str(get_sport_id) in data:
-                            print ('FUCKING INFO !!!')
-                            pass
-                        else:
-                            # ЗАПИСЬ в файл начало
-                            f = open('text.text', 'a')
-                            a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
-                            f.write(a)
-                            f.close()
 
-                            this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
-                            #print (this_message[message_id])
-                            id_get = this_message['message_id']
-                            #id_get = this_message.message_id
-                            new_id_get = id_get-9
-                            new_id_get = str(new_id_get)
-                            str_id_get = str(id_get)
-                            print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
-                            first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
-                            #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
-                            ff = open('all_links.txt', 'a')
-                            f = open(get_sport_id + '.txt', 'a')
+                # # =============== КИБЕР ФУТБОЛ 2,5 OVER (2nd)======================#
 
-                            a = str_id_get
-                            a = (a)
-                            b = get_sport_id 
-                            b = str("\n" + b)
+                # if int(the_time) < 8 and (int(s_attacks_total) >= 25) and (int(d_attacks_total) >= 20) and int(score_total) == 2 and int(corner_total) == 2 and int(red_total) == 0 and int(yellow_total) == 0 and (int(onTarget_total)+int(offTarget_total) == 2):
+                # #if the_time > 0:
+                #         score_total_plus = str(score_total + 0.5)
+                #         first_time_over = ("‼️ NEW 🌊 WAVE ‼️" + "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5'+ " Over\n" + "➖➖➖➖➖➖➖➖➖➖\ ")
+                #         # чтение файла
+                #         handle = open("text.text", "r")
+                #         data = handle.read()
+                #         if str(get_sport_id) in data:
+                #             print ('FUCKING INFO !!!')
+                #             pass
+                #         else:
+                #             # ЗАПИСЬ в файл начало
+                #             f = open('text.text', 'a')
+                #             a = str('\n' + get_sport_id + "="+ "[" + get_sport_id + "," + teams_text + "]" )
+                #             f.write(a)
+                #             f.close()
+
+                #             this_message = (bot.sendMessage(chat_id=my_telegram_chat_id, text=first_time_over))
+                #             #print (this_message[message_id])
+                #             id_get = this_message['message_id']
+                #             #id_get = this_message.message_id
+                #             new_id_get = id_get-9
+                #             new_id_get = str(new_id_get)
+                #             str_id_get = str(id_get)
+                #             print (time.strftime("%H:%M:%S  ") + 'last message ID: ' + str_id_get)
+                #             first_time_over2 = ("❗ Wave_" + new_id_get + "  eSport ❗"+ "\n" + "\n" + league_name + "\n" + teams_text + "\n" + "•" + "\n" + score_total_text + "\n" + the_time_text + "\n" + "••••" + "\n" + '💵 ADVICE:\n' 'Bet: 2,5' + " Over " +'\n' + "➖➖➖➖➖➖➖➖➖➖\ ")
+                #             #first_time_over2 = (str_id_get + "\n" + str(get_sport_id) + "\n" + time_status + "\n" )
+                #             ff = open('all_links.txt', 'a')
+                #             f = open(get_sport_id + '.txt', 'a')
+
+                #             a = str_id_get
+                #             a = (a)
+                #             b = get_sport_id 
+                #             b = str("\n" + b)
                             
-                            f.write(a)
-                            ff.write(b)
+                #             f.write(a)
+                #             ff.write(b)
 
-                            f.close()
-                            ff.close()
-                            #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
-                            bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
+                #             f.close()
+                #             ff.close()
+                #             #bot.editMessageText(chat_id=my_telegram_chat_id, message_id=id_get, text=first_time_over2)
+                #             bot.editMessageText(telepot.message_identifier(this_message), text=first_time_over2)
 
-                else:
-                    print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (2nd str)")
-                    #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
-                    pass
-                    time.sleep(0.3)    
+                # else:
+                #     print (str(get_sport_id) + " Bad conditions for 10-12 Min GAMES (2nd str)")
+                #     #print ("Odd Away: " + odd_away + "\nOdd Home: " + odd_home)
+                #     pass
+                #     time.sleep(0.3)    
 
 
 
@@ -387,7 +387,7 @@ def executeSomething():
 
 while True:
     executeSomething()
-    time.sleep(5)
+    time.sleep(7)
 
 
 
