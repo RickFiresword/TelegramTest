@@ -69,7 +69,7 @@ def executeSomething():
                 team_away = a['away']['name']
                 team_away = str(team_away)
 
-                the_time = '2'
+                the_time = '1'
                 the_time2 = '4'
                 score_home_str = int(a['scores']['2']['home'])
                 score_away_str = int(a['scores']['2']['away'])
