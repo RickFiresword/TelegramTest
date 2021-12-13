@@ -15,7 +15,7 @@ httplib2==0.12.0
 idna==2.7
 ipaddress==1.0.22
 Jinja2==2.10.1
-lxml==4.2.5
+lxml==4.6.5
 macholib==1.5.1
 modulegraph==0.10.4
 py2app==0.7.3
